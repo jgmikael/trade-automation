@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "DocumentRequirement": {
+      "@id": "ktddecv:DocumentRequirement",
+      "@context": {
+        "requiredDocumentType": {
+          "@id": "ktddecv:requiredDocumentType"
+        },
+        "issuerParty": {
+          "@id": "ktddecv:issuerParty"
+        },
+        "numberOfCopies": {
+          "@id": "ktddecv:numberOfCopies",
+          "@type": "http://www.w3.org/2001/XMLSchema#integer"
+        },
+        "numberOfOriginals": {
+          "@id": "ktddecv:numberOfOriginals",
+          "@type": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      }
+    }
+  }
+}

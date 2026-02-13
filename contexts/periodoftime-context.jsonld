@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "PeriodOfTime": {
+      "@id": "ktddecv:PeriodOfTime",
+      "@context": {
+        "startDate": {
+          "@id": "ktddecv:startDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "endDate": {
+          "@id": "ktddecv:endDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        }
+      }
+    }
+  }
+}

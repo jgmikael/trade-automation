@@ -10,11 +10,16 @@
         "paymentTermCode": {
           "@id": "ktddecv:paymentTermCode"
         },
-        "paymentMethod": {
-          "@id": "ktddecv:paymentMethod"
-        },
         "tenor": {
           "@id": "ktddecv:tenor"
+        },
+        "hasPaymentScheduleLine": {
+          "@id": "ktddecv:hasPaymentScheduleLine",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "tenorPeriod": {
+          "@id": "ktddecv:tenorPeriod"
         }
       }
     }

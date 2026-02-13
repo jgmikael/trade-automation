@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "DutyTaxFee": {
+      "@id": "ktddecv:DutyTaxFee",
+      "@context": {}
+    }
+  }
+}

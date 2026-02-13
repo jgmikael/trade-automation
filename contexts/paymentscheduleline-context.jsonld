@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "PaymentScheduleLine": {
+      "@id": "ktddecv:PaymentScheduleLine",
+      "@context": {
+        "baseAmount": {
+          "@id": "ktddecv:baseAmount"
+        },
+        "paymentDueDate": {
+          "@id": "ktddecv:paymentDueDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "deferredPaymentDate": {
+          "@id": "ktddecv:deferredPaymentDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "hasAmount": {
+          "@id": "ktddecv:hasAmount"
+        },
+        "amountPercentOfBase": {
+          "@id": "ktddecv:amountPercentOfBase",
+          "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+        }
+      }
+    }
+  }
+}

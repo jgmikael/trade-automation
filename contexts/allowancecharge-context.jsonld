@@ -1,0 +1,43 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "AllowanceCharge": {
+      "@id": "ktddecv:AllowanceCharge",
+      "@context": {
+        "allowanceChargeReasonCode": {
+          "@id": "ktddecv:allowanceChargeReasonCode"
+        },
+        "perUnitAmount": {
+          "@id": "ktddecv:perUnitAmount"
+        },
+        "chargeIndicator": {
+          "@id": "ktddecv:chargeIndicator",
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+        },
+        "calculationPercent": {
+          "@id": "ktddecv:calculationPercent",
+          "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+        },
+        "multiplierFactorPercent": {
+          "@id": "ktddecv:multiplierFactorPercent",
+          "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+        },
+        "chargedToParty": {
+          "@id": "ktddecv:chargedToParty"
+        },
+        "chargedByParty": {
+          "@id": "ktddecv:chargedByParty"
+        },
+        "hasAmount": {
+          "@id": "ktddecv:hasAmount"
+        },
+        "baseAmount": {
+          "@id": "ktddecv:baseAmount"
+        }
+      }
+    }
+  }
+}

@@ -7,8 +7,84 @@
     "Shipment": {
       "@id": "ktddecv:Shipment",
       "@context": {
-        "usesTransportMeans": {
-          "@id": "ktddecv:usesTransportMeans",
+        "buyerParty": {
+          "@id": "ktddecv:buyerParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "requestedDeliveryPeriod": {
+          "@id": "ktddecv:requestedDeliveryPeriod"
+        },
+        "placeOfDeliveryUNLocode": {
+          "@id": "ktddecv:placeOfDeliveryUNLocode"
+        },
+        "isRealizedByConsignment": {
+          "@id": "ktddecv:isRealizedByConsignment"
+        },
+        "totalTransportHandlingUnitQuantity": {
+          "@id": "ktddecv:totalTransportHandlingUnitQuantity"
+        },
+        "insuranceValueAmount": {
+          "@id": "ktddecv:insuranceValueAmount",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "finalDestinationUNLocode": {
+          "@id": "ktddecv:finalDestinationUNLocode"
+        },
+        "portOfDischargeUNLocode": {
+          "@id": "ktddecv:portOfDischargeUNLocode"
+        },
+        "relatedOrder": {
+          "@id": "ktddecv:relatedOrder"
+        },
+        "invoiceDocument": {
+          "@id": "ktddecv:invoiceDocument",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "hasGoodsItem": {
+          "@id": "ktddecv:hasGoodsItem",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "declaredCustomsValueAmount": {
+          "@id": "ktddecv:declaredCustomsValueAmount",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "totalGoodsItemQuantity": {
+          "@id": "ktddecv:totalGoodsItemQuantity"
+        },
+        "shipmentIdentifier": {
+          "@id": "ktddecv:shipmentIdentifier"
+        },
+        "totalPackageQuantity": {
+          "@id": "ktddecv:totalPackageQuantity"
+        },
+        "portOfLoadingUNLocode": {
+          "@id": "ktddecv:portOfLoadingUNLocode"
+        },
+        "placeOfReceiptUNLocode": {
+          "@id": "ktddecv:placeOfReceiptUNLocode"
+        },
+        "sellerParty": {
+          "@id": "ktddecv:sellerParty"
+        },
+        "hazardousRiskIndicator": {
+          "@id": "ktddecv:hazardousRiskIndicator",
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+        },
+        "contractNumber": {
+          "@id": "ktddecv:contractNumber"
+        },
+        "hasShipmentPeriod": {
+          "@id": "ktddecv:hasShipmentPeriod",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "deliveryTerms": {
+          "@id": "ktddecv:deliveryTerms",
           "@type": "@id",
           "@container": "@set"
         }

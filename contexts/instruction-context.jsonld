@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Instruction": {
+      "@id": "ktddecv:Instruction",
+      "@context": {
+        "instructionText": {
+          "@id": "ktddecv:instructionText"
+        },
+        "instructingParty": {
+          "@id": "ktddecv:instructingParty"
+        },
+        "instructedParty": {
+          "@id": "ktddecv:instructedParty"
+        }
+      }
+    }
+  }
+}

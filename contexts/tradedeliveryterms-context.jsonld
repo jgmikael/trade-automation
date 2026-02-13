@@ -7,16 +7,34 @@
     "TradeDeliveryTerms": {
       "@id": "ktddecv:TradeDeliveryTerms",
       "@context": {
-        "deliveryTypeCode": {
-          "@id": "ktddecv:deliveryTypeCode"
+        "relatesToConsignment": {
+          "@id": "ktddecv:relatesToConsignment"
         },
-        "loadingLocation": {
-          "@id": "ktddecv:loadingLocation",
+        "placeOfDischarge": {
+          "@id": "ktddecv:placeOfDischarge"
+        },
+        "placeOfDelivery": {
+          "@id": "ktddecv:placeOfDelivery"
+        },
+        "deliveryTermsText": {
+          "@id": "ktddecv:deliveryTermsText"
+        },
+        "hasDeliveryPeriod": {
+          "@id": "ktddecv:hasDeliveryPeriod"
+        },
+        "applicableRules": {
+          "@id": "ktddecv:applicableRules",
           "@type": "@id",
           "@container": "@set"
         },
-        "deliveryLocation": {
-          "@id": "ktddecv:deliveryLocation",
+        "placeOfLoading": {
+          "@id": "ktddecv:placeOfLoading"
+        },
+        "incotermsCode": {
+          "@id": "ktddecv:incotermsCode"
+        },
+        "includesAllowanceCharge": {
+          "@id": "ktddecv:includesAllowanceCharge",
           "@type": "@id",
           "@container": "@set"
         }

@@ -1,0 +1,48 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "CreditAvailability": {
+      "@id": "ktddecv:CreditAvailability",
+      "@context": {
+        "tenor": {
+          "@id": "ktddecv:tenor"
+        },
+        "obligorParty": {
+          "@id": "ktddecv:obligorParty"
+        },
+        "availableWithQualifier": {
+          "@id": "ktddecv:availableWithQualifier"
+        },
+        "draweeParty": {
+          "@id": "ktddecv:draweeParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "hasAvailabilityMethod": {
+          "@id": "ktddecv:hasAvailabilityMethod",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "availableWithParty": {
+          "@id": "ktddecv:availableWithParty"
+        },
+        "hasAmount": {
+          "@id": "ktddecv:hasAmount"
+        },
+        "availableAtPlace": {
+          "@id": "ktddecv:availableAtPlace"
+        },
+        "maturityDate": {
+          "@id": "ktddecv:maturityDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "payeeParty": {
+          "@id": "ktddecv:payeeParty"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "RuleSet": {
+      "@id": "ktddecv:RuleSet",
+      "@context": {
+        "publicationDate": {
+          "@id": "ktddecv:publicationDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "title": {
+          "@id": "ktddecv:title"
+        },
+        "ruleSetIdentifier": {
+          "@id": "ktddecv:ruleSetIdentifier"
+        },
+        "versionIdentifier": {
+          "@id": "ktddecv:versionIdentifier"
+        },
+        "publisher": {
+          "@id": "ktddecv:publisher"
+        }
+      }
+    }
+  }
+}

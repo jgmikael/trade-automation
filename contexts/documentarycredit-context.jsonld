@@ -7,8 +7,200 @@
     "DocumentaryCredit": {
       "@id": "ktddecv:DocumentaryCredit",
       "@context": {
+        "confirmationAddedDate": {
+          "@id": "ktddecv:confirmationAddedDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "hasPaymentTerms": {
+          "@id": "ktddecv:hasPaymentTerms",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "hasAvailabilityMethod": {
+          "@id": "ktddecv:hasAvailabilityMethod",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "additionalAmountsCovered": {
+          "@id": "ktddecv:additionalAmountsCovered",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "requestedConfirmationParty": {
+          "@id": "ktddecv:requestedConfirmationParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "hasShipment": {
+          "@id": "ktddecv:hasShipment",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "advisingBankParty": {
+          "@id": "ktddecv:advisingBankParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "reimbursingBankParty": {
+          "@id": "ktddecv:reimbursingBankParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "coversAdditionalCharge": {
+          "@id": "ktddecv:coversAdditionalCharge",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "applicantParty": {
+          "@id": "ktddecv:applicantParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "presentationPeriodDays": {
+          "@id": "ktddecv:presentationPeriodDays",
+          "@type": "http://www.w3.org/2001/XMLSchema#integer"
+        },
+        "hasCreditAvailability": {
+          "@id": "ktddecv:hasCreditAvailability",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "requiresDocument": {
+          "@id": "ktddecv:requiresDocument",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "partialShipmentAllowed": {
+          "@id": "ktddecv:partialShipmentAllowed",
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+        },
+        "hasPresentationPeriod": {
+          "@id": "ktddecv:hasPresentationPeriod",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "maximumCreditAmount": {
+          "@id": "ktddecv:maximumCreditAmount",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "referencesPreAdvice": {
+          "@id": "ktddecv:referencesPreAdvice",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "includesAllowanceCharge": {
+          "@id": "ktddecv:includesAllowanceCharge",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "expiryDate": {
+          "@id": "ktddecv:expiryDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "latestShipmentDate": {
+          "@id": "ktddecv:latestShipmentDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "issuingBankParty": {
+          "@id": "ktddecv:issuingBankParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "hasDeliveryMilestone": {
+          "@id": "ktddecv:hasDeliveryMilestone",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "applicableRules": {
+          "@id": "ktddecv:applicableRules",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "issueDate": {
+          "@id": "ktddecv:issueDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "hasShipmentPeriod": {
+          "@id": "ktddecv:hasShipmentPeriod",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "presentationBaseEvent": {
+          "@id": "ktddecv:presentationBaseEvent",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "beneficiaryParty": {
+          "@id": "ktddecv:beneficiaryParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "hasPaymentLine": {
+          "@id": "ktddecv:hasPaymentLine",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "AdditionalConditionsText": {
+          "@id": "ktddecv:additionalConditionsText"
+        },
+        "confirmingParty": {
+          "@id": "ktddecv:confirmingParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "confirmationInstructionCode": {
+          "@id": "ktddecv:confirmationInstructionCode",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "creditAmountTolerancePercentage": {
+          "@id": "ktddecv:creditAmountTolerancePercentage",
+          "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+        },
+        "latestPresentationDate": {
+          "@id": "ktddecv:latestPresentationDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "applicantBankParty": {
+          "@id": "ktddecv:applicantBankParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "placeOfExpiry": {
+          "@id": "ktddecv:placeOfExpiry",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "adviseThroughBankParty": {
+          "@id": "ktddecv:adviseThroughBankParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "draweeParty": {
+          "@id": "ktddecv:draweeParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "placeOfPresentation": {
+          "@id": "ktddecv:placeOfPresentation",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "documentaryCreditTypeCode": {
+          "@id": "ktddecv:documentaryCreditTypeCode"
+        },
         "creditIdentifier": {
           "@id": "ktddecv:creditIdentifier"
+        },
+        "instructionToBank": {
+          "@id": "ktddecv:instructionToBank",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "transshipmentAllowed": {
+          "@id": "ktddecv:transshipmentAllowed",
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean"
         }
       }
     }

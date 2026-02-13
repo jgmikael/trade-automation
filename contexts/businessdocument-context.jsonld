@@ -4,14 +4,14 @@
     "@protected": true,
     "ktdde": "https://iri.suomi.fi/model/ktddecv/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "Country": {
-      "@id": "ktddecv:Country",
+    "BusinessDocument": {
+      "@id": "ktddecv:BusinessDocument",
       "@context": {
-        "countryCode": {
-          "@id": "ktddecv:countryCode"
+        "documentType": {
+          "@id": "ktddecv:documentType"
         },
-        "countryName": {
-          "@id": "ktddecv:countryName"
+        "hasMessage": {
+          "@id": "ktddecv:hasMessage"
         }
       }
     }

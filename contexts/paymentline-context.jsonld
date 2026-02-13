@@ -1,0 +1,29 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "PaymentLine": {
+      "@id": "ktddecv:PaymentLine",
+      "@context": {
+        "hasAmount": {
+          "@id": "ktddecv:hasAmount"
+        },
+        "paymentSettlementMethod": {
+          "@id": "ktddecv:paymentSettlementMethod"
+        },
+        "tenor": {
+          "@id": "ktddecv:tenor"
+        },
+        "payeeParty": {
+          "@id": "ktddecv:payeeParty"
+        },
+        "paymentDueDate": {
+          "@id": "ktddecv:paymentDueDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        }
+      }
+    }
+  }
+}

@@ -10,13 +10,18 @@
         "name": {
           "@id": "ktddecv:name"
         },
+        "partyLegalEntity": {
+          "@id": "ktddecv:partyLegalEntity",
+          "@type": "@id",
+          "@container": "@set"
+        },
         "partyAddress": {
           "@id": "ktddecv:partyAddress",
           "@type": "@id",
           "@container": "@set"
         },
         "partyIdentifier": {
-          "@id": "owl:topObjectProperty",
+          "@id": "ktddecv:partyIdentifier",
           "@type": "@id",
           "@container": "@set"
         }
