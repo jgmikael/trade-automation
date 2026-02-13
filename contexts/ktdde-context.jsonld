@@ -1,0 +1,107 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "http://schema.org/",
+    
+    "CommercialInvoice": {
+      "@id": "ktdde:CommercialInvoice",
+      "@context": {
+        "invoiceNumber": {
+          "@id": "ktdde:invoiceNumber",
+          "@type": "xsd:string"
+        },
+        "invoiceDate": {
+          "@id": "ktdde:invoiceDate",
+          "@type": "xsd:dateTime"
+        },
+        "paymentDueDate": {
+          "@id": "ktdde:paymentDueDate",
+          "@type": "xsd:dateTime"
+        },
+        "totalAmount": {
+          "@id": "ktdde:totalAmount",
+          "@type": "@id"
+        },
+        "invoiceeParty": {
+          "@id": "ktdde:invoiceeParty",
+          "@type": "@id"
+        },
+        "hasInvoiceLine": {
+          "@id": "ktdde:hasInvoiceLine",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "hasDelivery": {
+          "@id": "ktdde:hasDelivery",
+          "@type": "@id"
+        },
+        "invoicePaymentTerms": {
+          "@id": "ktdde:invoicePaymentTerms",
+          "@type": "@id"
+        }
+      }
+    },
+    
+    "Party": {
+      "@id": "ktdde:Party",
+      "@context": {
+        "partyName": {
+          "@id": "ktdde:partyName",
+          "@type": "xsd:string"
+        },
+        "legalID": {
+          "@id": "ktdde:legalID",
+          "@type": "xsd:string"
+        },
+        "hasAddress": {
+          "@id": "ktdde:hasAddress",
+          "@type": "@id"
+        }
+      }
+    },
+    
+    "MonetaryAmount": {
+      "@id": "ktdde:MonetaryAmount",
+      "@context": {
+        "amountValue": {
+          "@id": "ktdde:amountValue",
+          "@type": "xsd:decimal"
+        },
+        "currencyCode": {
+          "@id": "ktdde:currencyCode",
+          "@type": "xsd:string"
+        }
+      }
+    },
+    
+    "InvoiceLine": {
+      "@id": "ktdde:InvoiceLine",
+      "@context": {
+        "lineNumber": {
+          "@id": "ktdde:lineNumber",
+          "@type": "xsd:integer"
+        },
+        "productDescription": {
+          "@id": "ktdde:productDescription",
+          "@type": "xsd:string"
+        },
+        "quantity": {
+          "@id": "ktdde:quantity",
+          "@type": "@id"
+        },
+        "unitPrice": {
+          "@id": "ktdde:unitPrice",
+          "@type": "@id"
+        },
+        "lineAmount": {
+          "@id": "ktdde:lineAmount",
+          "@type": "@id"
+        }
+      }
+    }
+  }
+}

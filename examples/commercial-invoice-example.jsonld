@@ -1,0 +1,84 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/ktdde-context.jsonld"
+  ],
+  "id": "https://example.com/credentials/invoice/INV-2024-001",
+  "type": ["VerifiableCredential", "CommercialInvoiceCredential"],
+  "issuer": {
+    "id": "did:example:seller123",
+    "name": "Example Export Company Oy"
+  },
+  "issuanceDate": "2024-02-13T10:00:00Z",
+  "expirationDate": "2025-02-13T10:00:00Z",
+  "credentialSubject": {
+    "id": "https://example.com/invoices/INV-2024-001",
+    "type": "CommercialInvoice",
+    "invoiceNumber": "INV-2024-001",
+    "invoiceDate": "2024-02-13T10:00:00Z",
+    "paymentDueDate": "2024-03-15T00:00:00Z",
+    "totalAmount": {
+      "type": "MonetaryAmount",
+      "amountValue": 15250.00,
+      "currencyCode": "EUR"
+    },
+    "invoiceeParty": {
+      "type": "Party",
+      "partyName": "International Buyer Ltd",
+      "legalID": "GB123456789",
+      "hasAddress": {
+        "street": "123 Trade Street",
+        "city": "London",
+        "postalCode": "SW1A 1AA",
+        "country": "GB"
+      }
+    },
+    "hasInvoiceLine": [
+      {
+        "type": "InvoiceLine",
+        "lineNumber": 1,
+        "productDescription": "Industrial machinery parts - Model XYZ-100",
+        "quantity": {
+          "value": 50,
+          "unit": "pieces"
+        },
+        "unitPrice": {
+          "amountValue": 250.00,
+          "currencyCode": "EUR"
+        },
+        "lineAmount": {
+          "amountValue": 12500.00,
+          "currencyCode": "EUR"
+        }
+      },
+      {
+        "type": "InvoiceLine",
+        "lineNumber": 2,
+        "productDescription": "Spare parts kit - Model XYZ-KIT",
+        "quantity": {
+          "value": 10,
+          "unit": "kits"
+        },
+        "unitPrice": {
+          "amountValue": 275.00,
+          "currencyCode": "EUR"
+        },
+        "lineAmount": {
+          "amountValue": 2750.00,
+          "currencyCode": "EUR"
+        }
+      }
+    ],
+    "invoicePaymentTerms": {
+      "description": "Net 30 days from invoice date",
+      "paymentMethod": "Bank transfer"
+    }
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2024-02-13T10:00:00Z",
+    "verificationMethod": "did:example:seller123#key-1",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQp...[signature would be here]"
+  }
+}
