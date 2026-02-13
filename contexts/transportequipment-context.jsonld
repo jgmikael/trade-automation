@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "TransportEquipment": {
+      "@id": "ktddecv:TransportEquipment",
+      "@context": {
+        "containerNumber": {
+          "@id": "ktddecv:containerNumber"
+        },
+        "equipmentIdentifier": {
+          "@id": "ktddecv:equipmentIdentifier",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "hasSeal": {
+          "@id": "owl:topObjectProperty",
+          "@type": "@id",
+          "@container": "@set"
+        }
+      }
+    }
+  }
+}

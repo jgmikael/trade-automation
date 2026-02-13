@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "TransportMeans": {
+      "@id": "ktddecv:TransportMeans",
+      "@context": {
+        "iMOShipID": {
+          "@id": "ktddecv:iMOShipID"
+        },
+        "vesselName": {
+          "@id": "ktddecv:vesselName"
+        },
+        "flightNumber": {
+          "@id": "ktddecv:flightNumber"
+        },
+        "vehicleRegistrationIdentifier": {
+          "@id": "ktddecv:vehicleRegistrationIdentifier"
+        },
+        "vehicleName": {
+          "@id": "ktddecv:vehicleName"
+        },
+        "voyageNumber": {
+          "@id": "ktddecv:voyageNumber"
+        }
+      }
+    }
+  }
+}

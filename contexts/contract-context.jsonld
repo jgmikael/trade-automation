@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Contract": {
+      "@id": "ktddecv:Contract",
+      "@context": {
+        "contractNumber": {
+          "@id": "ktddecv:contractNumber"
+        },
+        "contractIdentifier": {
+          "@id": "ktddecv:contractIdentifier"
+        }
+      }
+    }
+  }
+}

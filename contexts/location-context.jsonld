@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Location": {
+      "@id": "ktddecv:Location",
+      "@context": {
+        "unlocode": {
+          "@id": "ktddecv:unlocode"
+        },
+        "locationID": {
+          "@id": "ktddecv:locationID"
+        },
+        "locationName": {
+          "@id": "ktddecv:locationName"
+        },
+        "locationCountry": {
+          "@id": "ktddecv:locationCountry",
+          "@type": "@id",
+          "@container": "@set"
+        }
+      }
+    }
+  }
+}

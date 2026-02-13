@@ -1,0 +1,190 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "BillOfLading": {
+      "@id": "ktddecv:BillOfLading",
+      "@context": {
+        "coversContract": {
+          "@id": "ktddecv:coversContract",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "originCountry": {
+          "@id": "ktddecv:originCountry",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "buyerParty": {
+          "@id": "ktddecv:buyerParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "plannedArrivalDateTime": {
+          "@id": "ktddecv:plannedArrivalDateTime",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "declaredCustomsValueAmount": {
+          "@id": "ktddecv:declaredCustomsValueAmount",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "descriptionOfGoodsText": {
+          "@id": "ktddecv:descriptionOfGoodsText"
+        },
+        "paymentLocation": {
+          "@id": "ktddecv:paymentLocation",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "portOfDischargeUNLocode": {
+          "@id": "ktddecv:portOfDischargeUNLocode"
+        },
+        "totalPackageQuantity": {
+          "@id": "ktddecv:totalPackageQuantity",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "shippingMarks": {
+          "@id": "ktddecv:shippingMarks"
+        },
+        "departurePlace": {
+          "@id": "ktddecv:departurePlace",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "importerParty": {
+          "@id": "ktddecv:importerParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "houseWaybillDocumentIdentifier": {
+          "@id": "ktddecv:houseWaybillDocumentIdentifier"
+        },
+        "actualDepartureDateTime": {
+          "@id": "ktddecv:actualDepartureDateTime",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "placeOfIssue": {
+          "@id": "ktddecv:placeOfIssue",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "placeOfDeliveryUNLocode": {
+          "@id": "ktddecv:placeOfDeliveryUNLocode"
+        },
+        "documentIdentifier": {
+          "@id": "ktddecv:documentIdentifier"
+        },
+        "hasPaymentTerms": {
+          "@id": "ktddecv:hasPaymentTerms",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "placeOfDischarge": {
+          "@id": "ktddecv:placeOfDischarge",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "exporterParty": {
+          "@id": "ktddecv:exporterParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "consigneeParty": {
+          "@id": "ktddecv:consigneeParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "hasGoodsItem": {
+          "@id": "ktddecv:hasGoodsItem",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "usesTransportEquipment": {
+          "@id": "ktddecv:usesTransportEquipment",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "placeOfLoading": {
+          "@id": "ktddecv:placeOfLoading",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "totalGrossWeight": {
+          "@id": "ktddecv:totalGrossWeight",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "arrivalPlace": {
+          "@id": "ktddecv:arrivalPlace",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "notifyParty": {
+          "@id": "ktddecv:notifyParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "portOfLoadingUNLocode": {
+          "@id": "ktddecv:portOfLoadingUNLocode"
+        },
+        "placeOfDelivery": {
+          "@id": "ktddecv:placeOfDelivery",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "usesTransportMeans": {
+          "@id": "ktddecv:usesTransportMeans",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "carrierParty": {
+          "@id": "ktddecv:carrierParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "consignorParty": {
+          "@id": "ktddecv:consignorParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "freightChargesAmount": {
+          "@id": "ktddecv:freightChargesAmount",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "payerParty": {
+          "@id": "ktddecv:payerParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "totalNetWeight": {
+          "@id": "ktddecv:totalNetWeight",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "issueDate": {
+          "@id": "ktddecv:issueDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "estimatedTimeOfDeparture": {
+          "@id": "ktddecv:estimatedTimeOfDeparture",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "deliveryTermsText": {
+          "@id": "ktddecv:deliveryTermsText"
+        },
+        "actualArrivalDateTime": {
+          "@id": "ktddecv:actualArrivalDateTime",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "additionalConditionsText": {
+          "@id": "ktddecv:additionalConditionsText"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "MonetaryAmount": {
+      "@id": "ktddecv:MonetaryAmount",
+      "@context": {
+        "currencyCode": {
+          "@id": "ktddecv:currencyCode"
+        },
+        "amountValue": {
+          "@id": "ktddecv:amountValue",
+          "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+        }
+      }
+    }
+  }
+}

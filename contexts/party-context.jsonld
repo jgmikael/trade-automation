@@ -1,0 +1,28 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Party": {
+      "@id": "ktddecv:Party",
+      "@context": {
+        "partyLegalEntity": {
+          "@id": "ktddecv:partyLegalEntity",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "partyIdentifier": {
+          "@id": "ktddecv:partyIdentifier",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "partyAddress": {
+          "@id": "ktddecv:partyAddress",
+          "@type": "@id",
+          "@container": "@set"
+        }
+      }
+    }
+  }
+}
