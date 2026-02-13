@@ -4,11 +4,11 @@
     "@protected": true,
     "ktdde": "https://iri.suomi.fi/model/ktddecv/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "Contract": {
-      "@id": "ktddecv:Contract",
+    "BankAccount": {
+      "@id": "ktddecv:BankAccount",
       "@context": {
-        "contractIdentifier": {
-          "@id": "ktddecv:contractIdentifier"
+        "bankAccountIdentifier": {
+          "@id": "ktddecv:bankAccountIdentifier"
         }
       }
     }

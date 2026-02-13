@@ -7,11 +7,14 @@
     "PaymentTerms": {
       "@id": "ktddecv:PaymentTerms",
       "@context": {
-        "freightPaymentTermCode": {
-          "@id": "ktddecv:freightPaymentTermCode"
-        },
         "paymentTermCode": {
           "@id": "ktddecv:paymentTermCode"
+        },
+        "paymentMethod": {
+          "@id": "ktddecv:paymentMethod"
+        },
+        "tenor": {
+          "@id": "ktddecv:tenor"
         }
       }
     }

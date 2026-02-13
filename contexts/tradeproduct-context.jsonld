@@ -7,19 +7,11 @@
     "TradeProduct": {
       "@id": "ktddecv:TradeProduct",
       "@context": {
+        "productDescription": {
+          "@id": "ktddecv:productDescription"
+        },
         "productName": {
           "@id": "ktddecv:productName"
-        },
-        "productIdentifier": {
-          "@id": "ktddecv:productIdentifier"
-        },
-        "commodityCode": {
-          "@id": "ktddecv:commodityCode"
-        },
-        "applicableCommodityClassification": {
-          "@id": "ktddecv:applicableCommodityClassification",
-          "@type": "@id",
-          "@container": "@set"
         }
       }
     }

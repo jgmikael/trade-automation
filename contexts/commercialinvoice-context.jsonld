@@ -1,0 +1,100 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "CommercialInvoice": {
+      "@id": "ktddecv:CommercialInvoice",
+      "@context": {
+        "freightChargesAmount": {
+          "@id": "ktddecv:freightChargesAmount",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "purchaseOrderNumber": {
+          "@id": "ktddecv:purchaseOrderNumber"
+        },
+        "invoiceeParty": {
+          "@id": "ktddecv:invoiceeParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "invoiceDocument": {
+          "@id": "ktddecv:invoiceDocument"
+        },
+        "buyerParty": {
+          "@id": "ktddecv:buyerParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "paymentDueDate": {
+          "@id": "ktddecv:paymentDueDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "consigneeParty": {
+          "@id": "ktddecv:consigneeParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "invoiceNumber": {
+          "@id": "ktddecv:invoiceNumber"
+        },
+        "relatesToTransportDocument": {
+          "@id": "ktddecv:relatesToTransportDocument",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "deliveryTerms": {
+          "@id": "ktddecv:deliveryTerms",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "invoicePaymentTerms": {
+          "@id": "ktddecv:invoicePaymentTerms",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "hasInvoiceLine": {
+          "@id": "ktddecv:hasInvoiceLine",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "referencesLetterOfCredit": {
+          "@id": "ktddecv:referencesLetterOfCredit",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "sellerParty": {
+          "@id": "ktddecv:sellerParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "insuranceValueAmount": {
+          "@id": "ktddecv:insuranceValueAmount",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "totalAmount": {
+          "@id": "ktddecv:totalAmount",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "sellersBank": {
+          "@id": "owl:topObjectProperty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "isBasedOnContract": {
+          "@id": "owl:topObjectProperty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "invoiceDate": {
+          "@id": "ktddecv:invoiceDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        }
+      }
+    }
+  }
+}

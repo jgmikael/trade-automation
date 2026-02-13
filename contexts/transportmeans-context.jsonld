@@ -7,17 +7,6 @@
     "TransportMeans": {
       "@id": "ktddecv:TransportMeans",
       "@context": {
-        "transportMeansIdentifier": {
-          "@id": "ktddecv:transportMeansIdentifier"
-        },
-        "transportMeansGrossWeight": {
-          "@id": "ktddecv:transportMeansGrossWeight",
-          "@type": "@id",
-          "@container": "@set"
-        },
-        "vehicleRegistrationIdentifier": {
-          "@id": "ktddecv:vehicleRegistrationIdentifier"
-        },
         "vehicleName": {
           "@id": "ktddecv:vehicleName"
         }

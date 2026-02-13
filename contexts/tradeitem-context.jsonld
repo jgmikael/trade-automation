@@ -4,19 +4,20 @@
     "@protected": true,
     "ktdde": "https://iri.suomi.fi/model/ktddecv/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "Party": {
-      "@id": "ktddecv:Party",
+    "TradeItem": {
+      "@id": "ktddecv:TradeItem",
       "@context": {
-        "name": {
-          "@id": "ktddecv:name"
-        },
-        "partyAddress": {
-          "@id": "ktddecv:partyAddress",
+        "unitPriceAmount": {
+          "@id": "owl:topObjectProperty",
           "@type": "@id",
           "@container": "@set"
         },
-        "partyIdentifier": {
-          "@id": "owl:topObjectProperty",
+        "unitPrice": {
+          "@id": "ktddecv:unitPrice",
+          "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+        },
+        "hasProduct": {
+          "@id": "ktddecv:hasProduct",
           "@type": "@id",
           "@container": "@set"
         }

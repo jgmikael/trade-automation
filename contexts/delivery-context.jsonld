@@ -4,19 +4,16 @@
     "@protected": true,
     "ktdde": "https://iri.suomi.fi/model/ktddecv/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "Party": {
-      "@id": "ktddecv:Party",
+    "Delivery": {
+      "@id": "ktddecv:Delivery",
       "@context": {
-        "name": {
-          "@id": "ktddecv:name"
-        },
-        "partyAddress": {
-          "@id": "ktddecv:partyAddress",
+        "hasShipment": {
+          "@id": "ktddecv:hasShipment",
           "@type": "@id",
           "@container": "@set"
         },
-        "partyIdentifier": {
-          "@id": "owl:topObjectProperty",
+        "deliveryTerms": {
+          "@id": "ktddecv:deliveryTerms",
           "@type": "@id",
           "@container": "@set"
         }

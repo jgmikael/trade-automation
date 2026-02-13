@@ -4,19 +4,16 @@
     "@protected": true,
     "ktdde": "https://iri.suomi.fi/model/ktddecv/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "Party": {
-      "@id": "ktddecv:Party",
+    "InvoiceLine": {
+      "@id": "ktddecv:InvoiceLine",
       "@context": {
-        "name": {
-          "@id": "ktddecv:name"
-        },
-        "partyAddress": {
-          "@id": "ktddecv:partyAddress",
+        "invoicedQuantity": {
+          "@id": "ktddecv:invoicedQuantity",
           "@type": "@id",
           "@container": "@set"
         },
-        "partyIdentifier": {
-          "@id": "owl:topObjectProperty",
+        "describesItem": {
+          "@id": "ktddecv:describesItem",
           "@type": "@id",
           "@container": "@set"
         }
