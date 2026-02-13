@@ -7,44 +7,11 @@
     "Consignment": {
       "@id": "ktddecv:Consignment",
       "@context": {
-        "transportModeCode": {
-          "@id": "ktddecv:transportModeCode",
-          "@type": "@id"
+        "despatchDate": {
+          "@id": "ktddecv:despatchDate"
         },
-        "usesTransportMeans": {
-          "@id": "ktddecv:usesTransportMeans",
-          "@type": "@id",
-          "@container": "@set"
-        },
-        "hasGoodsItem": {
-          "@id": "ktddecv:hasGoodsItem",
-          "@type": "@id",
-          "@container": "@set"
-        },
-        "totalGrossWeight": {
-          "@id": "ktddecv:totalGrossWeight",
-          "@type": "@id"
-        },
-        "totalNetWeight": {
-          "@id": "ktddecv:totalNetWeight",
-          "@type": "@id"
-        },
-        "hasTransportEquipment": {
-          "@id": "ktddecv:hasTransportEquipment",
-          "@type": "@id",
-          "@container": "@set"
-        },
-        "originCountry": {
-          "@id": "ktddecv:originCountry",
-          "@type": "@id"
-        },
-        "departurePlace": {
-          "@id": "ktddecv:departurePlace",
-          "@type": "@id"
-        },
-        "totalPackageCount": {
-          "@id": "ktddecv:totalPackageCount",
-          "@type": "@id"
+        "deliveryDate": {
+          "@id": "ktddecv:deliveryDate"
         }
       }
     }

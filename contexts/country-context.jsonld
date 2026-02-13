@@ -7,11 +7,8 @@
     "Country": {
       "@id": "ktddecv:Country",
       "@context": {
-        "countryCode": {
-          "@id": "ktddecv:countryCode"
-        },
-        "countryName": {
-          "@id": "ktddecv:countryName"
+        "name": {
+          "@id": "ktddecv:name"
         }
       }
     }

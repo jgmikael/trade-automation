@@ -7,11 +7,6 @@
     "Delivery": {
       "@id": "ktddecv:Delivery",
       "@context": {
-        "hasShipment": {
-          "@id": "ktddecv:hasShipment",
-          "@type": "@id",
-          "@container": "@set"
-        },
         "deliveryTerms": {
           "@id": "ktddecv:deliveryTerms",
           "@type": "@id",

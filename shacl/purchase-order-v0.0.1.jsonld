@@ -1,0 +1,1623 @@
+{
+    "@graph": [
+        {
+            "@id": "dsipo:hasCountryOfOrigin",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "has country of origin"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "sh:PropertyShape"
+            ],
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:48:44.231Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:created": {
+                "@value": "2025-08-04T12:26:20.249Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:identifier": {
+                "@value": "hasCountryOfOrigin",
+                "@type": "xsd:NCName"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "sh:path": {
+                "@id": "ktddecv:hasCountryOfOrigin"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "sh:class": {
+                "@id": "ktddecv:Country"
+            }
+        },
+        {
+            "@id": "https://iri.suomi.fi/model/dsipo/",
+            "dcterms:isPartOf": [
+                {
+                    "@id": "http://urn.fi/URN:NBN:fi:au:ptvl:v1105"
+                },
+                {
+                    "@id": "http://urn.fi/URN:NBN:fi:au:ptvl:v1132"
+                },
+                {
+                    "@id": "http://urn.fi/URN:NBN:fi:au:ptvl:v1142"
+                }
+            ],
+            "suomi-meta:contentModified": {
+                "@value": "2025-08-04T11:41:41.067Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:identifier": "c51363f0-e456-4a6d-a98d-1f7b8a8e25a3",
+            "dcterms:language": "en",
+            "dcterms:modified": {
+                "@value": "2025-08-04T11:42:04.403Z",
+                "@type": "xsd:dateTime"
+            },
+            "owl:versionIRI": {
+                "@id": "dsipo:0.0.1/"
+            },
+            "owl:versionInfo": "0.0.1",
+            "dcterms:created": [
+                {
+                    "@value": "2025-08-04T11:41:41.068Z",
+                    "@type": "xsd:dateTime"
+                },
+                {
+                    "@value": "2025-08-04T11:41:41.067Z",
+                    "@type": "xsd:dateTime"
+                }
+            ],
+            "dcterms:requires": {
+                "@id": "https://iri.suomi.fi/model/ktddecv/0.0.1/"
+            },
+            "dcap:preferredXMLNamespace": "https://iri.suomi.fi/model/dsipo/",
+            "dcap:preferredXMLNamespacePrefix": "dsipo",
+            "suomi-meta:contact": "yhteentoimivuus@dvv.fi",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "DSI KTDDE Purchase Order"
+            },
+            "@type": [
+                "suomi-meta:ApplicationProfile",
+                "owl:Ontology"
+            ],
+            "dcterms:contributor": {
+                "@id": "urn:uuid:0e7e4f57-be57-4f99-bb1f-bfdcf0b6948a"
+            }
+        },
+        {
+            "@id": "dsipo:hasDelivery",
+            "@type": [
+                "sh:PropertyShape",
+                "owl:ObjectProperty"
+            ],
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "has delivery"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:created": {
+                "@value": "2025-08-04T12:04:52.623Z",
+                "@type": "xsd:dateTime"
+            },
+            "sh:path": {
+                "@id": "owl:topObjectProperty"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:05:24.873Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "sh:class": {
+                "@id": "ktddecv:Delivery"
+            },
+            "dcterms:identifier": {
+                "@value": "hasDelivery",
+                "@type": "xsd:NCName"
+            }
+        },
+        {
+            "@id": "dsipo:Amount",
+            "sh:property": [
+                {
+                    "@id": "dsipo:currencyCode"
+                },
+                {
+                    "@id": "dsipo:value"
+                }
+            ],
+            "dcterms:created": {
+                "@value": "2025-08-04T11:46:38.445Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:identifier": {
+                "@value": "Amount",
+                "@type": "xsd:NCName"
+            },
+            "@type": "sh:NodeShape",
+            "sh:targetClass": {
+                "@id": "ktddecv:Amount"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Amount"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T11:46:38.445Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            }
+        },
+        {
+            "@id": "dsipo:currencyCode",
+            "sh:path": {
+                "@id": "ktddecv:currencyCode"
+            },
+            "dcterms:identifier": {
+                "@value": "currencyCode",
+                "@type": "xsd:NCName"
+            },
+            "@type": [
+                "owl:DatatypeProperty",
+                "sh:PropertyShape"
+            ],
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:modified": {
+                "@value": "2025-08-04T11:48:02.675Z",
+                "@type": "xsd:dateTime"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Currency Code"
+            },
+            "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "dcterms:created": {
+                "@value": "2025-08-04T11:46:38.505Z",
+                "@type": "xsd:dateTime"
+            }
+        },
+        {
+            "@id": "dsipo:value",
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "sh:datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+            "dcterms:identifier": {
+                "@value": "value",
+                "@type": "xsd:NCName"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T11:46:38.513Z",
+                "@type": "xsd:dateTime"
+            },
+            "@type": [
+                "sh:PropertyShape",
+                "owl:DatatypeProperty"
+            ],
+            "sh:path": {
+                "@id": "ktddecv:value"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Value"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T11:47:50.318Z",
+                "@type": "xsd:dateTime"
+            }
+        },
+        {
+            "@id": "dsipo:Delivery",
+            "sh:property": {
+                "@id": "dsipo:deliveryTerms"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "sh:targetClass": {
+                "@id": "ktddecv:Delivery"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Delivery"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:00:48.211Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:00:48.211Z",
+                "@type": "xsd:dateTime"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "@type": "sh:NodeShape",
+            "dcterms:identifier": {
+                "@value": "Delivery",
+                "@type": "xsd:NCName"
+            }
+        },
+        {
+            "@id": "dsipo:deliveryTerms",
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "sh:PropertyShape"
+            ],
+            "sh:class": {
+                "@id": "ktddecv:TradeDeliveryTerms"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "delivery terms"
+            },
+            "dcterms:identifier": {
+                "@value": "deliveryTerms",
+                "@type": "xsd:NCName"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:created": {
+                "@value": "2025-08-04T12:00:48.271Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:01:33.423Z",
+                "@type": "xsd:dateTime"
+            },
+            "sh:path": {
+                "@id": "ktddecv:deliveryTerms"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            }
+        },
+        {
+            "@id": "dsipo:invoiceeParty",
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "dcterms:identifier": {
+                "@value": "invoiceeParty",
+                "@type": "xsd:NCName"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "invoicee party"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "sh:path": {
+                "@id": "ktddecv:invoiceeParty"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:22:01.78Z",
+                "@type": "xsd:dateTime"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "sh:PropertyShape"
+            ],
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:22:29.423Z",
+                "@type": "xsd:dateTime"
+            },
+            "sh:class": {
+                "@id": "ktddecv:Party"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            }
+        },
+        {
+            "@id": "dsipo:tenorPeriod",
+            "@type": [
+                "sh:PropertyShape",
+                "owl:ObjectProperty"
+            ],
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "tenor"
+            },
+            "sh:path": {
+                "@id": "ktddecv:tenorPeriod"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:42:25.463Z",
+                "@type": "xsd:dateTime"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "dcterms:identifier": {
+                "@value": "tenorPeriod",
+                "@type": "xsd:NCName"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:42:25.463Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8"
+        },
+        {
+            "@id": "dsipo:sellerParty",
+            "sh:class": {
+                "@id": "ktddecv:Party"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "sh:path": {
+                "@id": "ktddecv:sellerParty"
+            },
+            "@type": [
+                "sh:PropertyShape",
+                "owl:ObjectProperty"
+            ],
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:identifier": {
+                "@value": "sellerParty",
+                "@type": "xsd:NCName"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "seller party"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:10:15.956Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:11:11.379Z",
+                "@type": "xsd:dateTime"
+            }
+        },
+        {
+            "@id": "dsipo:loadingLocation",
+            "@type": [
+                "owl:ObjectProperty",
+                "sh:PropertyShape"
+            ],
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:03:21.874Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "loading location"
+            },
+            "sh:path": {
+                "@id": "ktddecv:loadingLocation"
+            },
+            "sh:class": {
+                "@id": "ktddecv:Location"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:01:10.255Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:identifier": {
+                "@value": "loadingLocation",
+                "@type": "xsd:NCName"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8"
+        },
+        {
+            "@id": "dsipo:Consignment",
+            "sh:property": [
+                {
+                    "@id": "dsipo:despatchDate"
+                },
+                {
+                    "@id": "dsipo:deliveryDate"
+                }
+            ],
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Consignment"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:identifier": {
+                "@value": "Consignment",
+                "@type": "xsd:NCName"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "@type": "sh:NodeShape",
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:46:37.802Z",
+                "@type": "xsd:dateTime"
+            },
+            "sh:targetClass": {
+                "@id": "ktddecv:Consignment"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:46:37.802Z",
+                "@type": "xsd:dateTime"
+            }
+        },
+        {
+            "@id": "dsipo:despatchDate",
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:46:37.909Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:46:37.909Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:identifier": {
+                "@value": "despatchDate",
+                "@type": "xsd:NCName"
+            },
+            "@type": [
+                "owl:DatatypeProperty",
+                "sh:PropertyShape"
+            ],
+            "sh:path": {
+                "@id": "ktddecv:despatchDate"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Despatch Date"
+            }
+        },
+        {
+            "@id": "dsipo:deliveryDate",
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:46:37.915Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Delivery Date"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "dcterms:identifier": {
+                "@value": "deliveryDate",
+                "@type": "xsd:NCName"
+            },
+            "@type": [
+                "owl:DatatypeProperty",
+                "sh:PropertyShape"
+            ],
+            "sh:path": {
+                "@id": "ktddecv:deliveryDate"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:created": {
+                "@value": "2025-08-04T12:46:37.915Z",
+                "@type": "xsd:dateTime"
+            }
+        },
+        {
+            "@id": "dsipo:unitPrice",
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "sh:path": {
+                "@id": "ktddecv:unitPrice"
+            },
+            "@type": [
+                "owl:DatatypeProperty",
+                "sh:PropertyShape"
+            ],
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Unit Price"
+            },
+            "sh:datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:identifier": {
+                "@value": "unitPrice",
+                "@type": "xsd:NCName"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:28:40.777Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:28:40.777Z",
+                "@type": "xsd:dateTime"
+            }
+        },
+        {
+            "@id": "dsipo:orderAmount",
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "sh:class": {
+                "@id": "ktddecv:Amount"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T11:47:06.828Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T11:45:36.469Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "sh:path": {
+                "@id": "ktddecv:orderAmount"
+            },
+            "@type": [
+                "sh:PropertyShape",
+                "owl:ObjectProperty"
+            ],
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "order amount"
+            },
+            "dcterms:identifier": {
+                "@value": "orderAmount",
+                "@type": "xsd:NCName"
+            }
+        },
+        {
+            "@id": "dsipo:hasContract",
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:06:43.561Z",
+                "@type": "xsd:dateTime"
+            },
+            "@type": [
+                "sh:PropertyShape",
+                "owl:ObjectProperty"
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "has contract"
+            },
+            "dcterms:identifier": {
+                "@value": "hasContract",
+                "@type": "xsd:NCName"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:06:03.448Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "sh:class": {
+                "@id": "ktddecv:Contract"
+            },
+            "sh:path": {
+                "@id": "owl:topObjectProperty"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8"
+        },
+        {
+            "@id": "dsipo:Contract",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Contract"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T11:42:40.083Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:identifier": {
+                "@value": "Contract",
+                "@type": "xsd:NCName"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:modified": {
+                "@value": "2025-08-04T11:42:40.083Z",
+                "@type": "xsd:dateTime"
+            },
+            "sh:targetClass": {
+                "@id": "ktddecv:Contract"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "@type": "sh:NodeShape",
+            "sh:property": {
+                "@id": "dsipo:contractIdentifier"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            }
+        },
+        {
+            "@id": "dsipo:contractIdentifier",
+            "dcterms:identifier": {
+                "@value": "contractIdentifier",
+                "@type": "xsd:NCName"
+            },
+            "@type": [
+                "sh:PropertyShape",
+                "owl:DatatypeProperty"
+            ],
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Contract Identifier"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:created": {
+                "@value": "2025-08-04T11:42:40.157Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:20:50.261Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "sh:path": {
+                "@id": "ktddecv:contractIdentifier"
+            }
+        },
+        {
+            "@id": "dsipo:hasItem",
+            "sh:path": {
+                "@id": "owl:topObjectProperty"
+            },
+            "sh:class": {
+                "@id": "ktddecv:GoodsItem"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:27:43.444Z",
+                "@type": "xsd:dateTime"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "sh:PropertyShape"
+            ],
+            "dcterms:identifier": {
+                "@value": "hasItem",
+                "@type": "xsd:NCName"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:26:48.695Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "has item"
+            }
+        },
+        {
+            "@id": "dsipo:deliveryParty",
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:23:47.981Z",
+                "@type": "xsd:dateTime"
+            },
+            "@type": [
+                "sh:PropertyShape",
+                "owl:ObjectProperty"
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:created": {
+                "@value": "2025-08-04T12:23:18.877Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "sh:path": {
+                "@id": "ktddecv:deliveryParty"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "delivery party"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:identifier": {
+                "@value": "deliveryParty",
+                "@type": "xsd:NCName"
+            },
+            "sh:class": {
+                "@id": "ktddecv:Party"
+            }
+        },
+        {
+            "@id": "dsipo:paymentMethod",
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "@type": [
+                "sh:PropertyShape",
+                "owl:DatatypeProperty"
+            ],
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:identifier": {
+                "@value": "paymentMethod",
+                "@type": "xsd:NCName"
+            },
+            "sh:path": {
+                "@id": "ktddecv:paymentMethod"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:43:11.613Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Payment Method"
+            },
+            "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:43:11.613Z",
+                "@type": "xsd:dateTime"
+            }
+        },
+        {
+            "@id": "dsipo:includesAllowanceCharge",
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "dcterms:identifier": {
+                "@value": "includesAllowanceCharge",
+                "@type": "xsd:NCName"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "includes allowance charge"
+            },
+            "sh:path": {
+                "@id": "ktddecv:includesAllowanceCharge"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-05T16:32:03.116Z",
+                "@type": "xsd:dateTime"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "sh:PropertyShape"
+            ],
+            "sh:class": {
+                "@id": "ktddecv:AllowanceCharge"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-05T16:32:24.706Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8"
+        },
+        {
+            "@id": "dsipo:Party",
+            "dcterms:created": {
+                "@value": "2025-08-04T12:07:30.425Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "sh:property": [
+                {
+                    "@id": "dsipo:name"
+                },
+                {
+                    "@id": "dsipo:partyAddress"
+                }
+            ],
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "sh:targetClass": {
+                "@id": "ktddecv:Party"
+            },
+            "@type": "sh:NodeShape",
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:07:30.425Z",
+                "@type": "xsd:dateTime"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Party"
+            },
+            "dcterms:identifier": {
+                "@value": "Party",
+                "@type": "xsd:NCName"
+            }
+        },
+        {
+            "@id": "dsipo:name",
+            "sh:path": {
+                "@id": "ktddecv:name"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:20:28.065Z",
+                "@type": "xsd:dateTime"
+            },
+            "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "@type": [
+                "sh:PropertyShape",
+                "owl:DatatypeProperty"
+            ],
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Name"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:07:30.49Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:identifier": {
+                "@value": "name",
+                "@type": "xsd:NCName"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            }
+        },
+        {
+            "@id": "dsipo:partyAddress",
+            "sh:path": {
+                "@id": "ktddecv:partyAddress"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "party address"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:identifier": {
+                "@value": "partyAddress",
+                "@type": "xsd:NCName"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "sh:PropertyShape"
+            ],
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:07:30.485Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:07:30.485Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8"
+        },
+        {
+            "@id": "dsipo:deliveryLocation",
+            "dcterms:created": {
+                "@value": "2025-08-04T12:01:10.261Z",
+                "@type": "xsd:dateTime"
+            },
+            "sh:class": {
+                "@id": "ktddecv:Location"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "sh:PropertyShape"
+            ],
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "delivery location"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:03:05.008Z",
+                "@type": "xsd:dateTime"
+            },
+            "sh:path": {
+                "@id": "ktddecv:deliveryLocation"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "dcterms:identifier": {
+                "@value": "deliveryLocation",
+                "@type": "xsd:NCName"
+            }
+        },
+        {
+            "@id": "dsipo:Country",
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:identifier": {
+                "@value": "Country",
+                "@type": "xsd:NCName"
+            },
+            "@type": "sh:NodeShape",
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "sh:targetClass": {
+                "@id": "ktddecv:Country"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Country"
+            },
+            "sh:property": {
+                "@id": "dsipo:name"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:48:10.228Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:created": {
+                "@value": "2025-08-04T12:48:10.228Z",
+                "@type": "xsd:dateTime"
+            }
+        },
+        {
+            "@id": "dsipo:PurchaseOrder",
+            "sh:property": [
+                {
+                    "@id": "dsipo:orderDate"
+                },
+                {
+                    "@id": "dsipo:includesAllowanceCharge"
+                },
+                {
+                    "@id": "dsipo:definesPaymentTerms"
+                },
+                {
+                    "@id": "dsipo:hasContract"
+                },
+                {
+                    "@id": "dsipo:orderAmount"
+                },
+                {
+                    "@id": "dsipo:hasItem"
+                },
+                {
+                    "@id": "dsipo:sellerParty"
+                },
+                {
+                    "@id": "dsipo:invoiceeParty"
+                },
+                {
+                    "@id": "dsipo:hasDelivery"
+                },
+                {
+                    "@id": "dsipo:buyerParty"
+                },
+                {
+                    "@id": "dsipo:deliveryParty"
+                },
+                {
+                    "@id": "dsipo:orderIdentifier"
+                }
+            ],
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Purchase Order"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T11:43:42.939Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "@type": "sh:NodeShape",
+            "dcterms:identifier": {
+                "@value": "PurchaseOrder",
+                "@type": "xsd:NCName"
+            },
+            "sh:targetClass": {
+                "@id": "ktddecv:PurchaseOrder"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T11:43:42.939Z",
+                "@type": "xsd:dateTime"
+            }
+        },
+        {
+            "@id": "dsipo:orderDate",
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "@type": [
+                "owl:DatatypeProperty",
+                "sh:PropertyShape"
+            ],
+            "sh:path": {
+                "@id": "ktddecv:orderDate"
+            },
+            "sh:datatype": "http://www.w3.org/2001/XMLSchema#date",
+            "dcterms:identifier": {
+                "@value": "orderDate",
+                "@type": "xsd:NCName"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:modified": {
+                "@value": "2025-08-04T11:47:24.502Z",
+                "@type": "xsd:dateTime"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Order Date"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T11:43:43.011Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            }
+        },
+        {
+            "@id": "dsipo:definesPaymentTerms",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "defines payment terms"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-05T16:41:55.215Z",
+                "@type": "xsd:dateTime"
+            },
+            "sh:path": {
+                "@id": "ktddecv:definesPaymentTerms"
+            },
+            "@type": [
+                "sh:PropertyShape",
+                "owl:ObjectProperty"
+            ],
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-05T16:42:51.68Z",
+                "@type": "xsd:dateTime"
+            },
+            "sh:class": {
+                "@id": "ktddecv:PaymentTerms"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:identifier": {
+                "@value": "definesPaymentTerms",
+                "@type": "xsd:NCName"
+            }
+        },
+        {
+            "@id": "dsipo:buyerParty",
+            "sh:class": {
+                "@id": "ktddecv:Party"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "@type": [
+                "sh:PropertyShape",
+                "owl:ObjectProperty"
+            ],
+            "dcterms:identifier": {
+                "@value": "buyerParty",
+                "@type": "xsd:NCName"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:08:46.771Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:08:01.573Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "sh:path": {
+                "@id": "ktddecv:buyerParty"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "buyer party"
+            }
+        },
+        {
+            "@id": "dsipo:orderIdentifier",
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Order Identifier"
+            },
+            "@type": [
+                "sh:PropertyShape",
+                "owl:DatatypeProperty"
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "sh:path": {
+                "@id": "ktddecv:orderIdentifier"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T11:43:43.005Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T11:47:35.402Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:identifier": {
+                "@value": "orderIdentifier",
+                "@type": "xsd:NCName"
+            },
+            "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            }
+        },
+        {
+            "@id": "dsipo:productIdentifier",
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Product Identifier"
+            },
+            "sh:path": {
+                "@id": "ktddecv:productIdentifier"
+            },
+            "@type": [
+                "sh:PropertyShape",
+                "owl:DatatypeProperty"
+            ],
+            "dcterms:created": {
+                "@value": "2025-08-04T12:31:49.404Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "dcterms:identifier": {
+                "@value": "productIdentifier",
+                "@type": "xsd:NCName"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:31:49.404Z",
+                "@type": "xsd:dateTime"
+            }
+        },
+        {
+            "@id": "dsipo:AllowanceCharge",
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:51:07.436Z",
+                "@type": "xsd:dateTime"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Allowance Charge"
+            },
+            "@type": "sh:NodeShape",
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "sh:targetClass": {
+                "@id": "ktddecv:AllowanceCharge"
+            },
+            "dcterms:identifier": {
+                "@value": "AllowanceCharge",
+                "@type": "xsd:NCName"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:51:07.436Z",
+                "@type": "xsd:dateTime"
+            }
+        },
+        {
+            "@id": "dsipo:TradeDeliveryTerms",
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:01:10.187Z",
+                "@type": "xsd:dateTime"
+            },
+            "sh:property": [
+                {
+                    "@id": "dsipo:loadingLocation"
+                },
+                {
+                    "@id": "dsipo:deliveryLocation"
+                },
+                {
+                    "@id": "dsipo:deliveryTypeCode"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "sh:targetClass": {
+                "@id": "ktddecv:TradeDeliveryTerms"
+            },
+            "dcterms:identifier": {
+                "@value": "TradeDeliveryTerms",
+                "@type": "xsd:NCName"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:01:10.187Z",
+                "@type": "xsd:dateTime"
+            },
+            "@type": "sh:NodeShape",
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Trade Delivery Terms"
+            }
+        },
+        {
+            "@id": "dsipo:deliveryTypeCode",
+            "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "@type": [
+                "sh:PropertyShape",
+                "owl:DatatypeProperty"
+            ],
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:20:05.455Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:19:29.295Z",
+                "@type": "xsd:dateTime"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "dcterms:identifier": {
+                "@value": "deliveryTypeCode",
+                "@type": "xsd:NCName"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Delivery Type Code"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "sh:path": {
+                "@id": "ktddecv:deliveryTypeCode"
+            }
+        },
+        {
+            "@id": "dsipo:descriptionOfGoods",
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "@type": [
+                "owl:DatatypeProperty",
+                "sh:PropertyShape"
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:33:26.825Z",
+                "@type": "xsd:dateTime"
+            },
+            "sh:path": {
+                "@id": "ktddecv:descriptionOfGoods"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:33:26.825Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:identifier": {
+                "@value": "descriptionOfGoods",
+                "@type": "xsd:NCName"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Description"
+            },
+            "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8"
+        },
+        {
+            "@id": "dsipo:PaymentTerms",
+            "dcterms:identifier": {
+                "@value": "PaymentTerms",
+                "@type": "xsd:NCName"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Payment Terms"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:42:25.401Z",
+                "@type": "xsd:dateTime"
+            },
+            "@type": "sh:NodeShape",
+            "sh:property": {
+                "@id": "dsipo:paymentMethod"
+            },
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "dcterms:created": {
+                "@value": "2025-08-04T12:42:25.401Z",
+                "@type": "xsd:dateTime"
+            },
+            "sh:targetClass": {
+                "@id": "ktddecv:PaymentTerms"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8"
+        },
+        {
+            "@id": "dsipo:Location",
+            "dcterms:created": {
+                "@value": "2025-08-04T12:02:20.641Z",
+                "@type": "xsd:dateTime"
+            },
+            "@type": "sh:NodeShape",
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "dcterms:identifier": {
+                "@value": "Location",
+                "@type": "xsd:NCName"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:02:20.641Z",
+                "@type": "xsd:dateTime"
+            },
+            "sh:targetClass": {
+                "@id": "ktddecv:Location"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Location"
+            }
+        },
+        {
+            "@id": "dsipo:locationCountry",
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:02:20.709Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:identifier": {
+                "@value": "locationCountry",
+                "@type": "xsd:NCName"
+            },
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "sh:path": {
+                "@id": "ktddecv:locationCountry"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "location country"
+            },
+            "@type": [
+                "sh:PropertyShape",
+                "owl:ObjectProperty"
+            ],
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "dcterms:created": {
+                "@value": "2025-08-04T12:02:20.709Z",
+                "@type": "xsd:dateTime"
+            }
+        },
+        {
+            "@id": "dsipo:GoodsItem",
+            "sh:property": [
+                {
+                    "@id": "dsipo:productIdentifier"
+                },
+                {
+                    "@id": "dsipo:unitPrice"
+                },
+                {
+                    "@id": "dsipo:hasCountryOfOrigin"
+                },
+                {
+                    "@id": "dsipo:descriptionOfGoods"
+                }
+            ],
+            "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+            "suomi-meta:publicationStatus": {
+                "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+            },
+            "@type": "sh:NodeShape",
+            "dcterms:created": {
+                "@value": "2025-08-04T12:26:20.185Z",
+                "@type": "xsd:dateTime"
+            },
+            "dcterms:identifier": {
+                "@value": "GoodsItem",
+                "@type": "xsd:NCName"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Product Item Goods Item"
+            },
+            "dcterms:modified": {
+                "@value": "2025-08-04T12:26:20.185Z",
+                "@type": "xsd:dateTime"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://iri.suomi.fi/model/dsipo/"
+            },
+            "sh:targetClass": {
+                "@id": "ktddecv:GoodsItem"
+            }
+        }
+    ],
+    "@context": {
+        "dcap": "http://purl.org/ws-mmi-dc/terms/",
+        "suomi-meta": "https://iri.suomi.fi/model/suomi-meta/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "dsipo": "https://iri.suomi.fi/model/dsipo/",
+        "geo": "http://www.opengis.net/ont/geosparql#",
+        "ktddecv": "https://iri.suomi.fi/model/ktddecv/0.0.1/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "sh": "http://www.w3.org/ns/shacl#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "http": "http://www.w3.org/2011/http#"
+    }
+}

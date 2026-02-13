@@ -1,0 +1,70 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "PurchaseOrder": {
+      "@id": "ktddecv:PurchaseOrder",
+      "@context": {
+        "orderDate": {
+          "@id": "ktddecv:orderDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "includesAllowanceCharge": {
+          "@id": "ktddecv:includesAllowanceCharge",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "definesPaymentTerms": {
+          "@id": "ktddecv:definesPaymentTerms",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "hasContract": {
+          "@id": "owl:topObjectProperty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "orderAmount": {
+          "@id": "ktddecv:orderAmount",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "hasItem": {
+          "@id": "owl:topObjectProperty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "sellerParty": {
+          "@id": "ktddecv:sellerParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "invoiceeParty": {
+          "@id": "ktddecv:invoiceeParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "hasDelivery": {
+          "@id": "owl:topObjectProperty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "buyerParty": {
+          "@id": "ktddecv:buyerParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "deliveryParty": {
+          "@id": "ktddecv:deliveryParty",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "orderIdentifier": {
+          "@id": "ktddecv:orderIdentifier"
+        }
+      }
+    }
+  }
+}

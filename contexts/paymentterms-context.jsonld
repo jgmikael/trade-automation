@@ -7,19 +7,8 @@
     "PaymentTerms": {
       "@id": "ktddecv:PaymentTerms",
       "@context": {
-        "paymentTermCode": {
-          "@id": "ktddecv:paymentTermCode"
-        },
-        "tenor": {
-          "@id": "ktddecv:tenor"
-        },
-        "hasPaymentScheduleLine": {
-          "@id": "ktddecv:hasPaymentScheduleLine",
-          "@type": "@id",
-          "@container": "@set"
-        },
-        "tenorPeriod": {
-          "@id": "ktddecv:tenorPeriod"
+        "paymentMethod": {
+          "@id": "ktddecv:paymentMethod"
         }
       }
     }

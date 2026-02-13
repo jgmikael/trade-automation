@@ -7,26 +7,20 @@
     "GoodsItem": {
       "@id": "ktddecv:GoodsItem",
       "@context": {
-        "descriptionOfGoodsText": {
-          "@id": "ktddecv:descriptionOfGoodsText"
-        },
-        "hasQuantity": {
-          "@id": "ktddecv:hasQuantity"
-        },
-        "hasDangerousGoodsDetails": {
-          "@id": "ktddecv:hasDangerousGoodsDetails"
-        },
         "productIdentifier": {
           "@id": "ktddecv:productIdentifier"
         },
-        "itemDescriptionText": {
-          "@id": "ktddecv:itemDescriptionText"
-        },
-        "appliedCommodityClassification": {
-          "@id": "ktddecv:appliedCommodityClassification"
+        "unitPrice": {
+          "@id": "ktddecv:unitPrice",
+          "@type": "http://www.w3.org/2001/XMLSchema#decimal"
         },
         "hasCountryOfOrigin": {
-          "@id": "ktddecv:hasCountryOfOrigin"
+          "@id": "ktddecv:hasCountryOfOrigin",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "descriptionOfGoods": {
+          "@id": "ktddecv:descriptionOfGoods"
         }
       }
     }

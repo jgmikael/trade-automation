@@ -10,20 +10,8 @@
         "name": {
           "@id": "ktddecv:name"
         },
-        "partyLegalEntity": {
-          "@id": "ktddecv:partyLegalEntity",
-          "@type": "@id",
-          "@container": "@set"
-        },
         "partyAddress": {
-          "@id": "ktddecv:partyAddress",
-          "@type": "@id",
-          "@container": "@set"
-        },
-        "partyIdentifier": {
-          "@id": "ktddecv:partyIdentifier",
-          "@type": "@id",
-          "@container": "@set"
+          "@id": "ktddecv:partyAddress"
         }
       }
     }
