@@ -2,11 +2,11 @@
 
 **Project:** International Trade Automation with W3C Verifiable Credentials  
 **Date:** 2024-02-13  
-**Status:** ✅ COMPLETE - All 4 documents implemented
+**Status:** ✅ COMPLETE - All 5 documents implemented
 
 ## Overview
 
-Successfully converted 4 KTDDE SHACL application profiles from tietomallit.suomi.fi into production-ready W3C Verifiable Credential implementations with JSON-LD contexts and JSON Schemas.
+Successfully converted 5 KTDDE SHACL application profiles from tietomallit.suomi.fi into production-ready W3C Verifiable Credential implementations with JSON-LD contexts and JSON Schemas.
 
 ## Documents Implemented
 
@@ -64,6 +64,21 @@ Letter of credit financial instrument covering:
 - Delivery milestones
 - Presentation rules
 
+### 5. Purchase Order ✅
+**Version:** 0.0.1 (59KB SHACL)  
+**Generated:** 12 types  
+**Key Properties:** 12
+
+Purchase order for goods covering:
+- Order identification (orderIdentifier, orderDate)
+- Trade parties (buyer, seller, invoicee, delivery party)
+- Order amount with line items
+- Payment terms and delivery terms
+- Allowances and charges
+- Contract references
+- Delivery schedule and locations
+- Consignment information
+
 ## Technical Architecture
 
 ### SHACL → W3C VC Converter Tool
@@ -88,29 +103,32 @@ Letter of credit financial instrument covering:
 
 ```
 trade-automation/
-├── shacl/                              # Source SHACL files (4 files)
+├── shacl/                              # Source SHACL files (5 files)
 │   ├── bill-of-lading-v0.0.1.jsonld
 │   ├── certificate-of-origin-v0.0.1.jsonld
 │   ├── commercial-invoice-v0.0.2.jsonld
-│   └── letter-of-credit-v0.0.1.jsonld
+│   ├── letter-of-credit-v0.0.1.jsonld
+│   └── purchase-order-v0.0.1.jsonld
 │
-├── contexts/                           # JSON-LD contexts (53 files)
+├── contexts/                           # JSON-LD contexts (51 files)
 │   ├── billoflading-context.jsonld
 │   ├── certificateoforigin-context.jsonld
 │   ├── commercialinvoice-context.jsonld
 │   ├── documentarycredit-context.jsonld
+│   ├── purchaseorder-context.jsonld
 │   ├── party-context.jsonld
 │   ├── location-context.jsonld
-│   └── ... (47 more supporting types)
+│   └── ... (44 more supporting types)
 │
-├── credentials/                        # JSON Schemas (53 files)
+├── credentials/                        # JSON Schemas (51 files)
 │   ├── billoflading-schema.json
 │   ├── certificateoforigin-schema.json
 │   ├── commercialinvoice-schema.json
 │   ├── documentarycredit-schema.json
+│   ├── purchaseorder-schema.json
 │   ├── party-schema.json
 │   ├── location-schema.json
-│   └── ... (47 more supporting types)
+│   └── ... (44 more supporting types)
 │
 ├── ontology/                           # KTDDE vocabulary
 │   ├── ktdde-v0.0.5.rdf               # Full KTDDE ontology (98 classes)
@@ -126,13 +144,14 @@ trade-automation/
 
 ## Semantic Type Coverage
 
-**Total unique types:** 53+
+**Total unique types:** 54+
 
-### Core Document Types (4)
+### Core Document Types (5)
 - BillOfLading
 - CertificateOfOrigin
 - CommercialInvoice
 - DocumentaryCredit
+- PurchaseOrder
 
 ### Party & Organization Types (3)
 - Party
@@ -151,8 +170,9 @@ trade-automation/
 - CommodityClassification
 - DangerousGoods
 
-### Financial Types (9)
+### Financial Types (10)
 - MonetaryAmount
+- Amount
 - PaymentTerms
 - PaymentLine
 - PaymentScheduleLine
@@ -291,6 +311,21 @@ ajv validate \
   -s credentials/commercialinvoice-schema.json \
   -d my-invoice-credential.json
 ```
+
+## Summary Statistics
+
+**Documents Implemented:** 5  
+**SHACL Profiles Processed:** 5 (total 683KB)  
+**Unique Semantic Types:** 54+  
+**JSON-LD Contexts Generated:** 51  
+**JSON Schemas Generated:** 51  
+
+**Document Breakdown:**
+1. Bill of Lading: 17 types, 40 properties (133KB SHACL)
+2. Certificate of Origin: 14 types, 23 properties (97KB SHACL)
+3. Commercial Invoice: 22 types, 28 properties (102KB SHACL)
+4. Documentary Credit: 29 types, 51 properties (242KB SHACL)
+5. Purchase Order: 12 types, 12 properties (59KB SHACL)
 
 ## Next Steps
 
