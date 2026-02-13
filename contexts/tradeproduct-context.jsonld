@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "TradeProduct": {
+      "@id": "ktddecv:TradeProduct",
+      "@context": {
+        "productName": {
+          "@id": "ktddecv:productName"
+        },
+        "productIdentifier": {
+          "@id": "ktddecv:productIdentifier"
+        },
+        "commodityCode": {
+          "@id": "ktddecv:commodityCode"
+        },
+        "applicableCommodityClassification": {
+          "@id": "ktddecv:applicableCommodityClassification",
+          "@type": "@id",
+          "@container": "@set"
+        }
+      }
+    }
+  }
+}

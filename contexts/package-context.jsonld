@@ -7,15 +7,10 @@
     "Package": {
       "@id": "ktddecv:Package",
       "@context": {
-        "shippingMarks": {
-          "@id": "ktddecv:shippingMarks"
-        },
         "packageTypeCode": {
-          "@id": "ktddecv:packageTypeCode"
-        },
-        "packageCount": {
-          "@id": "ktddecv:packageCount",
-          "@type": "http://www.w3.org/2001/XMLSchema#integer"
+          "@id": "ktddecv:packageTypeCode",
+          "@type": "@id",
+          "@container": "@set"
         }
       }
     }

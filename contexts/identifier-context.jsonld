@@ -6,7 +6,11 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "Identifier": {
       "@id": "ktddecv:Identifier",
-      "@context": {}
+      "@context": {
+        "value": {
+          "@id": "ktddecv:value"
+        }
+      }
     }
   }
 }

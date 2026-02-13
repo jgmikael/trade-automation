@@ -36,6 +36,18 @@ def get_label(item: Dict, lang: str = 'en') -> str:
         return label.get('@value', '')
     return str(label)
 
+def get_value(item: Any, default: Any = None) -> Any:
+    """Extract value from JSON-LD value object or return as-is"""
+    if isinstance(item, dict) and '@value' in item:
+        val = item['@value']
+        # Convert string numbers to actual numbers
+        if item.get('@type') in ['xsd:integer', 'http://www.w3.org/2001/XMLSchema#integer']:
+            return int(val)
+        elif item.get('@type') in ['xsd:decimal', 'http://www.w3.org/2001/XMLSchema#decimal']:
+            return float(val)
+        return val
+    return item if item is not None else default
+
 def get_datatype_json_type(xsd_type: str) -> tuple[str, Optional[str]]:
     """Map XSD datatype to JSON Schema type and format"""
     type_map = {
@@ -103,10 +115,17 @@ class SHACLToVCConverter:
             }
         }
         
-        # Process properties
+        # Process properties (handle both array and single object)
         properties = node_shape.get('sh:property', [])
+        if isinstance(properties, dict):
+            properties = [properties]
+        
         for prop_ref in properties:
-            prop_id = prop_ref.get('@id')
+            # Handle both {"@id": "..."} and direct string references
+            if isinstance(prop_ref, str):
+                prop_id = prop_ref
+            else:
+                prop_id = prop_ref.get('@id')
             prop = self.get_property_details(prop_id)
             if not prop:
                 continue
@@ -126,7 +145,8 @@ class SHACLToVCConverter:
             elif 'sh:class' in prop:
                 prop_context["@type"] = "@id"
                 # If it's a collection/array
-                if prop.get('sh:maxCount', 999) > 1 or not 'sh:maxCount' in prop:
+                max_count = get_value(prop.get('sh:maxCount'), 999)
+                if max_count > 1 or 'sh:maxCount' not in prop:
                     prop_context["@container"] = "@set"
             
             context["@context"][class_name]["@context"][prop_name] = prop_context
@@ -205,12 +225,18 @@ class SHACLToVCConverter:
             }
         }
         
-        # Process properties
+        # Process properties (handle both array and single object)
         required_props = ["type"]
         properties = node_shape.get('sh:property', [])
+        if isinstance(properties, dict):
+            properties = [properties]
         
         for prop_ref in properties:
-            prop_id = prop_ref.get('@id')
+            # Handle both {"@id": "..."} and direct string references
+            if isinstance(prop_ref, str):
+                prop_id = prop_ref
+            else:
+                prop_id = prop_ref.get('@id')
             prop = self.get_property_details(prop_id)
             if not prop:
                 continue
@@ -233,7 +259,7 @@ class SHACLToVCConverter:
                 _, ref_class_name = extract_prefix_from_id(class_ref)
                 
                 # Check if it's a collection
-                max_count = prop.get('sh:maxCount', 999)
+                max_count = get_value(prop.get('sh:maxCount'), 999)
                 if max_count > 1 or 'sh:maxCount' not in prop:
                     prop_schema["type"] = "array"
                     prop_schema["items"] = {
@@ -249,7 +275,8 @@ class SHACLToVCConverter:
                     }
             
             # Check if required
-            if prop.get('sh:minCount', 0) >= 1:
+            min_count = get_value(prop.get('sh:minCount'), 0)
+            if min_count >= 1:
                 required_props.append(prop_name)
             
             subject_schema["properties"][prop_name] = prop_schema

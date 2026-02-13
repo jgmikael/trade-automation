@@ -7,19 +7,8 @@
     "Location": {
       "@id": "ktddecv:Location",
       "@context": {
-        "unlocode": {
-          "@id": "ktddecv:unlocode"
-        },
-        "locationID": {
-          "@id": "ktddecv:locationID"
-        },
         "locationName": {
           "@id": "ktddecv:locationName"
-        },
-        "locationCountry": {
-          "@id": "ktddecv:locationCountry",
-          "@type": "@id",
-          "@container": "@set"
         }
       }
     }

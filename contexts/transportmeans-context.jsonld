@@ -7,23 +7,19 @@
     "TransportMeans": {
       "@id": "ktddecv:TransportMeans",
       "@context": {
-        "iMOShipID": {
-          "@id": "ktddecv:iMOShipID"
+        "transportMeansIdentifier": {
+          "@id": "ktddecv:transportMeansIdentifier"
         },
-        "vesselName": {
-          "@id": "ktddecv:vesselName"
-        },
-        "flightNumber": {
-          "@id": "ktddecv:flightNumber"
+        "transportMeansGrossWeight": {
+          "@id": "ktddecv:transportMeansGrossWeight",
+          "@type": "@id",
+          "@container": "@set"
         },
         "vehicleRegistrationIdentifier": {
           "@id": "ktddecv:vehicleRegistrationIdentifier"
         },
         "vehicleName": {
           "@id": "ktddecv:vehicleName"
-        },
-        "voyageNumber": {
-          "@id": "ktddecv:voyageNumber"
         }
       }
     }

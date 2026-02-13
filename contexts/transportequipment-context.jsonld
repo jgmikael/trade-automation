@@ -7,18 +7,15 @@
     "TransportEquipment": {
       "@id": "ktddecv:TransportEquipment",
       "@context": {
+        "containerSizeTypeCode": {
+          "@id": "ktddecv:containerSizeTypeCode"
+        },
         "containerNumber": {
           "@id": "ktddecv:containerNumber"
         },
         "equipmentIdentifier": {
           "@id": "ktddecv:equipmentIdentifier",
-          "@type": "@id",
-          "@container": "@set"
-        },
-        "hasSeal": {
-          "@id": "owl:topObjectProperty",
-          "@type": "@id",
-          "@container": "@set"
+          "@type": "@id"
         }
       }
     }

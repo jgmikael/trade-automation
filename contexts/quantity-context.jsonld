@@ -11,7 +11,8 @@
           "@id": "ktddecv:unitCode"
         },
         "quantityValue": {
-          "@id": "ktddecv:quantityValue"
+          "@id": "ktddecv:quantityValue",
+          "@type": "http://www.w3.org/2001/XMLSchema#decimal"
         }
       }
     }

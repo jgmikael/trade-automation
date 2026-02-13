@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "CertificateOfOrigin": {
+      "@id": "ktddecv:CertificateOfOrigin",
+      "@context": {
+        "invoiceNumber": {
+          "@id": "ktddecv:invoiceNumber"
+        },
+        "creditIdentifier": {
+          "@id": "ktddecv:creditIdentifier"
+        },
+        "transportDocumentNumber": {
+          "@id": "ktddecv:transportDocumentNumber"
+        },
+        "certificateNumber": {
+          "@id": "ktddecv:certificateNumber"
+        },
+        "contractNumber": {
+          "@id": "ktddecv:contractNumber"
+        },
+        "importerParty": {
+          "@id": "ktddecv:importerParty",
+          "@type": "@id"
+        },
+        "consignorParty": {
+          "@id": "ktddecv:consignorParty",
+          "@type": "@id"
+        },
+        "exporterParty": {
+          "@id": "ktddecv:exporterParty",
+          "@type": "@id"
+        },
+        "purchaseOrderNumber": {
+          "@id": "ktddecv:purchaseOrderNumber"
+        },
+        "consigneeParty": {
+          "@id": "ktddecv:consigneeParty",
+          "@type": "@id"
+        },
+        "documentIdentifier": {
+          "@id": "ktddecv:documentIdentifier"
+        },
+        "issuingAuthorityParty": {
+          "@id": "ktddecv:issuingAuthorityParty",
+          "@type": "@id"
+        },
+        "issueDate": {
+          "@id": "ktddecv:issueDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "issuerParty": {
+          "@id": "ktddecv:issuerParty",
+          "@type": "@id"
+        },
+        "hasConsignment": {
+          "@id": "ktddecv:hasConsignment",
+          "@type": "@id",
+          "@container": "@set"
+        }
+      }
+    }
+  }
+}

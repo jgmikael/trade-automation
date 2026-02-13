@@ -8,31 +8,17 @@
       "@id": "ktddecv:GoodsItem",
       "@context": {
         "hasPackage": {
-          "@id": "ktddecv:hasPackage",
+          "@id": "https://iri.suomi.fi/model/ktddecv/hasPackage",
           "@type": "@id",
           "@container": "@set"
-        },
-        "productName": {
-          "@id": "ktddecv:productName"
         },
         "descriptionOfGoodsText": {
           "@id": "ktddecv:descriptionOfGoodsText"
         },
-        "hasDangerousGoods": {
-          "@id": "ktddecv:hasDangerousGoods",
+        "hasProduct": {
+          "@id": "ktddecv:hasProduct",
           "@type": "@id",
           "@container": "@set"
-        },
-        "hasQuantity": {
-          "@id": "ktddecv:hasQuantity",
-          "@type": "@id",
-          "@container": "@set"
-        },
-        "hSCode": {
-          "@id": "ktddecv:hSCode"
-        },
-        "productIdentifier": {
-          "@id": "ktddecv:productIdentifier"
         }
       }
     }
