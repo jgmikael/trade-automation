@@ -22,10 +22,12 @@ This project aims to digitize and automate traditional paper-based international
 
 ```
 ├── ontology/           # OWL vocabulary definitions
-├── credentials/        # VC JSON-LD schemas and examples
-├── contexts/           # JSON-LD context files
+├── credentials/        # VC JSON-LD schemas (51 files)
+├── contexts/           # JSON-LD context files (51 files)
+├── shacl/             # Source SHACL profiles (5 files)
 ├── examples/           # Sample trade documents as VCs
-├── validation/         # Schema validation tools
+├── tools/             # SHACL to VC converter tool
+├── sap-simulator/     # SAP ERP API simulator with VC mapping
 └── docs/              # Documentation
 ```
 
@@ -59,6 +61,39 @@ KTDDE (to be documented) covers key international trade documents including:
 - Full KTDDE v0.0.5 vocabulary (98 classes)
 
 See [IMPLEMENTATION-SUMMARY.md](IMPLEMENTATION-SUMMARY.md) for complete details.
+
+## SAP API Simulator
+
+**NEW:** Complete SAP ERP simulation with W3C VC conversion!
+
+**Location:** `/sap-simulator/`
+
+**Features:**
+- Simulates SAP MM & SD modules (Purchase Orders, Sales Orders, Deliveries, Invoices)
+- Realistic international trade scenarios (EU ↔ Singapore, EU ↔ Japan)
+- Dual API: Traditional SAP OData format + W3C VC format
+- Real company data, products, HS codes, Incoterms
+- Mapping engine: SAP → KTDDE W3C VCs
+- Flask REST API with full documentation
+
+**Quick Start:**
+```bash
+cd sap-simulator
+pip install -r requirements.txt
+python3 api/sap_api.py
+# API runs on http://localhost:5000
+```
+
+**Demo:**
+```bash
+# Get all scenarios
+curl http://localhost:5000/sap/opu/odata/sap/api/v1/scenarios
+
+# Get W3C VCs for EU → Singapore scenario
+curl http://localhost:5000/vc/api/v1/scenarios/EU_TO_SINGAPORE_MACHINERY_EXPORT/verifiable-credentials
+```
+
+See [sap-simulator/README.md](sap-simulator/README.md) for full documentation.
 
 ## EU Business Wallet
 
