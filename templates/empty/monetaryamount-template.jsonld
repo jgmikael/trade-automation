@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/monetaryamount-context.jsonld"
+  ],
+  "id": "<<CREDENTIAL_ID>>",
+  "type": [
+    "VerifiableCredential",
+    "MonetaryAmountCredential"
+  ],
+  "issuer": {
+    "id": "<<ISSUER_DID>>",
+    "name": "<<ISSUER_NAME>>"
+  },
+  "issuanceDate": "<<ISO_8601_DATETIME>>",
+  "credentialSubject": {
+    "id": "<<SUBJECT_ID>>",
+    "type": "MonetaryAmount",
+    "currencyCode": "<<Currency Code>>"
+  },
+  "proof": {
+    "type": "<<SIGNATURE_TYPE>>",
+    "created": "<<ISO_8601_DATETIME>>",
+    "verificationMethod": "<<ISSUER_DID#KEY_ID>>",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "<<SIGNATURE_VALUE>>"
+  }
+}

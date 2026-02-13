@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/tradeitem-context.jsonld"
+  ],
+  "id": "https://example.com/credentials/tradeitem/EXAMPLE-001",
+  "type": [
+    "VerifiableCredential",
+    "TradeItemCredential"
+  ],
+  "issuer": {
+    "id": "did:example:issuer123",
+    "name": "Example Trade Item Issuer"
+  },
+  "issuanceDate": "2026-02-13T17:40:49.112177Z",
+  "credentialSubject": {
+    "id": "https://example.com/tradeitem/EXAMPLE-001",
+    "type": "TradeItem",
+    "unitPriceAmount": [
+      {
+        "type": "MonetaryAmount",
+        "amountValue": 1000.0,
+        "currencyCode": "EUR"
+      }
+    ],
+    "unitPrice": 123.45,
+    "hasProduct": [
+      {
+        "type": "TradeProduct",
+        "exampleProperty": "Example value for TradeProduct"
+      }
+    ]
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2026-02-13T17:40:49.112177Z",
+    "verificationMethod": "did:example:issuer123#key-1",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQpE1..........................................."
+  }
+}

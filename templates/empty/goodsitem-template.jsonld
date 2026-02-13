@@ -1,0 +1,35 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/goodsitem-context.jsonld"
+  ],
+  "id": "<<CREDENTIAL_ID>>",
+  "type": [
+    "VerifiableCredential",
+    "GoodsItemCredential"
+  ],
+  "issuer": {
+    "id": "<<ISSUER_DID>>",
+    "name": "<<ISSUER_NAME>>"
+  },
+  "issuanceDate": "<<ISO_8601_DATETIME>>",
+  "credentialSubject": {
+    "id": "<<SUBJECT_ID>>",
+    "type": "GoodsItem",
+    "hSCode": "<<HS Code>>",
+    "productIdentifier": "<<Product Identifier>>",
+    "hasCountryOfOrigin": [
+      {
+        "type": "Country",
+        "<<PROPERTY>>": "<<VALUE for Country>>"
+      }
+    ]
+  },
+  "proof": {
+    "type": "<<SIGNATURE_TYPE>>",
+    "created": "<<ISO_8601_DATETIME>>",
+    "verificationMethod": "<<ISSUER_DID#KEY_ID>>",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "<<SIGNATURE_VALUE>>"
+  }
+}

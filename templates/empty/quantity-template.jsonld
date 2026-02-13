@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/quantity-context.jsonld"
+  ],
+  "id": "<<CREDENTIAL_ID>>",
+  "type": [
+    "VerifiableCredential",
+    "QuantityCredential"
+  ],
+  "issuer": {
+    "id": "<<ISSUER_DID>>",
+    "name": "<<ISSUER_NAME>>"
+  },
+  "issuanceDate": "<<ISO_8601_DATETIME>>",
+  "credentialSubject": {
+    "id": "<<SUBJECT_ID>>",
+    "type": "Quantity",
+    "quantityValue": "<<Quantity Value>>",
+    "unitCode": "<<Unit Code>>"
+  },
+  "proof": {
+    "type": "<<SIGNATURE_TYPE>>",
+    "created": "<<ISO_8601_DATETIME>>",
+    "verificationMethod": "<<ISSUER_DID#KEY_ID>>",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "<<SIGNATURE_VALUE>>"
+  }
+}

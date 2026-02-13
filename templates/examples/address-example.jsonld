@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/address-context.jsonld"
+  ],
+  "id": "https://example.com/credentials/address/EXAMPLE-001",
+  "type": [
+    "VerifiableCredential",
+    "AddressCredential"
+  ],
+  "issuer": {
+    "id": "did:example:issuer123",
+    "name": "Example Address Issuer"
+  },
+  "issuanceDate": "2026-02-13T17:40:49.116742Z",
+  "credentialSubject": {
+    "id": "https://example.com/address/EXAMPLE-001",
+    "type": "Address"
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2026-02-13T17:40:49.116742Z",
+    "verificationMethod": "did:example:issuer123#key-1",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQpE1..........................................."
+  }
+}

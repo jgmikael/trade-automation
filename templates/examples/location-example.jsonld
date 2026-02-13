@@ -1,0 +1,35 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/location-context.jsonld"
+  ],
+  "id": "https://example.com/credentials/location/EXAMPLE-001",
+  "type": [
+    "VerifiableCredential",
+    "LocationCredential"
+  ],
+  "issuer": {
+    "id": "did:example:issuer123",
+    "name": "Example Location Issuer"
+  },
+  "issuanceDate": "2026-02-13T17:40:49.116167Z",
+  "credentialSubject": {
+    "id": "https://example.com/location/EXAMPLE-001",
+    "type": "Location",
+    "locationCountry": [
+      {
+        "type": "Country",
+        "countryCode": "FI"
+      }
+    ],
+    "locationName": "Example Location Name",
+    "unlocode": "Example UN Locode"
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2026-02-13T17:40:49.116167Z",
+    "verificationMethod": "did:example:issuer123#key-1",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQpE1..........................................."
+  }
+}

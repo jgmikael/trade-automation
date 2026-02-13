@@ -1,14 +1,18 @@
-# SHACL to W3C VC Converter
+# SHACL to W3C VC Tools
 
-Automatically converts SHACL application profiles into W3C Verifiable Credential JSON-LD contexts and JSON Schemas.
+Two tools for converting SHACL application profiles into W3C Verifiable Credentials:
+
+1. **shacl-to-vc-converter.py** - Generates JSON-LD contexts and JSON Schemas
+2. **generate_vc_templates.py** - Generates fillable VC templates
 
 ## Purpose
 
-SHACL (Shapes Constraint Language) defines the structure and validation rules for RDF data. This tool transforms SHACL shapes into production-ready W3C VC components:
+SHACL (Shapes Constraint Language) defines the structure and validation rules for RDF data. These tools transform SHACL shapes into production-ready W3C VC components:
 
 1. **JSON-LD Contexts** - Map SHACL properties to W3C VC format
 2. **JSON Schemas** - Provide validation for credential subjects
-3. **Ready for EU Business Wallet** - Standards-compliant credentials
+3. **VC Templates** - Fillable and example credentials
+4. **Ready for EU Business Wallet** - Standards-compliant credentials
 
 ## Installation
 
@@ -192,6 +196,166 @@ Ready to process from tietomallit.suomi.fi:
 3. **Create example credentials** using generated schemas
 4. **Implement validation** pipeline
 5. **Build issuer/verifier** services
+
+---
+
+## Tool 2: VC Template Generator
+
+### Purpose
+
+Generates fillable W3C Verifiable Credential templates from SHACL profiles. Creates both:
+- **Empty templates** with placeholders (for filling in)
+- **Example templates** with sample data (for reference)
+
+### Usage
+
+```bash
+python3 generate_vc_templates.py <shacl-file.jsonld> [output-dir]
+```
+
+### Example
+
+```bash
+# Generate templates for Commercial Invoice
+python3 generate_vc_templates.py ../shacl/commercial-invoice-v0.0.2.jsonld ../templates/
+
+# Outputs:
+# - templates/empty/commercialinvoice-template.jsonld    (fillable)
+# - templates/examples/commercialinvoice-example.jsonld  (with examples)
+# - Plus templates for all supporting types (Party, Location, etc.)
+```
+
+### Output Structure
+
+#### Empty Templates (`templates/empty/`)
+
+Fillable templates with placeholders:
+
+```json
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/commercialinvoice-context.jsonld"
+  ],
+  "id": "<<CREDENTIAL_ID>>",
+  "type": ["VerifiableCredential", "CommercialInvoiceCredential"],
+  "issuer": {
+    "id": "<<ISSUER_DID>>",
+    "name": "<<ISSUER_NAME>>"
+  },
+  "issuanceDate": "<<ISO_8601_DATETIME>>",
+  "credentialSubject": {
+    "id": "<<SUBJECT_ID>>",
+    "type": "CommercialInvoice",
+    "invoiceNumber": "<<Invoice Number>>",
+    "invoiceDate": "<<YYYY-MM-DD>>",
+    "totalAmount": [
+      {
+        "type": "MonetaryAmount",
+        "<<PROPERTY>>": "<<VALUE for MonetaryAmount>>"
+      }
+    ]
+  },
+  "proof": {
+    "type": "<<SIGNATURE_TYPE>>",
+    "created": "<<ISO_8601_DATETIME>>",
+    "verificationMethod": "<<ISSUER_DID#KEY_ID>>",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "<<SIGNATURE_VALUE>>"
+  }
+}
+```
+
+**How to use:**
+1. Copy template
+2. Replace `<<PLACEHOLDERS>>` with actual values
+3. Sign and issue the credential
+
+#### Example Templates (`templates/examples/`)
+
+Pre-filled with realistic sample data:
+
+```json
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/commercialinvoice-context.jsonld"
+  ],
+  "id": "https://example.com/credentials/commercialinvoice/EXAMPLE-001",
+  "type": ["VerifiableCredential", "CommercialInvoiceCredential"],
+  "issuer": {
+    "id": "did:example:issuer123",
+    "name": "Example Commercial Invoice Issuer"
+  },
+  "issuanceDate": "2026-02-13T17:40:49.107553Z",
+  "credentialSubject": {
+    "id": "https://example.com/commercialinvoice/EXAMPLE-001",
+    "type": "CommercialInvoice",
+    "invoiceNumber": "Example Invoice Number",
+    "invoiceDate": "2026-02-13",
+    "totalAmount": [
+      {
+        "type": "MonetaryAmount",
+        "amountValue": 1000.0,
+        "currencyCode": "EUR"
+      }
+    ],
+    "buyerParty": [
+      {
+        "type": "Party",
+        "partyName": "Example Company Ltd",
+        "hasAddress": {
+          "type": "Address",
+          "street": "123 Example Street",
+          "city": "Example City",
+          "postalCode": "12345"
+        }
+      }
+    ]
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2026-02-13T17:40:49.107553Z",
+    "verificationMethod": "did:example:issuer123#key-1",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQp..."
+  }
+}
+```
+
+**How to use:**
+1. Reference as examples
+2. Copy structure for similar credentials
+3. Use in documentation and demos
+
+### Features
+
+- **Automatic placeholder generation** based on field types
+- **Smart example values** for common types (Party, Amount, Location, etc.)
+- **Complete VC structure** including proof section
+- **Proper JSON-LD contexts** linked
+- **W3C VC 1.1 compliant** format
+
+### Generate All Document Templates
+
+```bash
+# Bill of Lading
+python3 generate_vc_templates.py ../shacl/bill-of-lading-v0.0.1.jsonld ../templates/
+
+# Certificate of Origin
+python3 generate_vc_templates.py ../shacl/certificate-of-origin-v0.0.1.jsonld ../templates/
+
+# Commercial Invoice
+python3 generate_vc_templates.py ../shacl/commercial-invoice-v0.0.2.jsonld ../templates/
+
+# Documentary Credit
+python3 generate_vc_templates.py ../shacl/letter-of-credit-v0.0.1.jsonld ../templates/
+
+# Purchase Order
+python3 generate_vc_templates.py ../shacl/purchase-order-v0.0.1.jsonld ../templates/
+```
+
+---
 
 ## Technical Notes
 

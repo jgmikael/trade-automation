@@ -1,0 +1,115 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/commercialinvoice-context.jsonld"
+  ],
+  "id": "<<CREDENTIAL_ID>>",
+  "type": [
+    "VerifiableCredential",
+    "CommercialInvoiceCredential"
+  ],
+  "issuer": {
+    "id": "<<ISSUER_DID>>",
+    "name": "<<ISSUER_NAME>>"
+  },
+  "issuanceDate": "<<ISO_8601_DATETIME>>",
+  "credentialSubject": {
+    "id": "<<SUBJECT_ID>>",
+    "type": "CommercialInvoice",
+    "freightChargesAmount": [
+      {
+        "type": "MonetaryAmount",
+        "<<PROPERTY>>": "<<VALUE for MonetaryAmount>>"
+      }
+    ],
+    "purchaseOrderNumber": "<<Purchase Order Number>>",
+    "invoiceeParty": [
+      {
+        "type": "Party",
+        "<<PROPERTY>>": "<<VALUE for Party>>"
+      }
+    ],
+    "buyerParty": [
+      {
+        "type": "Party",
+        "<<PROPERTY>>": "<<VALUE for Party>>"
+      }
+    ],
+    "paymentDueDate": "<<YYYY-MM-DD>>",
+    "consigneeParty": [
+      {
+        "type": "Party",
+        "<<PROPERTY>>": "<<VALUE for Party>>"
+      }
+    ],
+    "invoiceNumber": "<<Invoice Number>>",
+    "relatesToTransportDocument": [
+      {
+        "type": "TransportDocument",
+        "<<PROPERTY>>": "<<VALUE for TransportDocument>>"
+      }
+    ],
+    "deliveryTerms": [
+      {
+        "type": "TradeDeliveryTerms",
+        "<<PROPERTY>>": "<<VALUE for TradeDeliveryTerms>>"
+      }
+    ],
+    "invoicePaymentTerms": [
+      {
+        "type": "PaymentTerms",
+        "<<PROPERTY>>": "<<VALUE for PaymentTerms>>"
+      }
+    ],
+    "hasInvoiceLine": [
+      {
+        "type": "InvoiceLine",
+        "<<PROPERTY>>": "<<VALUE for InvoiceLine>>"
+      }
+    ],
+    "referencesLetterOfCredit": [
+      {
+        "type": "DocumentaryCredit",
+        "<<PROPERTY>>": "<<VALUE for DocumentaryCredit>>"
+      }
+    ],
+    "sellerParty": [
+      {
+        "type": "Party",
+        "<<PROPERTY>>": "<<VALUE for Party>>"
+      }
+    ],
+    "insuranceValueAmount": [
+      {
+        "type": "MonetaryAmount",
+        "<<PROPERTY>>": "<<VALUE for MonetaryAmount>>"
+      }
+    ],
+    "totalAmount": [
+      {
+        "type": "MonetaryAmount",
+        "<<PROPERTY>>": "<<VALUE for MonetaryAmount>>"
+      }
+    ],
+    "sellersBank": [
+      {
+        "type": "Bank",
+        "<<PROPERTY>>": "<<VALUE for Bank>>"
+      }
+    ],
+    "isBasedOnContract": [
+      {
+        "type": "Contract",
+        "<<PROPERTY>>": "<<VALUE for Contract>>"
+      }
+    ],
+    "invoiceDate": "<<YYYY-MM-DD>>"
+  },
+  "proof": {
+    "type": "<<SIGNATURE_TYPE>>",
+    "created": "<<ISO_8601_DATETIME>>",
+    "verificationMethod": "<<ISSUER_DID#KEY_ID>>",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "<<SIGNATURE_VALUE>>"
+  }
+}

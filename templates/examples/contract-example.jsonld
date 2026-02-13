@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/contract-context.jsonld"
+  ],
+  "id": "https://example.com/credentials/contract/EXAMPLE-001",
+  "type": [
+    "VerifiableCredential",
+    "ContractCredential"
+  ],
+  "issuer": {
+    "id": "did:example:issuer123",
+    "name": "Example Contract Issuer"
+  },
+  "issuanceDate": "2026-02-13T17:40:49.108999Z",
+  "credentialSubject": {
+    "id": "https://example.com/contract/EXAMPLE-001",
+    "type": "Contract",
+    "contractIdentifier": "Example Contract Identifier"
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2026-02-13T17:40:49.108999Z",
+    "verificationMethod": "did:example:issuer123#key-1",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQpE1..........................................."
+  }
+}

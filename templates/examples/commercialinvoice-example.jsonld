@@ -1,0 +1,158 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/commercialinvoice-context.jsonld"
+  ],
+  "id": "https://example.com/credentials/commercialinvoice/EXAMPLE-001",
+  "type": [
+    "VerifiableCredential",
+    "CommercialInvoiceCredential"
+  ],
+  "issuer": {
+    "id": "did:example:issuer123",
+    "name": "Example Commercial Invoice Issuer"
+  },
+  "issuanceDate": "2026-02-13T17:40:49.107553Z",
+  "credentialSubject": {
+    "id": "https://example.com/commercialinvoice/EXAMPLE-001",
+    "type": "CommercialInvoice",
+    "freightChargesAmount": [
+      {
+        "type": "MonetaryAmount",
+        "amountValue": 1000.0,
+        "currencyCode": "EUR"
+      }
+    ],
+    "purchaseOrderNumber": "Example Purchase Order Number",
+    "invoiceeParty": [
+      {
+        "type": "Party",
+        "partyName": "Example Company Ltd",
+        "hasAddress": {
+          "type": "Address",
+          "street": "123 Example Street",
+          "city": "Example City",
+          "postalCode": "12345",
+          "country": {
+            "type": "Country",
+            "countryCode": "FI"
+          }
+        }
+      }
+    ],
+    "buyerParty": [
+      {
+        "type": "Party",
+        "partyName": "Example Company Ltd",
+        "hasAddress": {
+          "type": "Address",
+          "street": "123 Example Street",
+          "city": "Example City",
+          "postalCode": "12345",
+          "country": {
+            "type": "Country",
+            "countryCode": "FI"
+          }
+        }
+      }
+    ],
+    "paymentDueDate": "2026-02-13",
+    "consigneeParty": [
+      {
+        "type": "Party",
+        "partyName": "Example Company Ltd",
+        "hasAddress": {
+          "type": "Address",
+          "street": "123 Example Street",
+          "city": "Example City",
+          "postalCode": "12345",
+          "country": {
+            "type": "Country",
+            "countryCode": "FI"
+          }
+        }
+      }
+    ],
+    "invoiceNumber": "Example Invoice Number",
+    "relatesToTransportDocument": [
+      {
+        "type": "TransportDocument",
+        "exampleProperty": "Example value for TransportDocument"
+      }
+    ],
+    "deliveryTerms": [
+      {
+        "type": "TradeDeliveryTerms",
+        "exampleProperty": "Example value for TradeDeliveryTerms"
+      }
+    ],
+    "invoicePaymentTerms": [
+      {
+        "type": "PaymentTerms",
+        "exampleProperty": "Example value for PaymentTerms"
+      }
+    ],
+    "hasInvoiceLine": [
+      {
+        "type": "InvoiceLine",
+        "exampleProperty": "Example value for InvoiceLine"
+      }
+    ],
+    "referencesLetterOfCredit": [
+      {
+        "type": "DocumentaryCredit",
+        "exampleProperty": "Example value for DocumentaryCredit"
+      }
+    ],
+    "sellerParty": [
+      {
+        "type": "Party",
+        "partyName": "Example Company Ltd",
+        "hasAddress": {
+          "type": "Address",
+          "street": "123 Example Street",
+          "city": "Example City",
+          "postalCode": "12345",
+          "country": {
+            "type": "Country",
+            "countryCode": "FI"
+          }
+        }
+      }
+    ],
+    "insuranceValueAmount": [
+      {
+        "type": "MonetaryAmount",
+        "amountValue": 1000.0,
+        "currencyCode": "EUR"
+      }
+    ],
+    "totalAmount": [
+      {
+        "type": "MonetaryAmount",
+        "amountValue": 1000.0,
+        "currencyCode": "EUR"
+      }
+    ],
+    "sellersBank": [
+      {
+        "type": "Bank",
+        "exampleProperty": "Example value for Bank"
+      }
+    ],
+    "isBasedOnContract": [
+      {
+        "type": "Contract",
+        "exampleProperty": "Example value for Contract"
+      }
+    ],
+    "invoiceDate": "2026-02-13"
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2026-02-13T17:40:49.107553Z",
+    "verificationMethod": "did:example:issuer123#key-1",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQpE1..........................................."
+  }
+}

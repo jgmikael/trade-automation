@@ -1,0 +1,33 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/shipment-context.jsonld"
+  ],
+  "id": "https://example.com/credentials/shipment/EXAMPLE-001",
+  "type": [
+    "VerifiableCredential",
+    "ShipmentCredential"
+  ],
+  "issuer": {
+    "id": "did:example:issuer123",
+    "name": "Example Shipment Issuer"
+  },
+  "issuanceDate": "2026-02-13T17:40:49.117538Z",
+  "credentialSubject": {
+    "id": "https://example.com/shipment/EXAMPLE-001",
+    "type": "Shipment",
+    "usesTransportMeans": [
+      {
+        "type": "TransportMeans",
+        "exampleProperty": "Example value for TransportMeans"
+      }
+    ]
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2026-02-13T17:40:49.117538Z",
+    "verificationMethod": "did:example:issuer123#key-1",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQpE1..........................................."
+  }
+}

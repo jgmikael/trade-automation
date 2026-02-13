@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/transportdocument-context.jsonld"
+  ],
+  "id": "https://example.com/credentials/transportdocument/EXAMPLE-001",
+  "type": [
+    "VerifiableCredential",
+    "TransportDocumentCredential"
+  ],
+  "issuer": {
+    "id": "did:example:issuer123",
+    "name": "Example Transport Document Issuer"
+  },
+  "issuanceDate": "2026-02-13T17:40:49.112512Z",
+  "credentialSubject": {
+    "id": "https://example.com/transportdocument/EXAMPLE-001",
+    "type": "TransportDocument",
+    "transportDocumentNumber": "Example Transport Document Number"
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2026-02-13T17:40:49.112512Z",
+    "verificationMethod": "did:example:issuer123#key-1",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQpE1..........................................."
+  }
+}

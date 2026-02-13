@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/tradeproduct-context.jsonld"
+  ],
+  "id": "https://example.com/credentials/tradeproduct/EXAMPLE-001",
+  "type": [
+    "VerifiableCredential",
+    "TradeProductCredential"
+  ],
+  "issuer": {
+    "id": "did:example:issuer123",
+    "name": "Example Trade Product Issuer"
+  },
+  "issuanceDate": "2026-02-13T17:40:49.108727Z",
+  "credentialSubject": {
+    "id": "https://example.com/tradeproduct/EXAMPLE-001",
+    "type": "TradeProduct",
+    "productDescription": "Example Product Description",
+    "productName": "Example Product Name"
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2026-02-13T17:40:49.108727Z",
+    "verificationMethod": "did:example:issuer123#key-1",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQpE1..........................................."
+  }
+}

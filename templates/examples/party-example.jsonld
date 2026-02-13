@@ -1,0 +1,40 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/party-context.jsonld"
+  ],
+  "id": "https://example.com/credentials/party/EXAMPLE-001",
+  "type": [
+    "VerifiableCredential",
+    "PartyCredential"
+  ],
+  "issuer": {
+    "id": "did:example:issuer123",
+    "name": "Example Party Issuer"
+  },
+  "issuanceDate": "2026-02-13T17:40:49.114815Z",
+  "credentialSubject": {
+    "id": "https://example.com/party/EXAMPLE-001",
+    "type": "Party",
+    "name": "Example Name",
+    "partyAddress": [
+      {
+        "type": "Address",
+        "exampleProperty": "Example value for Address"
+      }
+    ],
+    "partyIdentifier": [
+      {
+        "type": "Identifier",
+        "exampleProperty": "Example value for Identifier"
+      }
+    ]
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2026-02-13T17:40:49.114815Z",
+    "verificationMethod": "did:example:issuer123#key-1",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQpE1..........................................."
+  }
+}

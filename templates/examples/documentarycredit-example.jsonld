@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/documentarycredit-context.jsonld"
+  ],
+  "id": "https://example.com/credentials/documentarycredit/EXAMPLE-001",
+  "type": [
+    "VerifiableCredential",
+    "DocumentaryCreditCredential"
+  ],
+  "issuer": {
+    "id": "did:example:issuer123",
+    "name": "Example Documentary Credit Issuer"
+  },
+  "issuanceDate": "2026-02-13T17:40:49.110420Z",
+  "credentialSubject": {
+    "id": "https://example.com/documentarycredit/EXAMPLE-001",
+    "type": "DocumentaryCredit",
+    "creditIdentifier": "Example Credit Identifier"
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2026-02-13T17:40:49.110420Z",
+    "verificationMethod": "did:example:issuer123#key-1",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQpE1..........................................."
+  }
+}

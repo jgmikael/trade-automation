@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/paymentterms-context.jsonld"
+  ],
+  "id": "https://example.com/credentials/paymentterms/EXAMPLE-001",
+  "type": [
+    "VerifiableCredential",
+    "PaymentTermsCredential"
+  ],
+  "issuer": {
+    "id": "did:example:issuer123",
+    "name": "Example Payment Terms Issuer"
+  },
+  "issuanceDate": "2026-02-13T17:40:49.114067Z",
+  "credentialSubject": {
+    "id": "https://example.com/paymentterms/EXAMPLE-001",
+    "type": "PaymentTerms",
+    "paymentTermCode": "Example Payment Term Code",
+    "paymentMethod": "Example Payment Method"
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2026-02-13T17:40:49.114067Z",
+    "verificationMethod": "did:example:issuer123#key-1",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQpE1..........................................."
+  }
+}

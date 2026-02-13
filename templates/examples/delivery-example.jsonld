@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/delivery-context.jsonld"
+  ],
+  "id": "https://example.com/credentials/delivery/EXAMPLE-001",
+  "type": [
+    "VerifiableCredential",
+    "DeliveryCredential"
+  ],
+  "issuer": {
+    "id": "did:example:issuer123",
+    "name": "Example Delivery Issuer"
+  },
+  "issuanceDate": "2026-02-13T17:40:49.117026Z",
+  "credentialSubject": {
+    "id": "https://example.com/delivery/EXAMPLE-001",
+    "type": "Delivery",
+    "hasShipment": [
+      {
+        "type": "Shipment",
+        "exampleProperty": "Example value for Shipment"
+      }
+    ],
+    "deliveryTerms": [
+      {
+        "type": "TradeDeliveryTerms",
+        "exampleProperty": "Example value for TradeDeliveryTerms"
+      }
+    ]
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2026-02-13T17:40:49.117026Z",
+    "verificationMethod": "did:example:issuer123#key-1",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQpE1..........................................."
+  }
+}

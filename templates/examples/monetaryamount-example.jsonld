@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://github.com/jgmikael/trade-automation/contexts/monetaryamount-context.jsonld"
+  ],
+  "id": "https://example.com/credentials/monetaryamount/EXAMPLE-001",
+  "type": [
+    "VerifiableCredential",
+    "MonetaryAmountCredential"
+  ],
+  "issuer": {
+    "id": "did:example:issuer123",
+    "name": "Example Monetary Amount Issuer"
+  },
+  "issuanceDate": "2026-02-13T17:40:49.109395Z",
+  "credentialSubject": {
+    "id": "https://example.com/monetaryamount/EXAMPLE-001",
+    "type": "MonetaryAmount",
+    "currencyCode": "Example Currency Code"
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2026-02-13T17:40:49.109395Z",
+    "verificationMethod": "did:example:issuer123#key-1",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQpE1..........................................."
+  }
+}
