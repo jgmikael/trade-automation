@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Document Demo - Diagnostic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .status {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .success { color: green; }
+        .error { color: red; }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Trade Document Demo - Diagnostic</h1>
+    
+    <div class="status" id="status">
+        <h2>Loading...</h2>
+    </div>
+    
+    <div>
+        <button onclick="testDocuments()">Test Documents</button>
+        <button onclick="testActors()">Test Actors</button>
+        <button onclick="testTimeline()">Test Timeline</button>
+        <button onclick="showFullDemo()">Show Full Demo</button>
+    </div>
+    
+    <div id="content"></div>
+    
+    <script src="demo.js"></script>
+    <script>
+        const statusDiv = document.getElementById('status');
+        const contentDiv = document.getElementById('content');
+        
+        // Check if everything loaded
+        try {
+            const checks = [
+                { name: 'documents', obj: documents, expected: 15 },
+                { name: 'actorViews', obj: actorViews, expected: 7 },
+                { name: 'timeline', obj: timeline, expected: 16 },
+                { name: 'actors', obj: actors, expected: 7 },
+                { name: 'docInfo', obj: docInfo, expected: 15 }
+            ];
+            
+            let html = '<h2>✅ All data loaded successfully!</h2><ul>';
+            checks.forEach(check => {
+                const count = Array.isArray(check.obj) ? check.obj.length : Object.keys(check.obj).length;
+                const status = count === check.expected ? '✅' : '⚠️';
+                html += `<li>${status} ${check.name}: ${count} (expected ${check.expected})</li>`;
+            });
+            html += '</ul>';
+            statusDiv.innerHTML = html;
+            statusDiv.className = 'status success';
+        } catch (e) {
+            statusDiv.innerHTML = `<h2 class="error">❌ Error loading data</h2><pre>${e.message}\n${e.stack}</pre>`;
+            statusDiv.className = 'status error';
+        }
+        
+        function testDocuments() {
+            const docs = Object.keys(documents);
+            contentDiv.innerHTML = `
+                <h2>📄 Documents (${docs.length})</h2>
+                <ul>${docs.map(key => `<li><strong>${key}</strong>: ${docInfo[key]?.title || 'No info'}</li>`).join('')}</ul>
+            `;
+        }
+        
+        function testActors() {
+            contentDiv.innerHTML = `
+                <h2>👥 Actors (${actors.length})</h2>
+                <ul>${actors.map(a => `
+                    <li>${a.icon} <strong>${a.name}</strong> - ${a.description} (${actorViews[a.id]?.length || 0} docs)</li>
+                `).join('')}</ul>
+            `;
+        }
+        
+        function testTimeline() {
+            contentDiv.innerHTML = `
+                <h2>⏱️ Timeline (${timeline.length} events)</h2>
+                <ul>${timeline.map(e => `<li><strong>${e.date}</strong>: ${e.event} (${e.actor})</li>`).join('')}</ul>
+            `;
+        }
+        
+        function showFullDemo() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

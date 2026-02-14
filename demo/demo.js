@@ -1185,7 +1185,7 @@ function syntaxHighlight(json) {
 
 // Render timeline
 function renderTimeline() {
-  const container = document.getElementById('timeline-view');
+  const container = document.getElementById('timeline-events');
   if (!container) return;
   
   container.innerHTML = timeline.map(event => `

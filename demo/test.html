@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Test</title>
+</head>
+<body>
+    <h1>Testing demo.js</h1>
+    <div id="test-output"></div>
+    <script src="demo.js"></script>
+    <script>
+        const output = document.getElementById('test-output');
+        try {
+            output.innerHTML = `
+                <p>✅ demo.js loaded successfully</p>
+                <p>Documents defined: ${Object.keys(documents).length}</p>
+                <p>Actor views defined: ${Object.keys(actorViews).length}</p>
+                <p>Timeline events: ${timeline.length}</p>
+                <p>Actors: ${actors.length}</p>
+                <p>Document info entries: ${Object.keys(docInfo).length}</p>
+            `;
+        } catch (e) {
+            output.innerHTML = `<p style="color:red;">❌ Error: ${e.message}</p>`;
+        }
+    </script>
+</body>
+</html>
