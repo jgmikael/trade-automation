@@ -95,6 +95,36 @@ curl http://localhost:5000/vc/api/v1/scenarios/EU_TO_SINGAPORE_MACHINERY_EXPORT/
 
 See [sap-simulator/README.md](sap-simulator/README.md) for full documentation.
 
+## 🎭 Browser Demo
+
+**NEW:** Interactive trade document demo!
+
+**Location:** `/demo/`
+
+**Scenario:** Finnish gluelam timber export to Japan
+- **Exporter:** Nordic Timber Oy (Finland) 🇫🇮
+- **Importer:** Tokyo Construction Materials (Japan) 🇯🇵
+- **Product:** Engineered gluelam timber beams (EUR 339,000)
+- **Documents:** Purchase Order, L/C, Bill of Lading, Invoice, Certificate of Origin
+
+**Features:**
+- 📱 Interactive browser-based UI
+- 👥 Multiple actor perspectives (Buyer, Seller, Bank, Carrier, Customs, Chamber)
+- ⏱️ Timeline view of document flow
+- 📄 KTDDE SHACL-based JSON documents
+- ✨ Zero dependencies, no backend required
+
+**Quick Start:**
+```bash
+cd demo
+open index.html
+# or serve with: python3 -m http.server 8080
+```
+
+Perfect for demonstrating to EU, Japan, Singapore, and global audiences!
+
+See [demo/README.md](demo/README.md) for full details.
+
 ## EU Business Wallet
 
 This project is designed to work with the upcoming EU Business Wallet (EU regulation proposal November 2025).
