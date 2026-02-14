@@ -1,0 +1,37 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "InsuranceCertificate": {
+      "@id": "ktddecv:InsuranceCertificate",
+      "@context": {
+        "hasCertificateNumber": {
+          "@id": "ktddecv:hasCertificateNumber"
+        },
+        "hasIssueDate": {
+          "@id": "ktddecv:hasIssueDate"
+        },
+        "hasInsurer": {
+          "@id": "ktddecv:hasInsurer"
+        },
+        "hasInsured": {
+          "@id": "ktddecv:hasInsured"
+        },
+        "hasPolicyNumber": {
+          "@id": "ktddecv:hasPolicyNumber"
+        },
+        "hasInsuredAmount": {
+          "@id": "ktddecv:hasInsuredAmount"
+        },
+        "hasGoodsDescription": {
+          "@id": "ktddecv:hasGoodsDescription"
+        },
+        "hasTransportDetails": {
+          "@id": "ktddecv:hasTransportDetails"
+        }
+      }
+    }
+  }
+}

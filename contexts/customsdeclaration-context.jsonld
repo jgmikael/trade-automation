@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "CustomsDeclaration": {
+      "@id": "ktddecv:CustomsDeclaration",
+      "@context": {
+        "hasDeclarationNumber": {
+          "@id": "ktddecv:hasDeclarationNumber"
+        },
+        "hasDeclarationType": {
+          "@id": "ktddecv:hasDeclarationType"
+        },
+        "hasDeclarationDate": {
+          "@id": "ktddecv:hasDeclarationDate"
+        },
+        "hasDeclarant": {
+          "@id": "ktddecv:hasDeclarant"
+        },
+        "hasExporter": {
+          "@id": "ktddecv:hasExporter"
+        },
+        "hasImporter": {
+          "@id": "ktddecv:hasImporter"
+        },
+        "hasCustomsOffice": {
+          "@id": "ktddecv:hasCustomsOffice"
+        },
+        "hasGoodsItem": {
+          "@id": "ktddecv:hasGoodsItem"
+        },
+        "hasTotalInvoiceAmount": {
+          "@id": "ktddecv:hasTotalInvoiceAmount"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ConsignmentSecurityDeclaration": {
+      "@id": "ktddecv:ConsignmentSecurityDeclaration",
+      "@context": {
+        "hasDeclarationNumber": {
+          "@id": "ktddecv:hasDeclarationNumber"
+        },
+        "hasIssueDate": {
+          "@id": "ktddecv:hasIssueDate"
+        },
+        "hasDeclarant": {
+          "@id": "ktddecv:hasDeclarant"
+        },
+        "hasConsignment": {
+          "@id": "ktddecv:hasConsignment"
+        },
+        "hasSecurityMeasures": {
+          "@id": "ktddecv:hasSecurityMeasures"
+        },
+        "hasScreeningMethod": {
+          "@id": "ktddecv:hasScreeningMethod"
+        }
+      }
+    }
+  }
+}

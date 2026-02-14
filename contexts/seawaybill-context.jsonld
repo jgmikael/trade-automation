@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "SeaWaybill": {
+      "@id": "ktddecv:SeaWaybill",
+      "@context": {
+        "hasWaybillNumber": {
+          "@id": "ktddecv:hasWaybillNumber"
+        },
+        "hasIssueDate": {
+          "@id": "ktddecv:hasIssueDate"
+        },
+        "hasCarrier": {
+          "@id": "ktddecv:hasCarrier"
+        },
+        "hasShipper": {
+          "@id": "ktddecv:hasShipper"
+        },
+        "hasConsignee": {
+          "@id": "ktddecv:hasConsignee"
+        },
+        "hasPortOfLoading": {
+          "@id": "ktddecv:hasPortOfLoading"
+        },
+        "hasPortOfDischarge": {
+          "@id": "ktddecv:hasPortOfDischarge"
+        },
+        "hasGoodsItem": {
+          "@id": "ktddecv:hasGoodsItem"
+        },
+        "hasFreightAmount": {
+          "@id": "ktddecv:hasFreightAmount"
+        }
+      }
+    }
+  }
+}

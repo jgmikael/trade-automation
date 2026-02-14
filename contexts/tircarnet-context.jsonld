@@ -1,0 +1,37 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "TIRCarnet": {
+      "@id": "ktddecv:TIRCarnet",
+      "@context": {
+        "hasTirNumber": {
+          "@id": "ktddecv:hasTirNumber"
+        },
+        "hasIssueDate": {
+          "@id": "ktddecv:hasIssueDate"
+        },
+        "hasExpiryDate": {
+          "@id": "ktddecv:hasExpiryDate"
+        },
+        "hasHolder": {
+          "@id": "ktddecv:hasHolder"
+        },
+        "hasVehicleRegistration": {
+          "@id": "ktddecv:hasVehicleRegistration"
+        },
+        "hasCustomsOfficeOfDeparture": {
+          "@id": "ktddecv:hasCustomsOfficeOfDeparture"
+        },
+        "hasCustomsOfficeOfDestination": {
+          "@id": "ktddecv:hasCustomsOfficeOfDestination"
+        },
+        "hasGoodsDescription": {
+          "@id": "ktddecv:hasGoodsDescription"
+        }
+      }
+    }
+  }
+}

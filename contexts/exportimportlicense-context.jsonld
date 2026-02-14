@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ExportImportLicense": {
+      "@id": "ktddecv:ExportImportLicense",
+      "@context": {
+        "hasLicenseNumber": {
+          "@id": "ktddecv:hasLicenseNumber"
+        },
+        "hasIssueDate": {
+          "@id": "ktddecv:hasIssueDate"
+        },
+        "hasExpiryDate": {
+          "@id": "ktddecv:hasExpiryDate"
+        },
+        "hasIssuingAuthority": {
+          "@id": "ktddecv:hasIssuingAuthority"
+        },
+        "hasLicensee": {
+          "@id": "ktddecv:hasLicensee"
+        },
+        "hasGoodsDescription": {
+          "@id": "ktddecv:hasGoodsDescription"
+        },
+        "hasQuantity": {
+          "@id": "ktddecv:hasQuantity"
+        },
+        "hasValue": {
+          "@id": "ktddecv:hasValue"
+        },
+        "hasDestinationCountry": {
+          "@id": "ktddecv:hasDestinationCountry"
+        }
+      }
+    }
+  }
+}

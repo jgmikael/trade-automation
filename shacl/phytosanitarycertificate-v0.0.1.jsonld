@@ -1,0 +1,443 @@
+{
+  "@context": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcap": "http://purl.org/ws-mmi-dc/terms/",
+    "suomi-meta": "http://iow.csc.fi/ns/suomi-meta/",
+    "ktddecv": "https://iri.suomi.fi/model/ktddecv/",
+    "dsiphytosanitarycertificate": "https://iri.suomi.fi/model/dsiphytosanitarycertificate/"
+  },
+  "@graph": [
+    {
+      "@id": "https://iri.suomi.fi/model/dsiphytosanitarycertificate/",
+      "@type": [
+        "suomi-meta:ApplicationProfile",
+        "owl:Ontology"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "DSI KTDDE Phytosanitary Certificate"
+      },
+      "dcterms:identifier": "0-phytosanitarycertificate",
+      "dcterms:language": "en",
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:contentModified": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "suomi-meta:contact": "yhteentoimivuus@dvv.fi",
+      "owl:versionInfo": "0.0.1",
+      "owl:versionIRI": {
+        "@id": "dsiphytosanitarycertificate:0.0.1/"
+      },
+      "dcap:preferredXMLNamespace": "https://iri.suomi.fi/model/dsiphytosanitarycertificate/",
+      "dcap:preferredXMLNamespacePrefix": "dsiphytosanitarycertificate",
+      "dcterms:requires": {
+        "@id": "https://iri.suomi.fi/model/ktddecv/0.0.1/"
+      },
+      "dcterms:isPartOf": [
+        {
+          "@id": "http://urn.fi/URN:NBN:fi:au:ptvl:v1105"
+        },
+        {
+          "@id": "http://urn.fi/URN:NBN:fi:au:ptvl:v1132"
+        },
+        {
+          "@id": "http://urn.fi/URN:NBN:fi:au:ptvl:v1142"
+        }
+      ]
+    },
+    {
+      "@id": "dsiphytosanitarycertificate:hasCertificateNumber",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has certificatenumber"
+      },
+      "dcterms:identifier": {
+        "@value": "hasCertificateNumber",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasCertificateNumber"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiphytosanitarycertificate/"
+      }
+    },
+    {
+      "@id": "dsiphytosanitarycertificate:hasIssueDate",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has issuedate"
+      },
+      "dcterms:identifier": {
+        "@value": "hasIssueDate",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasIssueDate"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiphytosanitarycertificate/"
+      }
+    },
+    {
+      "@id": "dsiphytosanitarycertificate:hasIssuingAuthority",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has issuingauthority"
+      },
+      "dcterms:identifier": {
+        "@value": "hasIssuingAuthority",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasIssuingAuthority"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiphytosanitarycertificate/"
+      }
+    },
+    {
+      "@id": "dsiphytosanitarycertificate:hasExporter",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has exporter"
+      },
+      "dcterms:identifier": {
+        "@value": "hasExporter",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasExporter"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiphytosanitarycertificate/"
+      }
+    },
+    {
+      "@id": "dsiphytosanitarycertificate:hasConsignee",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has consignee"
+      },
+      "dcterms:identifier": {
+        "@value": "hasConsignee",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasConsignee"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiphytosanitarycertificate/"
+      }
+    },
+    {
+      "@id": "dsiphytosanitarycertificate:hasPlaceOfOrigin",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has placeoforigin"
+      },
+      "dcterms:identifier": {
+        "@value": "hasPlaceOfOrigin",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasPlaceOfOrigin"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiphytosanitarycertificate/"
+      }
+    },
+    {
+      "@id": "dsiphytosanitarycertificate:hasMeansOfConveyance",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has meansofconveyance"
+      },
+      "dcterms:identifier": {
+        "@value": "hasMeansOfConveyance",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasMeansOfConveyance"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiphytosanitarycertificate/"
+      }
+    },
+    {
+      "@id": "dsiphytosanitarycertificate:hasPointOfEntry",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has pointofentry"
+      },
+      "dcterms:identifier": {
+        "@value": "hasPointOfEntry",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasPointOfEntry"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiphytosanitarycertificate/"
+      }
+    },
+    {
+      "@id": "dsiphytosanitarycertificate:hasTreatment",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has treatment"
+      },
+      "dcterms:identifier": {
+        "@value": "hasTreatment",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasTreatment"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiphytosanitarycertificate/"
+      }
+    },
+    {
+      "@id": "dsiphytosanitarycertificate:PhytosanitaryCertificate",
+      "@type": [
+        "owl:Class",
+        "sh:NodeShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Phytosanitary Certificate"
+      },
+      "dcterms:description": {
+        "@language": "en",
+        "@value": "Certificate that plants/wood products are free from pests and diseases"
+      },
+      "dcterms:identifier": {
+        "@value": "PhytosanitaryCertificate",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.070673Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiphytosanitarycertificate/"
+      },
+      "rdfs:subClassOf": {
+        "@id": "ktddecv:Document"
+      },
+      "sh:targetClass": {
+        "@id": "ktddecv:PhytosanitaryCertificate"
+      },
+      "sh:property": [
+        {
+          "@id": "dsiphytosanitarycertificate:hasCertificateNumber"
+        },
+        {
+          "@id": "dsiphytosanitarycertificate:hasIssueDate"
+        },
+        {
+          "@id": "dsiphytosanitarycertificate:hasIssuingAuthority"
+        },
+        {
+          "@id": "dsiphytosanitarycertificate:hasExporter"
+        },
+        {
+          "@id": "dsiphytosanitarycertificate:hasConsignee"
+        },
+        {
+          "@id": "dsiphytosanitarycertificate:hasPlaceOfOrigin"
+        },
+        {
+          "@id": "dsiphytosanitarycertificate:hasMeansOfConveyance"
+        },
+        {
+          "@id": "dsiphytosanitarycertificate:hasPointOfEntry"
+        },
+        {
+          "@id": "dsiphytosanitarycertificate:hasTreatment"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,480 @@
+{
+  "@context": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcap": "http://purl.org/ws-mmi-dc/terms/",
+    "suomi-meta": "http://iow.csc.fi/ns/suomi-meta/",
+    "ktddecv": "https://iri.suomi.fi/model/ktddecv/",
+    "dsiairwaybill": "https://iri.suomi.fi/model/dsiairwaybill/"
+  },
+  "@graph": [
+    {
+      "@id": "https://iri.suomi.fi/model/dsiairwaybill/",
+      "@type": [
+        "suomi-meta:ApplicationProfile",
+        "owl:Ontology"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "DSI KTDDE Air Waybill"
+      },
+      "dcterms:identifier": "0-airwaybill",
+      "dcterms:language": "en",
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:contentModified": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "suomi-meta:contact": "yhteentoimivuus@dvv.fi",
+      "owl:versionInfo": "0.0.1",
+      "owl:versionIRI": {
+        "@id": "dsiairwaybill:0.0.1/"
+      },
+      "dcap:preferredXMLNamespace": "https://iri.suomi.fi/model/dsiairwaybill/",
+      "dcap:preferredXMLNamespacePrefix": "dsiairwaybill",
+      "dcterms:requires": {
+        "@id": "https://iri.suomi.fi/model/ktddecv/0.0.1/"
+      },
+      "dcterms:isPartOf": [
+        {
+          "@id": "http://urn.fi/URN:NBN:fi:au:ptvl:v1105"
+        },
+        {
+          "@id": "http://urn.fi/URN:NBN:fi:au:ptvl:v1132"
+        },
+        {
+          "@id": "http://urn.fi/URN:NBN:fi:au:ptvl:v1142"
+        }
+      ]
+    },
+    {
+      "@id": "dsiairwaybill:hasAwbNumber",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has awbnumber"
+      },
+      "dcterms:identifier": {
+        "@value": "hasAwbNumber",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasAwbNumber"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiairwaybill/"
+      }
+    },
+    {
+      "@id": "dsiairwaybill:hasIssueDate",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has issuedate"
+      },
+      "dcterms:identifier": {
+        "@value": "hasIssueDate",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasIssueDate"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiairwaybill/"
+      }
+    },
+    {
+      "@id": "dsiairwaybill:hasCarrier",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has carrier"
+      },
+      "dcterms:identifier": {
+        "@value": "hasCarrier",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasCarrier"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiairwaybill/"
+      }
+    },
+    {
+      "@id": "dsiairwaybill:hasShipper",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has shipper"
+      },
+      "dcterms:identifier": {
+        "@value": "hasShipper",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasShipper"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiairwaybill/"
+      }
+    },
+    {
+      "@id": "dsiairwaybill:hasConsignee",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has consignee"
+      },
+      "dcterms:identifier": {
+        "@value": "hasConsignee",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasConsignee"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiairwaybill/"
+      }
+    },
+    {
+      "@id": "dsiairwaybill:hasAirportOfDeparture",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has airportofdeparture"
+      },
+      "dcterms:identifier": {
+        "@value": "hasAirportOfDeparture",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasAirportOfDeparture"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiairwaybill/"
+      }
+    },
+    {
+      "@id": "dsiairwaybill:hasAirportOfDestination",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has airportofdestination"
+      },
+      "dcterms:identifier": {
+        "@value": "hasAirportOfDestination",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasAirportOfDestination"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiairwaybill/"
+      }
+    },
+    {
+      "@id": "dsiairwaybill:hasGoodsItem",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has goodsitem"
+      },
+      "dcterms:identifier": {
+        "@value": "hasGoodsItem",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasGoodsItem"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiairwaybill/"
+      }
+    },
+    {
+      "@id": "dsiairwaybill:hasChargeableWeight",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has chargeableweight"
+      },
+      "dcterms:identifier": {
+        "@value": "hasChargeableWeight",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasChargeableWeight"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiairwaybill/"
+      }
+    },
+    {
+      "@id": "dsiairwaybill:hasFreightAmount",
+      "@type": [
+        "owl:ObjectProperty",
+        "sh:PropertyShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has freightamount"
+      },
+      "dcterms:identifier": {
+        "@value": "hasFreightAmount",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "sh:path": {
+        "@id": "ktddecv:hasFreightAmount"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiairwaybill/"
+      }
+    },
+    {
+      "@id": "dsiairwaybill:AirWaybill",
+      "@type": [
+        "owl:Class",
+        "sh:NodeShape"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Air Waybill"
+      },
+      "dcterms:description": {
+        "@language": "en",
+        "@value": "Transport document for air cargo"
+      },
+      "dcterms:identifier": {
+        "@value": "AirWaybill",
+        "@type": "xsd:NCName"
+      },
+      "dcterms:created": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-14T21:09:36.082213Z",
+        "@type": "xsd:dateTime"
+      },
+      "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+      "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/SUGGESTED"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://iri.suomi.fi/model/dsiairwaybill/"
+      },
+      "rdfs:subClassOf": {
+        "@id": "ktddecv:Document"
+      },
+      "sh:targetClass": {
+        "@id": "ktddecv:AirWaybill"
+      },
+      "sh:property": [
+        {
+          "@id": "dsiairwaybill:hasAwbNumber"
+        },
+        {
+          "@id": "dsiairwaybill:hasIssueDate"
+        },
+        {
+          "@id": "dsiairwaybill:hasCarrier"
+        },
+        {
+          "@id": "dsiairwaybill:hasShipper"
+        },
+        {
+          "@id": "dsiairwaybill:hasConsignee"
+        },
+        {
+          "@id": "dsiairwaybill:hasAirportOfDeparture"
+        },
+        {
+          "@id": "dsiairwaybill:hasAirportOfDestination"
+        },
+        {
+          "@id": "dsiairwaybill:hasGoodsItem"
+        },
+        {
+          "@id": "dsiairwaybill:hasChargeableWeight"
+        },
+        {
+          "@id": "dsiairwaybill:hasFreightAmount"
+        }
+      ]
+    }
+  ]
+}

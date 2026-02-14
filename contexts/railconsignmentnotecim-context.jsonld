@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "RailConsignmentNoteCIM": {
+      "@id": "ktddecv:RailConsignmentNoteCIM",
+      "@context": {
+        "hasCimNumber": {
+          "@id": "ktddecv:hasCimNumber"
+        },
+        "hasIssueDate": {
+          "@id": "ktddecv:hasIssueDate"
+        },
+        "hasSender": {
+          "@id": "ktddecv:hasSender"
+        },
+        "hasCarrier": {
+          "@id": "ktddecv:hasCarrier"
+        },
+        "hasConsignee": {
+          "@id": "ktddecv:hasConsignee"
+        },
+        "hasStationOfDeparture": {
+          "@id": "ktddecv:hasStationOfDeparture"
+        },
+        "hasStationOfDestination": {
+          "@id": "ktddecv:hasStationOfDestination"
+        },
+        "hasGoodsDescription": {
+          "@id": "ktddecv:hasGoodsDescription"
+        },
+        "hasFreightCharges": {
+          "@id": "ktddecv:hasFreightCharges"
+        }
+      }
+    }
+  }
+}

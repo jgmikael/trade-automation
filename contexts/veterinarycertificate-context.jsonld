@@ -1,0 +1,37 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "VeterinaryCertificate": {
+      "@id": "ktddecv:VeterinaryCertificate",
+      "@context": {
+        "hasCertificateNumber": {
+          "@id": "ktddecv:hasCertificateNumber"
+        },
+        "hasIssueDate": {
+          "@id": "ktddecv:hasIssueDate"
+        },
+        "hasIssuingAuthority": {
+          "@id": "ktddecv:hasIssuingAuthority"
+        },
+        "hasExporter": {
+          "@id": "ktddecv:hasExporter"
+        },
+        "hasConsignee": {
+          "@id": "ktddecv:hasConsignee"
+        },
+        "hasAnimalProducts": {
+          "@id": "ktddecv:hasAnimalProducts"
+        },
+        "hasHealthDeclaration": {
+          "@id": "ktddecv:hasHealthDeclaration"
+        },
+        "hasInspectionDetails": {
+          "@id": "ktddecv:hasInspectionDetails"
+        }
+      }
+    }
+  }
+}

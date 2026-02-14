@@ -1,0 +1,37 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "SeaCargoManifest": {
+      "@id": "ktddecv:SeaCargoManifest",
+      "@context": {
+        "hasManifestNumber": {
+          "@id": "ktddecv:hasManifestNumber"
+        },
+        "hasIssueDate": {
+          "@id": "ktddecv:hasIssueDate"
+        },
+        "hasVessel": {
+          "@id": "ktddecv:hasVessel"
+        },
+        "hasVoyage": {
+          "@id": "ktddecv:hasVoyage"
+        },
+        "hasPortOfLoading": {
+          "@id": "ktddecv:hasPortOfLoading"
+        },
+        "hasPortOfDischarge": {
+          "@id": "ktddecv:hasPortOfDischarge"
+        },
+        "hasCarrierParty": {
+          "@id": "ktddecv:hasCarrierParty"
+        },
+        "hasConsignment": {
+          "@id": "ktddecv:hasConsignment"
+        }
+      }
+    }
+  }
+}

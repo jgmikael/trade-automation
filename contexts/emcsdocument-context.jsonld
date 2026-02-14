@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "EMCSDocument": {
+      "@id": "ktddecv:EMCSDocument",
+      "@context": {
+        "hasArcNumber": {
+          "@id": "ktddecv:hasArcNumber"
+        },
+        "hasIssueDate": {
+          "@id": "ktddecv:hasIssueDate"
+        },
+        "hasConsignor": {
+          "@id": "ktddecv:hasConsignor"
+        },
+        "hasConsignee": {
+          "@id": "ktddecv:hasConsignee"
+        },
+        "hasPlaceOfDispatch": {
+          "@id": "ktddecv:hasPlaceOfDispatch"
+        },
+        "hasPlaceOfDelivery": {
+          "@id": "ktddecv:hasPlaceOfDelivery"
+        },
+        "hasExciseProduct": {
+          "@id": "ktddecv:hasExciseProduct"
+        },
+        "hasQuantity": {
+          "@id": "ktddecv:hasQuantity"
+        },
+        "hasDutyAmount": {
+          "@id": "ktddecv:hasDutyAmount"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "WarehouseReceipt": {
+      "@id": "ktddecv:WarehouseReceipt",
+      "@context": {
+        "hasReceiptNumber": {
+          "@id": "ktddecv:hasReceiptNumber"
+        },
+        "hasIssueDate": {
+          "@id": "ktddecv:hasIssueDate"
+        },
+        "hasWarehouse": {
+          "@id": "ktddecv:hasWarehouse"
+        },
+        "hasDepositor": {
+          "@id": "ktddecv:hasDepositor"
+        },
+        "hasGoodsDescription": {
+          "@id": "ktddecv:hasGoodsDescription"
+        },
+        "hasQuantity": {
+          "@id": "ktddecv:hasQuantity"
+        },
+        "hasStorageLocation": {
+          "@id": "ktddecv:hasStorageLocation"
+        }
+      }
+    }
+  }
+}

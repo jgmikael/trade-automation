@@ -1,0 +1,34 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "TransitAccompanyingDocument": {
+      "@id": "ktddecv:TransitAccompanyingDocument",
+      "@context": {
+        "hasDocumentNumber": {
+          "@id": "ktddecv:hasDocumentNumber"
+        },
+        "hasIssueDate": {
+          "@id": "ktddecv:hasIssueDate"
+        },
+        "hasDeclarant": {
+          "@id": "ktddecv:hasDeclarant"
+        },
+        "hasOfficeOfDeparture": {
+          "@id": "ktddecv:hasOfficeOfDeparture"
+        },
+        "hasOfficeOfDestination": {
+          "@id": "ktddecv:hasOfficeOfDestination"
+        },
+        "hasGoodsItem": {
+          "@id": "ktddecv:hasGoodsItem"
+        },
+        "hasGuarantee": {
+          "@id": "ktddecv:hasGuarantee"
+        }
+      }
+    }
+  }
+}

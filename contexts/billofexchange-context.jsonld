@@ -1,0 +1,37 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "BillOfExchange": {
+      "@id": "ktddecv:BillOfExchange",
+      "@context": {
+        "hasBillNumber": {
+          "@id": "ktddecv:hasBillNumber"
+        },
+        "hasIssueDate": {
+          "@id": "ktddecv:hasIssueDate"
+        },
+        "hasDrawer": {
+          "@id": "ktddecv:hasDrawer"
+        },
+        "hasDrawee": {
+          "@id": "ktddecv:hasDrawee"
+        },
+        "hasPayee": {
+          "@id": "ktddecv:hasPayee"
+        },
+        "hasAmount": {
+          "@id": "ktddecv:hasAmount"
+        },
+        "hasTenor": {
+          "@id": "ktddecv:hasTenor"
+        },
+        "hasPlaceOfPayment": {
+          "@id": "ktddecv:hasPlaceOfPayment"
+        }
+      }
+    }
+  }
+}

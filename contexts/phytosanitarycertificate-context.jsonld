@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "PhytosanitaryCertificate": {
+      "@id": "ktddecv:PhytosanitaryCertificate",
+      "@context": {
+        "hasCertificateNumber": {
+          "@id": "ktddecv:hasCertificateNumber"
+        },
+        "hasIssueDate": {
+          "@id": "ktddecv:hasIssueDate"
+        },
+        "hasIssuingAuthority": {
+          "@id": "ktddecv:hasIssuingAuthority"
+        },
+        "hasExporter": {
+          "@id": "ktddecv:hasExporter"
+        },
+        "hasConsignee": {
+          "@id": "ktddecv:hasConsignee"
+        },
+        "hasPlaceOfOrigin": {
+          "@id": "ktddecv:hasPlaceOfOrigin"
+        },
+        "hasMeansOfConveyance": {
+          "@id": "ktddecv:hasMeansOfConveyance"
+        },
+        "hasPointOfEntry": {
+          "@id": "ktddecv:hasPointOfEntry"
+        },
+        "hasTreatment": {
+          "@id": "ktddecv:hasTreatment"
+        }
+      }
+    }
+  }
+}

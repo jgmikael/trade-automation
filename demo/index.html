@@ -80,133 +80,152 @@
             color: #374151;
         }
         
-        .tabs {
-            display: flex;
-            background: #f3f4f6;
-            border-bottom: 2px solid #e5e7eb;
-            overflow-x: auto;
+        .actor-tabs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            background: #f9fafb;
         }
         
-        .tab {
-            padding: 15px 25px;
-            cursor: pointer;
-            border: none;
-            background: none;
-            font-size: 1em;
-            font-weight: 500;
-            color: #6b7280;
-            transition: all 0.3s;
-            border-bottom: 3px solid transparent;
-            white-space: nowrap;
-        }
-        
-        .tab:hover {
-            background: #e5e7eb;
-            color: #1f2937;
-        }
-        
-        .tab.active {
-            color: #3b82f6;
-            border-bottom-color: #3b82f6;
+        .actor-tab {
+            padding: 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
             background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .actor-tab:hover {
+            border-color: #3b82f6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+        }
+        
+        .actor-tab.active {
+            border-color: #3b82f6;
+            background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+        
+        .actor-icon {
+            font-size: 2.5em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .actor-name {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .actor-tab small {
+            color: #6b7280;
+            display: block;
+            font-size: 0.85em;
         }
         
         .content {
             padding: 30px;
         }
         
-        .actor-view {
-            display: none;
-        }
-        
-        .actor-view.active {
-            display: block;
-        }
-        
-        .actor-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #e5e7eb;
-        }
-        
-        .actor-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2em;
-        }
-        
-        .actor-info h2 {
-            color: #1f2937;
-            margin-bottom: 5px;
-        }
-        
-        .actor-info .role {
-            color: #6b7280;
-            font-size: 0.95em;
-        }
-        
         .documents-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
+            margin-top: 20px;
         }
         
         .document-card {
+            background: white;
             border: 2px solid #e5e7eb;
             border-radius: 12px;
-            padding: 20px;
+            padding: 25px;
             cursor: pointer;
             transition: all 0.3s;
-            position: relative;
+            text-align: center;
         }
         
         .document-card:hover {
             border-color: #3b82f6;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
-            transform: translateY(-2px);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
         
-        .document-status {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.85em;
-            font-weight: 600;
-        }
-        
-        .status-created { background: #d1fae5; color: #065f46; }
-        .status-received { background: #dbeafe; color: #1e3a8a; }
-        .status-pending { background: #fef3c7; color: #92400e; }
-        
-        .document-card h3 {
-            color: #1f2937;
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-        
-        .document-meta {
-            color: #6b7280;
-            font-size: 0.9em;
+        .doc-icon {
+            font-size: 3em;
             margin-bottom: 15px;
         }
         
-        .document-preview {
-            background: #f9fafb;
-            border-radius: 6px;
-            padding: 12px;
-            font-size: 0.85em;
-            color: #374151;
-            max-height: 100px;
-            overflow: hidden;
+        .doc-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        
+        .doc-description {
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+        
+        .timeline-view {
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .timeline-event {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .timeline-event.clickable {
+            cursor: pointer;
+        }
+        
+        .timeline-event.clickable:hover {
+            background: #f0f9ff;
+            transform: translateX(5px);
+        }
+        
+        .timeline-date {
+            min-width: 120px;
+            font-weight: 600;
+            color: #1e3a8a;
+            font-size: 0.9em;
+        }
+        
+        .timeline-marker {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #3b82f6;
+            border: 4px solid #dbeafe;
+            flex-shrink: 0;
+        }
+        
+        .timeline-content {
+            flex: 1;
+        }
+        
+        .timeline-content strong {
+            display: block;
+            color: #1f2937;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-content small {
+            color: #6b7280;
         }
         
         .modal {
@@ -216,15 +235,11 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.7);
             z-index: 1000;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             padding: 20px;
-        }
-        
-        .modal.active {
-            display: flex;
         }
         
         .modal-content {
@@ -233,123 +248,95 @@
             max-width: 900px;
             width: 100%;
             max-height: 90vh;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
+            overflow-y: auto;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
         }
         
         .modal-header {
-            padding: 25px 30px;
-            background: #f9fafb;
-            border-bottom: 2px solid #e5e7eb;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .modal-header h2 {
-            color: #1f2937;
+            font-size: 1.5em;
         }
         
         .close-button {
             background: none;
             border: none;
-            font-size: 1.5em;
+            color: white;
+            font-size: 1.8em;
             cursor: pointer;
-            color: #6b7280;
-            padding: 0;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 6px;
-            transition: all 0.2s;
+            opacity: 0.8;
+            transition: opacity 0.3s;
         }
         
         .close-button:hover {
-            background: #e5e7eb;
-            color: #1f2937;
+            opacity: 1;
         }
         
         .modal-body {
             padding: 30px;
-            overflow-y: auto;
-            flex: 1;
         }
         
-        .json-viewer {
-            background: #1f2937;
-            color: #f9fafb;
+        .json-display {
+            background: #1e1e1e;
+            color: #d4d4d4;
             padding: 20px;
             border-radius: 8px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
             overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
             line-height: 1.6;
         }
         
-        .json-key { color: #60a5fa; }
-        .json-string { color: #34d399; }
-        .json-number { color: #fbbf24; }
-        .json-boolean { color: #f87171; }
-        
-        .timeline {
-            margin: 30px 0;
-            padding: 0 20px;
+        .json-key {
+            color: #9cdcfe;
         }
         
-        .timeline-item {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 30px;
-            position: relative;
+        .json-string {
+            color: #ce9178;
         }
         
-        .timeline-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            left: 20px;
-            top: 45px;
-            width: 2px;
-            height: calc(100% + 10px);
-            background: #e5e7eb;
+        .json-number {
+            color: #b5cea8;
         }
         
-        .timeline-marker {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #3b82f6;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            flex-shrink: 0;
-            z-index: 1;
+        .json-boolean {
+            color: #569cd6;
         }
         
-        .timeline-content {
-            flex: 1;
-            padding-top: 5px;
+        .json-null {
+            color: #569cd6;
         }
         
-        .timeline-date {
+        .no-docs {
+            text-align: center;
             color: #6b7280;
+            padding: 40px;
+            font-size: 1.1em;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
             font-size: 0.85em;
-            margin-bottom: 5px;
-        }
-        
-        .timeline-title {
-            color: #1f2937;
             font-weight: 600;
-            margin-bottom: 5px;
         }
         
-        .timeline-desc {
-            color: #6b7280;
-            font-size: 0.9em;
+        .badge-success {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .badge-info {
+            background: #dbeafe;
+            color: #1e3a8a;
         }
         
         @media (max-width: 768px) {
@@ -357,11 +344,15 @@
                 font-size: 1.8em;
             }
             
+            .scenario-details {
+                grid-template-columns: 1fr;
+            }
+            
             .documents-grid {
                 grid-template-columns: 1fr;
             }
             
-            .scenario-details {
+            .actor-tabs {
                 grid-template-columns: 1fr;
             }
         }
@@ -371,187 +362,71 @@
     <div class="container">
         <div class="header">
             <h1>🌍 International Trade Document Flow</h1>
-            <div class="subtitle">KTDDE Standardized Trade Documents Demo</div>
+            <p class="subtitle">KTDDE-Based Digital Trade Documents Demo</p>
         </div>
         
         <div class="scenario-info">
-            <h2>📦 Current Scenario: Finnish Gluelam Timber Export to Japan</h2>
+            <h2>📦 Trade Scenario: Finnish Gluelam Timber to Japan</h2>
             <div class="scenario-details">
                 <div class="detail-item">
-                    <span class="detail-label">Exporter:</span>
-                    <span class="detail-value">Nordic Timber Oy, Kuhmo, Finland 🇫🇮</span>
+                    <span class="detail-label">🏭 Exporter:</span>
+                    <span class="detail-value">Nordic Timber Oy, Kuhmo, Finland</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">Importer:</span>
-                    <span class="detail-value">Tokyo Construction Materials Ltd, Japan 🇯🇵</span>
+                    <span class="detail-label">🏢 Importer:</span>
+                    <span class="detail-value">Tokyo Construction Materials Ltd, Japan</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">Product:</span>
-                    <span class="detail-value">Engineered Gluelam Timber Beams</span>
+                    <span class="detail-label">📦 Product:</span>
+                    <span class="detail-value">Engineered Gluelam Timber Beams (GL30c, GL32h)</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">Value:</span>
-                    <span class="detail-value">EUR 339,000</span>
+                    <span class="detail-label">💰 Value:</span>
+                    <span class="detail-value">EUR 339,000 (CFR Tokyo Port)</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">Incoterms:</span>
-                    <span class="detail-value">CFR Tokyo Port</span>
+                    <span class="detail-label">⚖️ Weight:</span>
+                    <span class="detail-value">28,800 kg (160 pieces, 8 bundles)</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">Payment:</span>
-                    <span class="detail-value">Confirmed L/C (60 days)</span>
+                    <span class="detail-label">🚢 Route:</span>
+                    <span class="detail-value">Rauma Port, FI → Tokyo Port, JP (~45 days)</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">💳 Payment:</span>
+                    <span class="detail-value">Confirmed Irrevocable L/C (60 days)</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">📄 Documents:</span>
+                    <span class="detail-value">15 KTDDE-compliant trade documents</span>
                 </div>
             </div>
         </div>
         
-        <div class="tabs">
-            <button class="tab active" onclick="showActor('timeline')">⏱️ Timeline</button>
-            <button class="tab" onclick="showActor('buyer')">🏢 Buyer (Japan)</button>
-            <button class="tab" onclick="showActor('seller')">🏭 Seller (Finland)</button>
-            <button class="tab" onclick="showActor('bank')">🏦 Bank</button>
-            <button class="tab" onclick="showActor('carrier')">🚢 Carrier</button>
-            <button class="tab" onclick="showActor('customs')">🛃 Customs</button>
-            <button class="tab" onclick="showActor('chamber')">📜 Chamber of Commerce</button>
+        <div id="actor-tabs" class="actor-tabs">
+            <!-- Actor tabs will be dynamically generated by demo.js -->
         </div>
         
         <div class="content">
-            <!-- Timeline View -->
-            <div id="timeline" class="actor-view active">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker">1</div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">T-60 days</div>
-                            <div class="timeline-title">Purchase Order Created</div>
-                            <div class="timeline-desc">Tokyo Construction Materials issues PO for 160 gluelam beams</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">2</div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">T-50 days</div>
-                            <div class="timeline-title">Sales Order Confirmed</div>
-                            <div class="timeline-desc">Nordic Timber confirms order and begins production scheduling</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">3</div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">T-30 days</div>
-                            <div class="timeline-title">Letter of Credit Opened</div>
-                            <div class="timeline-desc">MUFG Bank Tokyo opens confirmed L/C advised by Nordea Finland</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">4</div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">T-5 days</div>
-                            <div class="timeline-title">Goods Shipped</div>
-                            <div class="timeline-desc">Delivery to Rauma Port, loaded on FESCO vessel</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">5</div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">T-3 days</div>
-                            <div class="timeline-title">Invoice & Documents Issued</div>
-                            <div class="timeline-desc">Commercial invoice, B/L, and certificates prepared</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">6</div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">Today</div>
-                            <div class="timeline-title">Goods in Transit</div>
-                            <div class="timeline-desc">Vessel en route to Tokyo (ETA: 45 days from shipment)</div>
-                        </div>
-                    </div>
-                </div>
+            <div id="documents-grid" class="documents-grid">
+                <!-- Documents will be dynamically generated by demo.js -->
             </div>
             
-            <!-- Buyer View -->
-            <div id="buyer" class="actor-view">
-                <div class="actor-header">
-                    <div class="actor-icon" style="background: #dbeafe;">🏢</div>
-                    <div class="actor-info">
-                        <h2>Tokyo Construction Materials Ltd</h2>
-                        <div class="role">Buyer / Importer</div>
-                    </div>
-                </div>
-                <div class="documents-grid" id="buyer-docs"></div>
-            </div>
-            
-            <!-- Seller View -->
-            <div id="seller" class="actor-view">
-                <div class="actor-header">
-                    <div class="actor-icon" style="background: #d1fae5;">🏭</div>
-                    <div class="actor-info">
-                        <h2>Nordic Timber Oy</h2>
-                        <div class="role">Seller / Exporter</div>
-                    </div>
-                </div>
-                <div class="documents-grid" id="seller-docs"></div>
-            </div>
-            
-            <!-- Bank View -->
-            <div id="bank" class="actor-view">
-                <div class="actor-header">
-                    <div class="actor-icon" style="background: #fef3c7;">🏦</div>
-                    <div class="actor-info">
-                        <h2>MUFG Bank Tokyo / Nordea Finland</h2>
-                        <div class="role">Issuing & Advising Banks</div>
-                    </div>
-                </div>
-                <div class="documents-grid" id="bank-docs"></div>
-            </div>
-            
-            <!-- Carrier View -->
-            <div id="carrier" class="actor-view">
-                <div class="actor-header">
-                    <div class="actor-icon" style="background: #e0e7ff;">🚢</div>
-                    <div class="actor-info">
-                        <h2>Far Eastern Shipping Company (FESCO)</h2>
-                        <div class="role">Ocean Carrier</div>
-                    </div>
-                </div>
-                <div class="documents-grid" id="carrier-docs"></div>
-            </div>
-            
-            <!-- Customs View -->
-            <div id="customs" class="actor-view">
-                <div class="actor-header">
-                    <div class="actor-icon" style="background: #fce7f3;">🛃</div>
-                    <div class="actor-info">
-                        <h2>Finnish & Japanese Customs</h2>
-                        <div class="role">Customs Authorities</div>
-                    </div>
-                </div>
-                <div class="documents-grid" id="customs-docs"></div>
-            </div>
-            
-            <!-- Chamber of Commerce View -->
-            <div id="chamber" class="actor-view">
-                <div class="actor-header">
-                    <div class="actor-icon" style="background: #fef3c7;">📜</div>
-                    <div class="actor-info">
-                        <h2>Finnish Chamber of Commerce</h2>
-                        <div class="role">Certificate Authority</div>
-                    </div>
-                </div>
-                <div class="documents-grid" id="chamber-docs"></div>
+            <div id="timeline-view" class="timeline-view" style="display:none;">
+                <!-- Timeline will be dynamically generated by demo.js -->
             </div>
         </div>
     </div>
     
-    <!-- Document Modal -->
-    <div id="documentModal" class="modal">
+    <!-- Modal for document details -->
+    <div id="doc-modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 id="modalTitle">Document</h2>
-                <button class="close-button" onclick="closeModal()">×</button>
+                <h2 id="doc-modal-title"></h2>
+                <button class="close-button" onclick="closeModal()">&times;</button>
             </div>
             <div class="modal-body">
-                <div id="modalContent" class="json-viewer"></div>
+                <div id="doc-modal-content"></div>
             </div>
         </div>
     </div>

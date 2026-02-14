@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "ktdde": "https://iri.suomi.fi/model/ktddecv/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "DangerousGoodsDeclaration": {
+      "@id": "ktddecv:DangerousGoodsDeclaration",
+      "@context": {
+        "hasDeclarationNumber": {
+          "@id": "ktddecv:hasDeclarationNumber"
+        },
+        "hasIssueDate": {
+          "@id": "ktddecv:hasIssueDate"
+        },
+        "hasShipper": {
+          "@id": "ktddecv:hasShipper"
+        },
+        "hasCarrier": {
+          "@id": "ktddecv:hasCarrier"
+        },
+        "hasDangerousGoods": {
+          "@id": "ktddecv:hasDangerousGoods"
+        },
+        "hasUnNumber": {
+          "@id": "ktddecv:hasUnNumber"
+        },
+        "hasProperShippingName": {
+          "@id": "ktddecv:hasProperShippingName"
+        },
+        "hasHazardClass": {
+          "@id": "ktddecv:hasHazardClass"
+        },
+        "hasPackingGroup": {
+          "@id": "ktddecv:hasPackingGroup"
+        }
+      }
+    }
+  }
+}
