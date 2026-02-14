@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Page</title>
+</head>
+<body>
+    <h1>Demo Test Page</h1>
+    <div id="output">Loading...</div>
+    <script>
+        // Inline test - no external files
+        document.getElementById('output').innerHTML = `
+            <p style="color: green; font-size: 20px;">✅ JavaScript is working!</p>
+            <p>If you see this, the HTML file opened correctly.</p>
+            <p>Current time: ${new Date().toLocaleString()}</p>
+        `;
+    </script>
+</body>
+</html>
