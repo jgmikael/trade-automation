@@ -1,0 +1,153 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix webuild: <https://iri.suomi.fi/model/webuild/> .
+@prefix webuild-vocab: <https://iri.suomi.fi/terminology/webuild/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eu-core: <https://iri.suomi.fi/model/eu-core/> .
+
+# SHACL Shape for WE BUILD Tax Debt Status Attestation
+# Based on WE BUILD Large Scale Pilot for electronic attestations
+
+webuild:TaxDebtStatusAttestationShape
+  a sh:NodeShape ;
+  sh:targetClass webuild:TaxDebtStatusAttestation ;
+  sh:name "Tax Debt Status Attestation"@en ,
+          "Veroviraston velkatodistus"@fi ;
+  sh:description """Electronic attestation issued by tax authorities certifying 
+                    the tax debt status of a legal entity for procurement purposes."""@en ;
+  dcterms:subject webuild-vocab:c_taxDebtStatus ;  # Link to SKOS concept
+  
+  # Attestation identifier
+  sh:property [
+    sh:path dcterms:identifier ;
+    sh:name "Attestation Identifier"@en ;
+    sh:description "Unique identifier for this attestation"@en ;
+    dcterms:subject webuild-vocab:c_identifier ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  
+  # Issue date
+  sh:property [
+    sh:path dcterms:issued ;
+    sh:name "Issue Date"@en ;
+    sh:description "Date and time when attestation was issued"@en ;
+    dcterms:subject webuild-vocab:c_issueDate ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  
+  # Expiry date
+  sh:property [
+    sh:path dcterms:valid ;
+    sh:name "Expiry Date"@en ;
+    sh:description "Date until which attestation is valid"@en ;
+    dcterms:subject webuild-vocab:c_expiryDate ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+  ] ;
+  
+  # Subject (legal entity)
+  sh:property [
+    sh:path webuild:isLegalEntity ;
+    sh:name "Subject Legal Entity"@en ;
+    sh:description "Legal entity to whom this attestation applies"@en ;
+    dcterms:subject webuild-vocab:c_legalEntity ;
+    sh:class eu-core:LegalEntity ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  
+  # Issuing institution
+  sh:property [
+    sh:path webuild:issuingInstitution ;
+    sh:name "Issuing Institution"@en ;
+    sh:description "Tax authority that issued this attestation"@en ;
+    dcterms:subject webuild-vocab:c_issuingInstitution ;
+    sh:class eu-core:PublicOrganisation ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  
+  # Tax debt status (core attestation claim)
+  sh:property [
+    sh:path webuild:hasTaxDebtStatus ;
+    sh:name "Tax Debt Status"@en ;
+    sh:description "Status indicating whether entity has outstanding tax debts"@en ;
+    dcterms:subject webuild-vocab:c_taxDebtStatus ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in ( "NO_DEBT" "HAS_DEBT" "PAYMENT_ARRANGEMENT" "UNDER_REVIEW" ) ;
+  ] ;
+  
+  # Tax debt amount (if applicable)
+  sh:property [
+    sh:path webuild:hasTaxDebtAmount ;
+    sh:name "Tax Debt Amount"@en ;
+    sh:description "Amount of outstanding tax debt, if any"@en ;
+    dcterms:subject webuild-vocab:c_taxDebtAmount ;
+    sh:datatype xsd:decimal ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    # Conditional: only if hasTaxDebtStatus = "HAS_DEBT"
+  ] ;
+  
+  # Applicable jurisdiction
+  sh:property [
+    sh:path webuild:hasApplicableJurisdiction ;
+    sh:name "Applicable Jurisdiction"@en ;
+    sh:description "Country whose tax laws apply"@en ;
+    dcterms:subject webuild-vocab:c_jurisdiction ;
+    sh:class eu-core:Location ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  
+  # Debt arrangement status (if applicable)
+  sh:property [
+    sh:path webuild:hasDebtArrangementStatus ;
+    sh:name "Debt Arrangement Status"@en ;
+    sh:description "Status of any payment arrangement for outstanding debts"@en ;
+    dcterms:subject webuild-vocab:c_debtArrangement ;
+    sh:datatype xsd:string ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:in ( "NONE" "ACTIVE" "COMPLETED" "DEFAULTED" ) ;
+  ] ;
+  
+  # Reference period
+  sh:property [
+    sh:path webuild:applicablePeriod ;
+    sh:name "Reference Period"@en ;
+    sh:description "Tax period to which this attestation refers"@en ;
+    dcterms:subject webuild-vocab:c_period ;
+    sh:datatype xsd:string ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+  ] ;
+  .
+
+# Example usage and documentation
+webuild:TaxDebtStatusAttestationShape
+  rdfs:comment """
+This SHACL shape defines the structure for Tax Debt Status Attestations
+in the WE BUILD Large Scale Pilot. These attestations are used in 
+public procurement to verify that contractors have no outstanding tax debts.
+
+The shape follows W3C Semantic Web best practices:
+1. SKOS concepts (webuild-vocab:*) define terminology
+2. OWL properties (webuild:*) define data model
+3. SHACL shape defines validation constraints
+4. JSON-LD / SD-JWT for serialization
+5. W3C VC for trust layer
+
+All properties reference SKOS concepts via dcterms:subject for 
+semantic traceability.
+"""@en ;
+  .

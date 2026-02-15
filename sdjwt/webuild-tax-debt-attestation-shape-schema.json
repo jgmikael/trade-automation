@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Tax Debt Status Attestation",
+  "description": "Electronic attestation issued by tax authorities certifying \n                    the tax debt status of a legal entity for procurement purposes.",
+  "properties": {
+    "identifier": {
+      "type": "string",
+      "description": "Unique identifier for this attestation"
+    },
+    "issued": {
+      "type": "string",
+      "description": "Date and time when attestation was issued"
+    },
+    "valid": {
+      "type": "string",
+      "description": "Date until which attestation is valid"
+    },
+    "is_legal_entity": {
+      "type": "object",
+      "description": "Legal entity to whom this attestation applies"
+    },
+    "issuing_institution": {
+      "type": "object",
+      "description": "Tax authority that issued this attestation"
+    },
+    "has_tax_debt_status": {
+      "type": "string",
+      "description": "Status indicating whether entity has outstanding tax debts",
+      "enum": [
+        "NO_DEBT",
+        "HAS_DEBT",
+        "PAYMENT_ARRANGEMENT",
+        "UNDER_REVIEW"
+      ]
+    },
+    "has_tax_debt_amount": {
+      "type": "number",
+      "description": "Amount of outstanding tax debt, if any"
+    },
+    "has_applicable_jurisdiction": {
+      "type": "object",
+      "description": "Country whose tax laws apply"
+    },
+    "has_debt_arrangement_status": {
+      "type": "string",
+      "description": "Status of any payment arrangement for outstanding debts",
+      "enum": [
+        "NONE",
+        "ACTIVE",
+        "COMPLETED",
+        "DEFAULTED"
+      ]
+    },
+    "applicable_period": {
+      "type": "string",
+      "description": "Tax period to which this attestation refers"
+    }
+  },
+  "required": [
+    "identifier",
+    "issued",
+    "is_legal_entity",
+    "issuing_institution",
+    "has_tax_debt_status",
+    "has_applicable_jurisdiction"
+  ],
+  "_semantic_mapping": {
+    "shacl_shape": "webuild:TaxDebtStatusAttestationShape",
+    "target_class": "webuild:TaxDebtStatusAttestation",
+    "skos_concept": "webuild-vocab:c_taxDebtStatus",
+    "properties": {
+      "identifier": {
+        "owl_property": "dcterms:identifier",
+        "original_name": "identifier",
+        "skos_concept": "webuild-vocab:c_identifier",
+        "datatype": "xsd:string",
+        "class": null,
+        "mandatory": true
+      },
+      "issued": {
+        "owl_property": "dcterms:issued",
+        "original_name": "issued",
+        "skos_concept": "webuild-vocab:c_issueDate",
+        "datatype": "xsd:dateTime",
+        "class": null,
+        "mandatory": true
+      },
+      "valid": {
+        "owl_property": "dcterms:valid",
+        "original_name": "valid",
+        "skos_concept": "webuild-vocab:c_expiryDate",
+        "datatype": "xsd:dateTime",
+        "class": null,
+        "mandatory": false
+      },
+      "is_legal_entity": {
+        "owl_property": "webuild:isLegalEntity",
+        "original_name": "isLegalEntity",
+        "skos_concept": "webuild-vocab:c_legalEntity",
+        "datatype": null,
+        "class": "eu-core:LegalEntity",
+        "mandatory": true
+      },
+      "issuing_institution": {
+        "owl_property": "webuild:issuingInstitution",
+        "original_name": "issuingInstitution",
+        "skos_concept": "webuild-vocab:c_issuingInstitution",
+        "datatype": null,
+        "class": "eu-core:PublicOrganisation",
+        "mandatory": true
+      },
+      "has_tax_debt_status": {
+        "owl_property": "webuild:hasTaxDebtStatus",
+        "original_name": "hasTaxDebtStatus",
+        "skos_concept": "webuild-vocab:c_taxDebtStatus",
+        "datatype": "xsd:string",
+        "class": null,
+        "mandatory": true
+      },
+      "has_tax_debt_amount": {
+        "owl_property": "webuild:hasTaxDebtAmount",
+        "original_name": "hasTaxDebtAmount",
+        "skos_concept": "webuild-vocab:c_taxDebtAmount",
+        "datatype": "xsd:decimal",
+        "class": null,
+        "mandatory": false
+      },
+      "has_applicable_jurisdiction": {
+        "owl_property": "webuild:hasApplicableJurisdiction",
+        "original_name": "hasApplicableJurisdiction",
+        "skos_concept": "webuild-vocab:c_jurisdiction",
+        "datatype": null,
+        "class": "eu-core:Location",
+        "mandatory": true
+      },
+      "has_debt_arrangement_status": {
+        "owl_property": "webuild:hasDebtArrangementStatus",
+        "original_name": "hasDebtArrangementStatus",
+        "skos_concept": "webuild-vocab:c_debtArrangement",
+        "datatype": "xsd:string",
+        "class": null,
+        "mandatory": false
+      },
+      "applicable_period": {
+        "owl_property": "webuild:applicablePeriod",
+        "original_name": "applicablePeriod",
+        "skos_concept": "webuild-vocab:c_period",
+        "datatype": "xsd:string",
+        "class": null,
+        "mandatory": false
+      }
+    }
+  }
+}

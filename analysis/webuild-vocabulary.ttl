@@ -1,0 +1,297 @@
+{
+    "@id": "https://iri.suomi.fi/model/webuild/",
+    "dcterms:hasPart": [
+        {
+            "@id": "webuild:hasTaxDebtStatus"
+        },
+        {
+            "@id": "webuild:Asset"
+        },
+        {
+            "@id": "webuild:TaxDebtStatusAttestation"
+        },
+        {
+            "@id": "webuild:ticketToken"
+        },
+        {
+            "@id": "webuild:SocialContributionsDebtStatusAttestation"
+        },
+        {
+            "@id": "webuild:hasWorkLocation"
+        },
+        {
+            "@id": "webuild:insuredPerson"
+        },
+        {
+            "@id": "webuild:employmentType"
+        },
+        {
+            "@id": "webuild:hasAddress"
+        },
+        {
+            "@id": "webuild:obligationType"
+        },
+        {
+            "@id": "webuild:hasActivity"
+        },
+        {
+            "@id": "webuild:Seat"
+        },
+        {
+            "@id": "webuild:hasSocialContributionsDebtStatus"
+        },
+        {
+            "@id": "webuild:OperationalAsset"
+        },
+        {
+            "@id": "webuild:ticketLetter"
+        },
+        {
+            "@id": "webuild:flagState"
+        },
+        {
+            "@id": "webuild:hasExclusionGroundsStatus"
+        },
+        {
+            "@id": "webuild:Participation"
+        },
+        {
+            "@id": "webuild:coverageScope"
+        },
+        {
+            "@id": "webuild:workHost"
+        },
+        {
+            "@id": "webuild:hasTaxFilingStatus"
+        },
+        {
+            "@id": "webuild:hasWorker"
+        },
+        {
+            "@id": "webuild:coverageValidityBasis"
+        },
+        {
+            "@id": "webuild:ProcurementExclusionGroundsStatusAttestation"
+        },
+        {
+            "@id": "webuild:obligationStatus"
+        },
+        {
+            "@id": "webuild:CompanyRegistrationGoodStandingAttestation"
+        },
+        {
+            "@id": "webuild:isLegalEntity"
+        },
+        {
+            "@id": "webuild:usesOperationalAsset"
+        },
+        {
+            "@id": "webuild:hasTaxDebtAmount"
+        },
+        {
+            "@id": "webuild:hasParticipation"
+        },
+        {
+            "@id": "webuild:issuingInstitution"
+        },
+        {
+            "@id": "webuild:hasSeat"
+        },
+        {
+            "@id": "webuild:Coverage"
+        },
+        {
+            "@id": "webuild:TaxObligationAssessment"
+        },
+        {
+            "@id": "webuild:coveredPeriod"
+        },
+        {
+            "@id": "webuild:hasCoverage"
+        },
+        {
+            "@id": "webuild:hasInsuranceCoverageStatus"
+        },
+        {
+            "@id": "webuild:hasEmployer"
+        },
+        {
+            "@id": "webuild:hasComplianceStatus"
+        },
+        {
+            "@id": "webuild:seatNumber"
+        },
+        {
+            "@id": "webuild:isSubjectToTransitionalRules"
+        },
+        {
+            "@id": "webuild:hasDetermination"
+        },
+        {
+            "@id": "webuild:PDA1Certificate"
+        },
+        {
+            "@id": "webuild:hasTaxObligationAssessment"
+        },
+        {
+            "@id": "webuild:hasParticipant"
+        },
+        {
+            "@id": "webuild:hasWorkRelation"
+        },
+        {
+            "@id": "webuild:Employment"
+        },
+        {
+            "@id": "webuild:hasPassenger"
+        },
+        {
+            "@id": "webuild:seatingType"
+        },
+        {
+            "@id": "webuild:hasDebtArrangementStatus"
+        },
+        {
+            "@id": "webuild:hasLegalApplicability"
+        },
+        {
+            "@id": "webuild:applicablePeriod"
+        },
+        {
+            "@id": "webuild:TaxFilingComplianceAttestation"
+        },
+        {
+            "@id": "webuild:PublicDebtArrangementStatusAttestation"
+        },
+        {
+            "@id": "webuild:hasApplicableJurisdiction"
+        },
+        {
+            "@id": "webuild:hasSocialDeclarationsStatus"
+        },
+        {
+            "@id": "webuild:Activity"
+        },
+        {
+            "@id": "webuild:ComplianceAttestation"
+        },
+        {
+            "@id": "webuild:hasPlaceOfActivity"
+        },
+        {
+            "@id": "webuild:PostedWorkerNotification"
+        },
+        {
+            "@id": "webuild:activityCountry"
+        },
+        {
+            "@id": "webuild:StatutoryInsuranceCoverageAttestation"
+        },
+        {
+            "@id": "webuild:hasFixedPlaceOfActivity"
+        },
+        {
+            "@id": "webuild:LegalApplicability"
+        },
+        {
+            "@id": "webuild:hasGoodStandingStatus"
+        },
+        {
+            "@id": "webuild:Determination"
+        },
+        {
+            "@id": "webuild:TransportTicket"
+        },
+        {
+            "@id": "webuild:SocialDeclarationsComplianceAttestation"
+        }
+    ],
+    "dcterms:isPartOf": [
+        {
+            "@id": "http://urn.fi/URN:NBN:fi:au:ptvl:v1115"
+        },
+        {
+            "@id": "http://urn.fi/URN:NBN:fi:au:ptvl:v1095"
+        },
+        {
+            "@id": "http://urn.fi/URN:NBN:fi:au:ptvl:v1096"
+        },
+        {
+            "@id": "http://urn.fi/URN:NBN:fi:au:ptvl:v1142"
+        },
+        {
+            "@id": "http://urn.fi/URN:NBN:fi:au:ptvl:v1105"
+        },
+        {
+            "@id": "http://urn.fi/URN:NBN:fi:au:ptvl:v1126"
+        },
+        {
+            "@id": "http://urn.fi/URN:NBN:fi:au:ptvl:v1132"
+        }
+    ],
+    "dcterms:identifier": "7262c954-bbd4-4217-92e5-cd7efc1d22b0",
+    "dcterms:contributor": {
+        "@id": "urn:uuid:0e7e4f57-be57-4f99-bb1f-bfdcf0b6948a"
+    },
+    "dcterms:requires": [
+        {
+            "@id": "https://iri.suomi.fi/terminology/webuild/"
+        },
+        {
+            "@id": "http://www.w3.org/2004/02/skos/core#"
+        }
+    ],
+    "owl:imports": [
+        {
+            "@id": "https://iri.suomi.fi/model/eu-core/"
+        },
+        {
+            "@id": "https://gs1.org/voc/"
+        }
+    ],
+    "dcterms:modified": {
+        "@value": "2026-02-06T13:04:16.97Z",
+        "@type": "xsd:dateTime"
+    },
+    "dcap:preferredXMLNamespacePrefix": "webuild",
+    "dcterms:language": "en",
+    "rdfs:label": {
+        "@language": "en",
+        "@value": "WE BUILD Vocabulary"
+    },
+    "rdfs:comment": {
+        "@language": "en",
+        "@value": "Vocabulary for the electronic attestations of attributes (QEAA, PubEAA, EAA) that are designed by and for the Use Cases of the WE BUILD Large Scale Pilot."
+    },
+    "suomi-meta:contentModified": {
+        "@value": "2026-01-12T17:12:46.471Z",
+        "@type": "xsd:dateTime"
+    },
+    "suomi-meta:modifier": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+    "suomi-meta:creator": "5dc030a4-740f-4dde-9548-4e6e797899d8",
+    "@type": "owl:Ontology",
+    "dcap:preferredXMLNamespace": "https://iri.suomi.fi/model/webuild/",
+    "suomi-meta:contact": "yhteentoimivuus@dvv.fi",
+    "dcterms:created": {
+        "@value": "2026-01-12T17:12:46.471Z",
+        "@type": "xsd:dateTime"
+    },
+    "suomi-meta:publicationStatus": {
+        "@id": "http://uri.suomi.fi/codelist/interoperabilityplatform/interoperabilityplatform_status/code/DRAFT"
+    },
+    "@context": {
+        "dcap": "http://purl.org/ws-mmi-dc/terms/",
+        "suomi-meta": "https://iri.suomi.fi/model/suomi-meta/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "geo": "http://www.opengis.net/ont/geosparql#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "sh": "http://www.w3.org/ns/shacl#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "http": "http://www.w3.org/2011/http#",
+        "eu-core": "https://iri.suomi.fi/model/eu-core/",
+        "webuild": "https://iri.suomi.fi/model/webuild/"
+    }
+}

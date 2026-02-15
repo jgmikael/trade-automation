@@ -1,0 +1,98 @@
+{
+  "format": "dual-track",
+  "source": "SHACL shape",
+  "credential_type": "TaxDebtStatusAttestation",
+  "formats": {
+    "json-ld": {
+      "format": "W3C Verifiable Credential",
+      "specification": "https://www.w3.org/TR/vc-data-model-2.0/",
+      "semantic_linking": "automatic via @context",
+      "credential": {
+        "@context": [
+          "https://www.w3.org/ns/credentials/v2",
+          "https://iri.suomi.fi/context/webuild/tax-debt-v1.jsonld"
+        ],
+        "type": [
+          "VerifiableCredential",
+          "TaxDebtStatusAttestation"
+        ],
+        "id": "urn:uuid:10eb41c280a251bf2f5b735d995bd02f",
+        "issuer": {
+          "id": "did:web:tax-authority.fi",
+          "type": "Organization"
+        },
+        "issuanceDate": "2026-02-15T20:35:18Z",
+        "expirationDate": "2026-02-16T20:35:18Z",
+        "credentialSubject": {
+          "identifier": "ATT-2024-TAX-00123",
+          "issued": "2024-02-15T10:30:00Z",
+          "valid": "2024-08-15T10:30:00Z",
+          "isLegalEntity": {
+            "type": "LegalEntity",
+            "id": "https://ytj.fi/0123456-7",
+            "legalName": "Example Construction Oy",
+            "taxIdentifier": "FI12345678"
+          },
+          "issuingInstitution": {
+            "type": "PublicOrganisation",
+            "id": "https://vero.fi",
+            "name": "Finnish Tax Administration"
+          },
+          "hasTaxDebtStatus": "NO_DEBT",
+          "hasApplicableJurisdiction": {
+            "type": "Location",
+            "countryCode": "FI"
+          },
+          "applicablePeriod": "2023-Q4",
+          "id": "https://ytj.fi/0123456-7"
+        },
+        "proof": {
+          "type": "DataIntegrityProof",
+          "cryptosuite": "eddsa-rdfc-2022",
+          "created": "2026-02-15T20:35:18Z",
+          "verificationMethod": "did:web:tax-authority.fi#key-1",
+          "proofPurpose": "assertionMethod",
+          "proofValue": "z...PLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDER"
+        }
+      }
+    },
+    "sd-jwt": {
+      "format": "IETF SD-JWT",
+      "specification": "https://datatracker.ietf.org/doc/draft-ietf-oauth-selective-disclosure-jwt/",
+      "semantic_linking": "manual via registry",
+      "semantic_registry": "https://iri.suomi.fi/registry/webuild/tax-debt-v1.json",
+      "credential": {
+        "iss": "did:web:tax-authority.fi",
+        "sub": "https://ytj.fi/0123456-7",
+        "iat": 1771187718,
+        "exp": 1771274118,
+        "type": "TaxDebtStatusAttestation",
+        "_semantic_registry": "https://iri.suomi.fi/registry/webuild/tax-debt-v1.json",
+        "_semantic_context": "https://tax-authority.fi/schemas/context/taxdebtstatusattestation-v1.jsonld",
+        "identifier": "ATT-2024-TAX-00123",
+        "issued": "2024-02-15T10:30:00Z",
+        "valid": "2024-08-15T10:30:00Z",
+        "is_legal_entity": {
+          "type": "LegalEntity",
+          "id": "https://ytj.fi/0123456-7",
+          "legalName": "Example Construction Oy",
+          "taxIdentifier": "FI12345678"
+        },
+        "issuing_institution": {
+          "type": "PublicOrganisation",
+          "id": "https://vero.fi",
+          "name": "Finnish Tax Administration"
+        },
+        "has_tax_debt_status": "NO_DEBT",
+        "has_applicable_jurisdiction": {
+          "type": "Location",
+          "countryCode": "FI"
+        },
+        "applicable_period": "2023-Q4",
+        "id": "https://ytj.fi/0123456-7"
+      }
+    }
+  },
+  "semantic_equivalence": true,
+  "note": "Both credentials carry the same information. JSON-LD has automatic semantic linking; SD-JWT requires registry lookup."
+}

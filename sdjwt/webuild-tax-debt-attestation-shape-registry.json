@@ -1,0 +1,88 @@
+{
+  "$schema": "https://openclaw.ai/schemas/semantic-registry-v1.json",
+  "description": "Semantic registry mapping SD-JWT claims to SHACL/OWL/SKOS",
+  "version": "1.0.0",
+  "source_shacl": "webuild:TaxDebtStatusAttestationShape",
+  "mappings": {
+    "identifier": {
+      "sdjwt_claim": "identifier",
+      "shacl_shape": "webuild:TaxDebtStatusAttestationShape",
+      "owl_property": "dcterms:identifier",
+      "skos_concept": "webuild-vocab:c_identifier",
+      "label": "Attestation Identifier",
+      "description": "Unique identifier for this attestation"
+    },
+    "issued": {
+      "sdjwt_claim": "issued",
+      "shacl_shape": "webuild:TaxDebtStatusAttestationShape",
+      "owl_property": "dcterms:issued",
+      "skos_concept": "webuild-vocab:c_issueDate",
+      "label": "Issue Date",
+      "description": "Date and time when attestation was issued"
+    },
+    "valid": {
+      "sdjwt_claim": "valid",
+      "shacl_shape": "webuild:TaxDebtStatusAttestationShape",
+      "owl_property": "dcterms:valid",
+      "skos_concept": "webuild-vocab:c_expiryDate",
+      "label": "Expiry Date",
+      "description": "Date until which attestation is valid"
+    },
+    "is_legal_entity": {
+      "sdjwt_claim": "is_legal_entity",
+      "shacl_shape": "webuild:TaxDebtStatusAttestationShape",
+      "owl_property": "webuild:isLegalEntity",
+      "skos_concept": "webuild-vocab:c_legalEntity",
+      "label": "Subject Legal Entity",
+      "description": "Legal entity to whom this attestation applies"
+    },
+    "issuing_institution": {
+      "sdjwt_claim": "issuing_institution",
+      "shacl_shape": "webuild:TaxDebtStatusAttestationShape",
+      "owl_property": "webuild:issuingInstitution",
+      "skos_concept": "webuild-vocab:c_issuingInstitution",
+      "label": "Issuing Institution",
+      "description": "Tax authority that issued this attestation"
+    },
+    "has_tax_debt_status": {
+      "sdjwt_claim": "has_tax_debt_status",
+      "shacl_shape": "webuild:TaxDebtStatusAttestationShape",
+      "owl_property": "webuild:hasTaxDebtStatus",
+      "skos_concept": "webuild-vocab:c_taxDebtStatus",
+      "label": "Tax Debt Status",
+      "description": "Status indicating whether entity has outstanding tax debts"
+    },
+    "has_tax_debt_amount": {
+      "sdjwt_claim": "has_tax_debt_amount",
+      "shacl_shape": "webuild:TaxDebtStatusAttestationShape",
+      "owl_property": "webuild:hasTaxDebtAmount",
+      "skos_concept": "webuild-vocab:c_taxDebtAmount",
+      "label": "Tax Debt Amount",
+      "description": "Amount of outstanding tax debt, if any"
+    },
+    "has_applicable_jurisdiction": {
+      "sdjwt_claim": "has_applicable_jurisdiction",
+      "shacl_shape": "webuild:TaxDebtStatusAttestationShape",
+      "owl_property": "webuild:hasApplicableJurisdiction",
+      "skos_concept": "webuild-vocab:c_jurisdiction",
+      "label": "Applicable Jurisdiction",
+      "description": "Country whose tax laws apply"
+    },
+    "has_debt_arrangement_status": {
+      "sdjwt_claim": "has_debt_arrangement_status",
+      "shacl_shape": "webuild:TaxDebtStatusAttestationShape",
+      "owl_property": "webuild:hasDebtArrangementStatus",
+      "skos_concept": "webuild-vocab:c_debtArrangement",
+      "label": "Debt Arrangement Status",
+      "description": "Status of any payment arrangement for outstanding debts"
+    },
+    "applicable_period": {
+      "sdjwt_claim": "applicable_period",
+      "shacl_shape": "webuild:TaxDebtStatusAttestationShape",
+      "owl_property": "webuild:applicablePeriod",
+      "skos_concept": "webuild-vocab:c_period",
+      "label": "Reference Period",
+      "description": "Tax period to which this attestation refers"
+    }
+  }
+}
