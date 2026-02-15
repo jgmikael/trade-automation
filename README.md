@@ -86,6 +86,40 @@ Interactive visualization of document flow:
 
 ---
 
+## ⚠️ **IMPORTANT: Data Quality Notice**
+
+### SHACL Shapes Status
+
+**5 Core Documents (Production Quality):** ✅
+- Purchase Order
+- Commercial Invoice  
+- Bill of Lading
+- Certificate of Origin
+- Documentary Credit (Letter of Credit)
+
+These shapes are based on actual KTDDE specifications and are suitable for demonstration to standards bodies.
+
+**31 Additional Documents (Placeholder Quality):** ⚠️
+
+The 31 additional SHACL shapes are **simplified placeholders for demonstration purposes only**. They:
+- ❌ Use generic property names (not official KTDDE vocabulary)
+- ❌ Lack cardinality constraints (min/max)
+- ❌ Missing data type specifications
+- ❌ Not mapped to UNTDED/ISO 7372 codes
+- ❌ **NOT validated against official KTDDE Data Glossary**
+
+**For Production Use:**
+Before using these shapes in production systems, they must be properly created based on:
+1. **Official KTDDE Data Glossary:** https://www.digitalizetrade.org/files/ktdde/DSI-KTDDE-data-glossary_20260108.xlsx
+2. **KTDDE OWL Ontology:** `ontology/ktdde-v0.0.5.rdf`
+3. **UNTDED/ISO 7372 standards:** https://unece.org/untded-iso7372
+
+**See:** `QUALITY_ASSESSMENT.md` for detailed analysis and proper implementation guide.
+
+---
+
+---
+
 ## 🚀 Quick Start
 
 ### View the Demo
