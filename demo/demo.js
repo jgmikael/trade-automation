@@ -1,6 +1,6 @@
 // demo.js - Finnish Gluelam Timber to Japan Trade Demo
 // All 15 relevant KTDDE documents for the trade
-// Generated from scenario_gluelam_timber_full.py
+// WITH INTERACTIVE DOCUMENT FLOW VISUALIZATION
 
 // Document metadata
 const docInfo = {
@@ -60,7 +60,7 @@ const docInfo = {
     description: "Final delivery to construction site"
   },
   regulatory_certificate: {
-    title: "Regulatory Certificate",
+    title: "Regulatory Certificate (CE)",
     icon: "✅",
     description: "CE marking for structural timber (EN 14080)"
   },
@@ -86,7 +86,7 @@ const documents = {
   "purchase_order": {
     "@type": "PurchaseOrder",
     "purchaseOrderNumber": "4500001000",
-    "issueDate": "2025-12-31",
+    "issueDate": "2026-01-01",
     "buyerParty": {
       "@type": "Party",
       "partyName": "Tokyo Construction Materials Ltd",
@@ -113,7 +113,7 @@ const documents = {
     "paymentTerms": {
       "@type": "PaymentTerms",
       "paymentMeans": "Letter of Credit",
-      "paymentDueDate": "2026-04-05"
+      "paymentDueDate": "2026-04-06"
     },
     "goodsItems": [
       {
@@ -166,8 +166,8 @@ const documents = {
   "documentary_credit": {
     "@type": "DocumentaryCredit",
     "creditNumber": "LC-MUFG-FI-2024-05678",
-    "issueDate": "2026-01-15",
-    "expiryDate": "2026-04-15",
+    "issueDate": "2026-01-16",
+    "expiryDate": "2026-04-16",
     "applicant": {
       "@type": "Party",
       "partyName": "Tokyo Construction Materials Ltd",
@@ -207,7 +207,7 @@ const documents = {
   "bill_of_lading": {
     "@type": "BillOfLading",
     "blNumber": "FESCO2024FI123456",
-    "issueDate": "2026-02-04",
+    "issueDate": "2026-02-05",
     "carrierParty": {
       "@type": "Party",
       "partyName": "FESCO (Far Eastern Shipping Company)"
@@ -257,7 +257,7 @@ const documents = {
   "commercial_invoice": {
     "@type": "CommercialInvoice",
     "invoiceNumber": "9000002000",
-    "issueDate": "2026-02-04",
+    "issueDate": "2026-02-05",
     "sellerParty": {
       "@type": "Party",
       "partyName": "Nordic Timber Oy",
@@ -337,7 +337,7 @@ const documents = {
   "certificate_of_origin": {
     "@type": "CertificateOfOrigin",
     "certificateNumber": "COO-FI-2024-0234",
-    "issueDate": "2026-02-04",
+    "issueDate": "2026-02-05",
     "issuingAuthority": {
       "@type": "Party",
       "partyName": "Finnish Chamber of Commerce",
@@ -366,7 +366,7 @@ const documents = {
   "packing_list": {
     "@type": "PackingList",
     "packingListNumber": "PL-2024-0567",
-    "issueDate": "2026-02-04",
+    "issueDate": "2026-02-05",
     "shipper": {
       "@type": "Party",
       "partyName": "Nordic Timber Oy",
@@ -496,7 +496,7 @@ const documents = {
   "insurance_certificate": {
     "@type": "InsuranceCertificate",
     "certificateNumber": "INS-FESCO-2024-1234",
-    "issueDate": "2026-02-02",
+    "issueDate": "2026-02-03",
     "insurer": {
       "@type": "Party",
       "partyName": "Nordic Marine Insurance AS",
@@ -522,7 +522,7 @@ const documents = {
   "phytosanitary_certificate": {
     "@type": "PhytosanitaryCertificate",
     "certificateNumber": "PHY-FI-2024-00891",
-    "issueDate": "2026-02-03",
+    "issueDate": "2026-02-04",
     "issuingAuthority": {
       "@type": "Party",
       "partyName": "Finnish Food Authority - Plant Health Unit",
@@ -545,14 +545,14 @@ const documents = {
     "treatment": "Heat treatment ISPM-15 compliant, Kiln dried to 12% moisture content",
     "disinfestationMethod": "HT (Heat Treatment) 56°C for 30 minutes",
     "additionalDeclaration": "Wood products free from bark, treated according to ISPM-15 standard",
-    "inspectionDate": "2026-02-02",
+    "inspectionDate": "2026-02-03",
     "inspectorName": "Dr. Matti Virtanen"
   },
   "customs_declaration_export": {
     "@type": "CustomsDeclaration",
     "declarationNumber": "FI-EXP-2024-123456",
     "declarationType": "Export Declaration",
-    "declarationDate": "2026-02-04",
+    "declarationDate": "2026-02-05",
     "declarant": {
       "@type": "Party",
       "partyName": "Baltic Logistics Oy",
@@ -624,7 +624,7 @@ const documents = {
     "@type": "CustomsDeclaration",
     "declarationNumber": "JP-IMP-2024-987654",
     "declarationType": "Import Declaration",
-    "declarationDate": "2026-03-21",
+    "declarationDate": "2026-03-22",
     "declarant": {
       "@type": "Party",
       "partyName": "Tokyo Customs Broker KK",
@@ -701,7 +701,7 @@ const documents = {
   "delivery_note": {
     "@type": "DeliveryNote",
     "deliveryNoteNumber": "DN-2024-0234",
-    "deliveryDate": "2026-03-24",
+    "deliveryDate": "2026-03-25",
     "supplier": {
       "@type": "Party",
       "partyName": "Nordic Timber Oy",
@@ -743,14 +743,14 @@ const documents = {
       }
     ],
     "receivedBy": "Tanaka-san (Site Manager)",
-    "receivedDate": "2026-03-24",
+    "receivedDate": "2026-03-25",
     "referencePO": "4500001000",
     "referenceBL": "FESCO2024FI123456"
   },
   "regulatory_certificate": {
     "@type": "RegulatoryCertificate",
     "certificateNumber": "CE-GL-2024-0156",
-    "issueDate": "2026-01-30",
+    "issueDate": "2026-01-31",
     "issuingAuthority": {
       "@type": "Party",
       "partyName": "TÜV SÜD Finland Oy",
@@ -774,7 +774,7 @@ const documents = {
   "sea_cargo_manifest": {
     "@type": "SeaCargoManifest",
     "manifestNumber": "FESCO-MAN-2024-FI123",
-    "issueDate": "2026-02-04",
+    "issueDate": "2026-02-05",
     "vessel": {
       "@type": "TransportMeans",
       "vesselName": "MV Baltic Express",
@@ -826,7 +826,7 @@ const documents = {
   "warehouse_receipt": {
     "@type": "WarehouseReceipt",
     "receiptNumber": "WH-RAU-2024-0567",
-    "issueDate": "2026-02-01",
+    "issueDate": "2026-02-02",
     "warehouse": {
       "@type": "Party",
       "partyName": "Rauma Port Warehouse Services Oy",
@@ -849,14 +849,14 @@ const documents = {
       "unitCode": "KGM"
     },
     "storageLocation": "Export Warehouse Section B-12",
-    "storageStartDate": "2026-02-01",
-    "storageEndDate": "2026-02-04",
+    "storageStartDate": "2026-02-02",
+    "storageEndDate": "2026-02-05",
     "releaseCondition": "Released for shipment on B/L FESCO2024FI123456"
   },
   "payment_confirmation": {
     "@type": "PaymentConfirmation",
     "confirmationNumber": "PAY-MUFG-2024-05678",
-    "paymentDate": "2026-03-01",
+    "paymentDate": "2026-03-02",
     "payer": {
       "@type": "Party",
       "partyName": "MUFG Bank Tokyo",
@@ -877,7 +877,7 @@ const documents = {
     "referenceDocument": "L/C No. LC-MUFG-FI-2024-05678",
     "paymentStatus": "Completed",
     "transactionId": "SWIFT-MT700-2024-05678",
-    "valueDate": "2026-03-01"
+    "valueDate": "2026-03-02"
   }
 };
 
@@ -970,100 +970,366 @@ const actorViews = {
 // Timeline events
 const timeline = [
   {
-    "date": "2025-12-31",
+    "date": "2026-01-01",
     "event": "Purchase Order Issued",
     "actor": "Buyer",
     "doc": "purchase_order"
   },
   {
-    "date": "2026-01-15",
+    "date": "2026-01-16",
     "event": "Letter of Credit Opened",
     "actor": "Bank",
     "doc": "documentary_credit"
   },
   {
-    "date": "2026-01-30",
+    "date": "2026-01-31",
     "event": "CE Certification Completed",
     "actor": "Certifier",
     "doc": "regulatory_certificate"
   },
   {
-    "date": "2026-02-01",
+    "date": "2026-02-02",
     "event": "Goods Stored at Port Warehouse",
     "actor": "Warehouse",
     "doc": "warehouse_receipt"
   },
   {
-    "date": "2026-02-02",
+    "date": "2026-02-03",
     "event": "Phytosanitary Inspection",
     "actor": "Authority",
     "doc": "phytosanitary_certificate"
   },
   {
-    "date": "2026-02-02",
+    "date": "2026-02-03",
     "event": "Insurance Certificate Issued",
     "actor": "Insurer",
     "doc": "insurance_certificate"
   },
   {
-    "date": "2026-02-03",
+    "date": "2026-02-04",
     "event": "Certificate of Origin Issued",
     "actor": "Chamber",
     "doc": "certificate_of_origin"
   },
   {
-    "date": "2026-02-04",
+    "date": "2026-02-05",
     "event": "Goods Loaded & Shipped",
     "actor": "Carrier",
     "doc": "bill_of_lading"
   },
   {
-    "date": "2026-02-04",
+    "date": "2026-02-05",
     "event": "Commercial Invoice Issued",
     "actor": "Seller",
     "doc": "commercial_invoice"
   },
   {
-    "date": "2026-02-04",
+    "date": "2026-02-05",
     "event": "Packing List Created",
     "actor": "Seller",
     "doc": "packing_list"
   },
   {
-    "date": "2026-02-04",
+    "date": "2026-02-05",
     "event": "Export Customs Clearance",
     "actor": "Customs",
     "doc": "customs_declaration_export"
   },
   {
-    "date": "2026-02-04",
+    "date": "2026-02-05",
     "event": "Sea Cargo Manifest Filed",
     "actor": "Carrier",
     "doc": "sea_cargo_manifest"
   },
   {
-    "date": "2026-03-01",
+    "date": "2026-03-02",
     "event": "Payment Processed",
     "actor": "Bank",
     "doc": "payment_confirmation"
   },
   {
-    "date": "2026-03-21",
+    "date": "2026-03-22",
     "event": "Vessel Arrives Tokyo Port",
     "actor": "Carrier",
     "doc": null
   },
   {
-    "date": "2026-03-21",
+    "date": "2026-03-22",
     "event": "Import Customs Clearance",
     "actor": "Customs",
     "doc": "customs_declaration_import"
   },
   {
-    "date": "2026-03-24",
+    "date": "2026-03-25",
     "event": "Final Delivery to Buyer",
     "actor": "Logistics",
     "doc": "delivery_note"
+  }
+];
+
+// Document flow (who creates what, dependencies, triggers)
+const documentFlow = {
+  "purchase_order": {
+    "order": 1,
+    "creator": "buyer",
+    "creator_name": "Buyer (Tokyo Construction)",
+    "action": "Issues Purchase Order",
+    "triggers": [
+      "documentary_credit"
+    ],
+    "dependencies": [],
+    "description": "Buyer issues PO requesting 160 gluelam beams for EUR 285,000"
+  },
+  "documentary_credit": {
+    "order": 2,
+    "creator": "bank",
+    "creator_name": "Buyer's Bank (MUFG Tokyo)",
+    "action": "Opens Letter of Credit",
+    "triggers": [
+      "regulatory_certificate",
+      "phytosanitary_certificate",
+      "warehouse_receipt"
+    ],
+    "dependencies": [
+      "purchase_order"
+    ],
+    "description": "Bank opens confirmed irrevocable L/C for EUR 339,000 valid 90 days"
+  },
+  "regulatory_certificate": {
+    "order": 3,
+    "creator": "certifier",
+    "creator_name": "Certifier (TÜV SÜD)",
+    "action": "Issues CE Marking Certificate",
+    "triggers": [
+      "warehouse_receipt"
+    ],
+    "dependencies": [
+      "documentary_credit"
+    ],
+    "description": "CE certification for structural timber per EN 14080:2013"
+  },
+  "warehouse_receipt": {
+    "order": 4,
+    "creator": "seller",
+    "creator_name": "Warehouse (Rauma Port)",
+    "action": "Receives Goods at Port",
+    "triggers": [
+      "phytosanitary_certificate",
+      "insurance_certificate"
+    ],
+    "dependencies": [
+      "regulatory_certificate",
+      "documentary_credit"
+    ],
+    "description": "Timber stored at export warehouse, ready for shipment"
+  },
+  "phytosanitary_certificate": {
+    "order": 5,
+    "creator": "certifier",
+    "creator_name": "Authority (Finnish Food Authority)",
+    "action": "Issues Phytosanitary Certificate",
+    "triggers": [
+      "insurance_certificate"
+    ],
+    "dependencies": [
+      "warehouse_receipt"
+    ],
+    "description": "ISPM-15 heat treatment certification for wood products"
+  },
+  "insurance_certificate": {
+    "order": 6,
+    "creator": "seller",
+    "creator_name": "Insurer (Nordic Marine Insurance)",
+    "action": "Issues Insurance Certificate",
+    "triggers": [
+      "certificate_of_origin",
+      "packing_list"
+    ],
+    "dependencies": [
+      "phytosanitary_certificate"
+    ],
+    "description": "All Risks marine cargo insurance for EUR 373,000 (110% CIF)"
+  },
+  "certificate_of_origin": {
+    "order": 7,
+    "creator": "chamber",
+    "creator_name": "Chamber (Finnish Chamber of Commerce)",
+    "action": "Issues Certificate of Origin",
+    "triggers": [
+      "bill_of_lading",
+      "commercial_invoice"
+    ],
+    "dependencies": [
+      "insurance_certificate"
+    ],
+    "description": "Certifies goods originate from Finland"
+  },
+  "packing_list": {
+    "order": 8,
+    "creator": "seller",
+    "creator_name": "Seller (Nordic Timber)",
+    "action": "Creates Packing List",
+    "triggers": [
+      "bill_of_lading"
+    ],
+    "dependencies": [
+      "insurance_certificate"
+    ],
+    "description": "Details of 8 timber bundles, 28.8 tons total"
+  },
+  "bill_of_lading": {
+    "order": 9,
+    "creator": "carrier",
+    "creator_name": "Carrier (FESCO)",
+    "action": "Issues Bill of Lading",
+    "triggers": [
+      "commercial_invoice",
+      "customs_declaration_export",
+      "sea_cargo_manifest"
+    ],
+    "dependencies": [
+      "certificate_of_origin",
+      "packing_list"
+    ],
+    "description": "Ocean B/L for MV Baltic Express, Rauma → Tokyo"
+  },
+  "commercial_invoice": {
+    "order": 10,
+    "creator": "seller",
+    "creator_name": "Seller (Nordic Timber)",
+    "action": "Issues Commercial Invoice",
+    "triggers": [
+      "customs_declaration_export"
+    ],
+    "dependencies": [
+      "bill_of_lading"
+    ],
+    "description": "Invoice for EUR 339,000 (CFR terms)"
+  },
+  "customs_declaration_export": {
+    "order": 11,
+    "creator": "customs",
+    "creator_name": "Customs (Finnish Customs)",
+    "action": "Clears for Export",
+    "triggers": [
+      "sea_cargo_manifest"
+    ],
+    "dependencies": [
+      "bill_of_lading",
+      "commercial_invoice"
+    ],
+    "description": "Export declaration at Rauma Port customs"
+  },
+  "sea_cargo_manifest": {
+    "order": 12,
+    "creator": "carrier",
+    "creator_name": "Carrier (FESCO)",
+    "action": "Files Cargo Manifest",
+    "triggers": [
+      "payment_confirmation"
+    ],
+    "dependencies": [
+      "customs_declaration_export",
+      "bill_of_lading"
+    ],
+    "description": "Vessel manifest filed, cargo loaded and sailing"
+  },
+  "payment_confirmation": {
+    "order": 13,
+    "creator": "bank",
+    "creator_name": "Bank (MUFG/Nordea)",
+    "action": "Processes L/C Payment",
+    "triggers": [
+      "customs_declaration_import"
+    ],
+    "dependencies": [
+      "sea_cargo_manifest"
+    ],
+    "description": "Documents presented, L/C payment released (EUR 339,000)"
+  },
+  "customs_declaration_import": {
+    "order": 14,
+    "creator": "customs",
+    "creator_name": "Customs (Japanese Customs)",
+    "action": "Clears for Import",
+    "triggers": [
+      "delivery_note"
+    ],
+    "dependencies": [
+      "payment_confirmation"
+    ],
+    "description": "Import clearance at Tokyo Port (zero duty under EU-Japan EPA)"
+  },
+  "delivery_note": {
+    "order": 15,
+    "creator": "buyer",
+    "creator_name": "Logistics (Tokyo Logistics)",
+    "action": "Delivers to Construction Site",
+    "triggers": [],
+    "dependencies": [
+      "customs_declaration_import"
+    ],
+    "description": "Final delivery to buyer's construction site warehouse"
+  }
+};
+
+// Actor colors for visualization
+const actorColors = {
+  "buyer": "#3b82f6",
+  "seller": "#10b981",
+  "bank": "#f59e0b",
+  "carrier": "#06b6d4",
+  "customs": "#8b5cf6",
+  "chamber": "#ec4899",
+  "certifier": "#14b8a6"
+};
+
+// Process stages
+const processStages = [
+  {
+    "name": "Negotiation & Contract",
+    "docs": [
+      "purchase_order",
+      "documentary_credit"
+    ],
+    "description": "Buyer and seller agree on terms; bank provides payment guarantee"
+  },
+  {
+    "name": "Preparation & Certification",
+    "docs": [
+      "regulatory_certificate",
+      "warehouse_receipt",
+      "phytosanitary_certificate",
+      "insurance_certificate"
+    ],
+    "description": "Seller prepares goods, obtains required certificates and insurance"
+  },
+  {
+    "name": "Documentation & Export",
+    "docs": [
+      "certificate_of_origin",
+      "packing_list",
+      "bill_of_lading",
+      "commercial_invoice",
+      "customs_declaration_export"
+    ],
+    "description": "Export documents prepared, customs clearance, goods loaded"
+  },
+  {
+    "name": "Transit & Payment",
+    "docs": [
+      "sea_cargo_manifest",
+      "payment_confirmation"
+    ],
+    "description": "Goods in transit, documents presented to bank, payment released"
+  },
+  {
+    "name": "Import & Delivery",
+    "docs": [
+      "customs_declaration_import",
+      "delivery_note"
+    ],
+    "description": "Import clearance at destination, final delivery to buyer"
   }
 ];
 
@@ -1081,12 +1347,15 @@ const actors = [
 // Current state
 let currentActor = 'buyer';
 let currentDoc = null;
+let flowAnimationStep = 0;
+let flowAnimationInterval = null;
 
 // Initialize demo
 function initDemo() {
   renderActorTabs();
   renderDocuments(currentActor);
   renderTimeline();
+  renderDocumentFlow();
 }
 
 // Render actor tabs
@@ -1199,6 +1468,151 @@ function renderTimeline() {
       </div>
     </div>
   `).join('');
+}
+
+// Render document flow
+function renderDocumentFlow() {
+  const container = document.getElementById('flow-diagram');
+  if (!container) return;
+  
+  // Get documents sorted by order
+  const sortedDocs = Object.keys(documentFlow).sort((a, b) => 
+    documentFlow[a].order - documentFlow[b].order
+  );
+  
+  // Group by stage
+  let html = '<div class="flow-stages">';
+  
+  processStages.forEach((stage, stageIdx) => {
+    html += `
+      <div class="flow-stage">
+        <div class="stage-header">
+          <div class="stage-number">${stageIdx + 1}</div>
+          <div>
+            <h3>${stage.name}</h3>
+            <p>${stage.description}</p>
+          </div>
+        </div>
+        <div class="stage-docs">
+    `;
+    
+    stage.docs.forEach(docKey => {
+      const flow = documentFlow[docKey];
+      const info = docInfo[docKey];
+      const color = actorColors[flow.creator];
+      
+      html += `
+        <div class="flow-doc" 
+             data-doc="${docKey}"
+             data-order="${flow.order}"
+             style="border-color: ${color};"
+             onclick="showDocumentFlow('${docKey}')">
+          <div class="flow-doc-header" style="background: ${color};">
+            <div class="flow-doc-number">${flow.order}</div>
+            <div class="flow-doc-icon">${info.icon}</div>
+          </div>
+          <div class="flow-doc-body">
+            <div class="flow-doc-title">${info.title}</div>
+            <div class="flow-doc-creator">${flow.creator_name}</div>
+            <div class="flow-doc-action">${flow.action}</div>
+          </div>
+          ${flow.dependencies.length > 0 ? `
+            <div class="flow-doc-deps">
+              <small>Requires: ${flow.dependencies.length} doc(s)</small>
+            </div>
+          ` : ''}
+          ${flow.triggers.length > 0 ? `
+            <div class="flow-doc-triggers">
+              <small>→ Triggers: ${flow.triggers.length} doc(s)</small>
+            </div>
+          ` : ''}
+        </div>
+      `;
+    });
+    
+    html += `
+        </div>
+      </div>
+    `;
+    
+    // Add stage connector
+    if (stageIdx < processStages.length - 1) {
+      html += '<div class="stage-connector">→</div>';
+    }
+  });
+  
+  html += '</div>';
+  
+  container.innerHTML = html;
+}
+
+// Show document in flow context
+function showDocumentFlow(docKey) {
+  const flow = documentFlow[docKey];
+  const info = docInfo[docKey];
+  const doc = documents[docKey];
+  
+  if (!flow || !info || !doc) return;
+  
+  const modal = document.getElementById('doc-modal');
+  const title = document.getElementById('doc-modal-title');
+  const content = document.getElementById('doc-modal-content');
+  
+  let flowInfo = `
+    <div class="flow-info">
+      <h3>📋 Document Flow Information</h3>
+      <div class="flow-info-grid">
+        <div class="flow-info-item">
+          <strong>Order:</strong> #${flow.order} of 15
+        </div>
+        <div class="flow-info-item">
+          <strong>Creator:</strong> ${flow.creator_name}
+        </div>
+        <div class="flow-info-item">
+          <strong>Action:</strong> ${flow.action}
+        </div>
+        <div class="flow-info-item">
+          <strong>Description:</strong> ${flow.description}
+        </div>
+      </div>
+  `;
+  
+  if (flow.dependencies.length > 0) {
+    flowInfo += `
+      <div class="flow-dependencies">
+        <h4>📥 Requires These Documents First:</h4>
+        <ul>
+          ${flow.dependencies.map(dep => `
+            <li onclick="showDocumentFlow('${dep}')" style="cursor: pointer; color: #3b82f6;">
+              ${docInfo[dep].icon} ${docInfo[dep].title}
+            </li>
+          `).join('')}
+        </ul>
+      </div>
+    `;
+  }
+  
+  if (flow.triggers.length > 0) {
+    flowInfo += `
+      <div class="flow-triggers">
+        <h4>📤 Triggers Creation Of:</h4>
+        <ul>
+          ${flow.triggers.map(trig => `
+            <li onclick="showDocumentFlow('${trig}')" style="cursor: pointer; color: #10b981;">
+              ${docInfo[trig].icon} ${docInfo[trig].title}
+            </li>
+          `).join('')}
+        </ul>
+      </div>
+    `;
+  }
+  
+  flowInfo += '</div><hr>';
+  
+  title.innerHTML = `${info.icon} ${info.title} <span style="font-size: 0.6em; opacity: 0.8;">(#${flow.order})</span>`;
+  content.innerHTML = flowInfo + `<pre class="json-display">${syntaxHighlight(JSON.stringify(doc, null, 2))}</pre>`;
+  
+  modal.style.display = 'flex';
 }
 
 // Close modal on escape

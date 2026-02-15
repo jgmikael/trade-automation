@@ -378,6 +378,213 @@
                 grid-template-columns: 1fr;
             }
         }
+    
+        /* Document Flow Styles */
+        .flow-stages {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+            overflow-x: auto;
+            min-height: 600px;
+        }
+        
+        .flow-stage {
+            min-width: 350px;
+            flex-shrink: 0;
+        }
+        
+        .stage-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            border-radius: 12px;
+        }
+        
+        .stage-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            color: #1e3a8a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.3em;
+            flex-shrink: 0;
+        }
+        
+        .stage-header h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.1em;
+        }
+        
+        .stage-header p {
+            margin: 0;
+            font-size: 0.85em;
+            opacity: 0.9;
+        }
+        
+        .stage-docs {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .flow-doc {
+            background: white;
+            border: 3px solid #e5e7eb;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            overflow: hidden;
+        }
+        
+        .flow-doc:hover {
+            transform: translateX(5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        .flow-doc-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            color: white;
+        }
+        
+        .flow-doc-number {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9em;
+        }
+        
+        .flow-doc-icon {
+            font-size: 1.8em;
+        }
+        
+        .flow-doc-body {
+            padding: 15px;
+        }
+        
+        .flow-doc-title {
+            font-weight: 600;
+            font-size: 1em;
+            color: #1e3a8a;
+            margin-bottom: 8px;
+        }
+        
+        .flow-doc-creator {
+            font-size: 0.85em;
+            color: #6b7280;
+            margin-bottom: 5px;
+        }
+        
+        .flow-doc-action {
+            font-size: 0.8em;
+            color: #374151;
+            font-style: italic;
+        }
+        
+        .flow-doc-deps, .flow-doc-triggers {
+            padding: 8px 15px;
+            background: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.75em;
+        }
+        
+        .flow-doc-deps {
+            color: #dc2626;
+        }
+        
+        .flow-doc-triggers {
+            color: #059669;
+        }
+        
+        .stage-connector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            color: #3b82f6;
+            padding: 0 10px;
+            flex-shrink: 0;
+        }
+        
+        .flow-info {
+            background: #f0f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .flow-info h3 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+        }
+        
+        .flow-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .flow-info-item {
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+        }
+        
+        .flow-info-item strong {
+            display: block;
+            color: #1e3a8a;
+            margin-bottom: 5px;
+        }
+        
+        .flow-dependencies, .flow-triggers {
+            margin-top: 15px;
+        }
+        
+        .flow-dependencies h4 {
+            color: #dc2626;
+            margin-bottom: 10px;
+        }
+        
+        .flow-triggers h4 {
+            color: #059669;
+            margin-bottom: 10px;
+        }
+        
+        .flow-dependencies ul, .flow-triggers ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .flow-dependencies li, .flow-triggers li {
+            padding: 8px;
+            margin: 5px 0;
+            background: white;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        
+        .flow-dependencies li:hover, .flow-triggers li:hover {
+            background: #e0e7ff;
+            transform: translateX(5px);
+        }
+
     </style>
 </head>
 <body>
@@ -428,6 +635,7 @@
         <div class="nav-tabs">
             <button class="nav-tab active" onclick="showView('actors')">👥 Document Actors</button>
             <button class="nav-tab" onclick="showView('timeline')">⏱️ Timeline</button>
+            <button class="nav-tab" onclick="showView('flow')">🔄 Document Flow</button>
         </div>
         
         <div id="actors-view" class="view-section active">
@@ -442,6 +650,15 @@
             </div>
         </div>
         
+        
+        <div id="flow-view" class="view-section">
+            <div class="content">
+                <div id="flow-diagram">
+                    <!-- Flow diagram will be dynamically generated by demo.js -->
+                </div>
+            </div>
+        </div>
+
         <div id="timeline-view" class="view-section">
             <div class="content">
                 <div id="timeline-events">
