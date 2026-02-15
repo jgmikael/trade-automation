@@ -1,0 +1,209 @@
+@prefix ktddecv: <https://iri.suomi.fi/model/ktddecv/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+# ==============================================================================
+# NEW PROPERTY PROPOSALS FOR KTDDE OWL ONTOLOGY
+# Based on Packing List Gap Analysis
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# PROPOSAL 1: Package Type Code
+# ------------------------------------------------------------------------------
+
+ktddecv:packageTypeCode
+  a owl:DatatypeProperty ;
+  rdfs:label "package type code"@en ,
+             "pakkaustyyppikoodi"@fi ;
+  rdfs:comment """UNTDED 7065 - Code specifying the type of package according to 
+                  UN/ECE Recommendation 21. Examples: PAL (Pallet), BOX (Box), 
+                  BDL (Bundle), CRT (Crate)."""@en ;
+  skos:definition """Code identifying the type of packaging used for goods, 
+                     based on standardized package type code lists."""@en ;
+  dcterms:source "UNTDED 7065, UN/ECE Recommendation 21"@en ;
+  rdfs:domain ktddecv:Package ;
+  rdfs:range xsd:string ;
+  # Alternative: could point to controlled vocabulary
+  # rdfs:range [ owl:oneOf ( "PAL" "BOX" "BDL" "CRT" ... ) ]
+  rdfs:isDefinedBy <https://iri.suomi.fi/model/ktddecv/> ;
+  skos:example "PAL", "BOX", "BDL", "CRT", "DRM" ;
+  # Reusability
+  skos:scopeNote """Generic property reusable across all trade documents 
+                    that describe packages: PackingList, BillOfLading, 
+                    CargoManifest, CustomsDeclaration, DeliveryNote."""@en .
+
+# ------------------------------------------------------------------------------
+# PROPOSAL 2: Temperature Requirement
+# ------------------------------------------------------------------------------
+
+ktddecv:temperatureRequirement
+  a owl:DatatypeProperty ;
+  rdfs:label "temperature requirement"@en ,
+             "lämpötilavaatimus"@fi ;
+  rdfs:comment """UNTDED 6245 - Temperature control requirements for goods during 
+                  transport and storage. Used for temperature-sensitive cargo such 
+                  as perishables, pharmaceuticals, or chemicals."""@en ;
+  skos:definition """Temperature range or condition that must be maintained for 
+                     goods throughout the supply chain."""@en ;
+  dcterms:source "UNTDED 6245"@en ;
+  rdfs:domain ktddecv:GoodsItem ;
+  rdfs:range xsd:string ;
+  # Format examples: "-20°C to +5°C", "Frozen", "Refrigerated 2-8°C"
+  rdfs:isDefinedBy <https://iri.suomi.fi/model/ktddecv/> ;
+  skos:example "-20°C to +5°C", "Frozen (-18°C or below)", "Refrigerated 2-8°C" ;
+  # Conditional property - only when temperature control needed
+  skos:scopeNote """Conditional property: mandatory when temperature control 
+                    is required, otherwise omitted. Reusable in: PackingList, 
+                    BillOfLading, CargoManifest, InsuranceCertificate."""@en .
+
+# Future enhancement: Could be evolved into structured class
+# ktddecv:TemperatureRange with min/max/unit properties if needed
+
+# ------------------------------------------------------------------------------
+# PROPOSAL 3: Total Net Weight (IF MISSING)
+# ------------------------------------------------------------------------------
+
+ktddecv:totalNetWeight
+  a owl:ObjectProperty ;
+  rdfs:label "total net weight"@en ,
+             "nettopainoyhteensä"@fi ;
+  rdfs:comment """UNTDED 6292 - Total weight of goods excluding all packaging 
+                  materials. Net weight is critical for customs valuation and 
+                  duty calculation."""@en ;
+  skos:definition """Sum of net weights of all goods items in a shipment, 
+                     excluding packaging, pallets, containers, and other 
+                     transport equipment."""@en ;
+  dcterms:source "UNTDED 6292"@en ;
+  rdfs:domain [ 
+    a owl:Class ;
+    owl:unionOf ( ktddecv:PackingList 
+                  ktddecv:BillOfLading 
+                  ktddecv:CommercialInvoice 
+                  ktddecv:CustomsDeclaration )
+  ] ;
+  rdfs:range ktddecv:Quantity ;
+  rdfs:isDefinedBy <https://iri.suomi.fi/model/ktddecv/> ;
+  skos:example "28224 KGM (kilograms)" ;
+  # Parallel property to totalGrossWeight
+  rdfs:seeAlso ktddecv:totalGrossWeight ;
+  skos:scopeNote """Parallel to totalGrossWeight. Net weight = Gross weight - 
+                    Packaging weight. Reusable across all documents requiring 
+                    weight information."""@en .
+
+# ------------------------------------------------------------------------------
+# PROPOSAL 4: Typed Document References (IF MISSING)
+# ------------------------------------------------------------------------------
+
+# Option A: Specific typed properties (if generic referencedDocument doesn't exist)
+
+ktddecv:referencedTransportDocument
+  a owl:ObjectProperty ;
+  rdfs:label "referenced transport document"@en ,
+             "viitattu kuljetusasiakirja"@fi ;
+  rdfs:comment """UNTDED 1188 - Reference to related transport document such as 
+                  Bill of Lading, Air Waybill, or CMR."""@en ;
+  rdfs:domain ktddecv:PackingList ;  # Also other documents
+  rdfs:range ktddecv:TransportDocument ;
+  rdfs:subPropertyOf ktddecv:referencedDocument ;  # If generic property exists
+  rdfs:isDefinedBy <https://iri.suomi.fi/model/ktddecv/> ;
+  skos:scopeNote """Links packing list to its corresponding transport document. 
+                    Enables traceability across document chain."""@en .
+
+ktddecv:referencedInvoice
+  a owl:ObjectProperty ;
+  rdfs:label "referenced commercial invoice"@en ,
+             "viitattu kaupallinen lasku"@fi ;
+  rdfs:comment """UNTDED 1334 - Reference to related commercial invoice."""@en ;
+  rdfs:domain ktddecv:PackingList ;  # Also other documents
+  rdfs:range ktddecv:CommercialInvoice ;
+  rdfs:subPropertyOf ktddecv:referencedDocument ;  # If generic property exists
+  rdfs:isDefinedBy <https://iri.suomi.fi/model/ktddecv/> ;
+  skos:scopeNote """Links packing list to invoice for goods. Supports document 
+                    reconciliation and audit trail."""@en .
+
+# Option B: If generic referencedDocument exists, use it with type annotation
+# In that case, above specific properties are NOT needed
+
+# ------------------------------------------------------------------------------
+# PROPOSAL 5: Shipping Marks (IF MISSING)
+# ------------------------------------------------------------------------------
+
+ktddecv:shippingMarks
+  a owl:DatatypeProperty ;
+  rdfs:label "shipping marks and numbers"@en ,
+             "laivaustunnukset"@fi ;
+  rdfs:comment """UNTDED 7102 - Marks and numbers identifying packages for 
+                  shipping purposes. Typically includes consignee name, 
+                  destination, package numbers."""@en ;
+  skos:definition """Distinctive marks, numbers, or symbols placed on packages 
+                     for identification during transport and handling."""@en ;
+  dcterms:source "UNTDED 7102"@en ;
+  rdfs:domain ktddecv:Package ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <https://iri.suomi.fi/model/ktddecv/> ;
+  skos:example "NT-FI-2024-001", "TOKYO/001-160", "C/O TOKYO CONSTRUCTION" ;
+  skos:scopeNote """Optional but commonly used for package identification. 
+                    Reusable in: PackingList, BillOfLading, CargoManifest."""@en .
+
+# ==============================================================================
+# DESIGN RATIONALE
+# ==============================================================================
+
+# All proposed properties follow these principles:
+#
+# 1. GENERIC - Reusable across multiple trade documents
+#    - Not specific to Packing List only
+#    - Applicable to broader use cases
+#
+# 2. STANDARDS-BASED - Grounded in UNTDED/ISO 7372
+#    - Official UID codes referenced
+#    - Definitions from international standards
+#
+# 3. PATTERN-CONSISTENT - Follow existing KTDDE conventions
+#    - Naming: camelCase with descriptive terms
+#    - Structure: domain + range properly specified
+#    - Metadata: labels in EN + FI, comments, examples
+#
+# 4. MINIMAL - Only propose what's truly missing
+#    - Check for existing properties first
+#    - Don't duplicate existing vocabulary
+#    - Prefer reusing existing classes (Party, Quantity, Identifier)
+#
+# 5. DOCUMENTED - Each proposal includes:
+#    - rdfs:label (EN + FI)
+#    - rdfs:comment (from UNTDED)
+#    - skos:definition (clear meaning)
+#    - dcterms:source (standards reference)
+#    - skos:example (sample values)
+#    - skos:scopeNote (usage guidance)
+#
+# 6. VALIDATED - Before submission:
+#    - Check no conflicts with existing KTDDE properties
+#    - Verify UNTDED codes are correct
+#    - Confirm reusability across documents
+#    - Test with sample data
+
+# ==============================================================================
+# SUBMISSION CHECKLIST
+# ==============================================================================
+
+# Before submitting these proposals to Finnish Interoperability Platform:
+#
+# [ ] Verified each property is truly missing from KTDDE OWL
+# [ ] Confirmed UNTDED codes are accurate
+# [ ] Checked reusability in at least 2 documents
+# [ ] Added bilingual labels (EN + FI minimum)
+# [ ] Provided examples for each property
+# [ ] Documented design rationale
+# [ ] Tested with sample RDF data
+# [ ] No naming conflicts with existing vocabulary
+# [ ] Follows KTDDE naming conventions
+# [ ] Community feedback incorporated
+
+# ==============================================================================
+# END OF PROPOSALS
+# ==============================================================================

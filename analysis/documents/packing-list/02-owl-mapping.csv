@@ -1,0 +1,23 @@
+Data Element,UID,M/O/C,KTDDE OWL Property,OWL Class/Type,Gap Status,Notes,Access Path
+Packing List Number,1004,M,packingListNumber,Identifier,✅,Exact match - already in KTDDE OWL,PackingList.packingListNumber
+Issue Date/Time,2379,M,issueDateTime,xsd:dateTime,✅,Standard date/time property,PackingList.issueDateTime
+Shipper Name,3132,M,consignorParty,Party,✅,Via Party object,PackingList.consignorParty.name
+Shipper Address,3124,M,consignorParty,Party,✅,Via Party object,PackingList.consignorParty.address
+Consignee Name,3132,M,consigneeParty,Party,✅,Via Party object,PackingList.consigneeParty.name
+Consignee Address,3124,M,consigneeParty,Party,✅,Via Party object,PackingList.consigneeParty.address
+Transport Doc Ref,1188,O,referencedDocument,Document,⚠️,Generic doc reference exists,"PackingList.referencedDocument (type=""TransportDocument"")"
+Invoice Reference,1334,O,referencedDocument,Document,⚠️,Generic doc reference exists,"PackingList.referencedDocument (type=""CommercialInvoice"")"
+Package Type Code,7065,M,packageTypeCode,Code,❌,Property missing - propose new,Package.packageTypeCode (NEW)
+Package Marks,7102,O,shippingMarks,String,⚠️,Check if exists in Package class,Package.shippingMarks (verify)
+Number of Packages,7224,M,totalPackageCount,Quantity,✅,Exact match,PackingList.totalPackageCount
+Package ID (SSCC),7402,O,sscc,Identifier,✅,SSCC property exists in KTDDE,Package.sscc
+Gross Weight,6292,O,totalGrossWeight,Quantity,✅,Exists for totals,PackingList.totalGrossWeight
+Net Weight,6292,O,totalNetWeight,Quantity,❌,Propose: totalNetWeight,PackingList.totalNetWeight (NEW)
+Volume,6411,O,totalCubeVolume,Quantity,⚠️,Check exact property name,PackingList.totalCubeVolume (verify)
+Container Number,7140,O,containerNumber,String,✅,Exists as DatatypeProperty,TransportEquipment.containerNumber
+Seal Number,9308,O,sealIdentifier,Identifier,✅,Seal identifier exists,Seal.sealIdentifier
+Goods Description,7064,M,goodsDescription,String,✅,Standard description field,GoodsItem.goodsDescription
+HS Code,7357,O,commodityCode,CommodityClassification,✅,Via classification object,GoodsItem.commodityCode
+Country of Origin,5071,O,originCountry,Country,✅,Origin country property,GoodsItem.originCountry
+Dangerous Goods Flag,7124,C,dangerousGoodsIndicator,Boolean,⚠️,Verify property name,GoodsItem.dangerousGoodsIndicator (verify)
+Temperature Range,6245,C,temperatureRange,String,❌,Propose new for temperature-controlled goods,GoodsItem.temperatureRequirement (NEW)

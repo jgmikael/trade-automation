@@ -1,0 +1,23 @@
+Data Element,UID,M/O/C,Description,Data Type,Example Value,UNTDED Reference
+Packing List Number,1004,M,"Reference number to identify a packing list",String,PL-2024-0567,UNTDED 1004
+Issue Date/Time,2379,M,"Date/time when the packing list was issued",DateTime,2024-02-14T10:30:00Z,UNTDED 2379
+Shipper/Consignor Name,3132,M,"Name of the party consigning goods",String,Nordic Timber Oy,UNTDED 3132 (Consignor)
+Shipper/Consignor Address,3124,M,"Address of the party consigning goods",Address,"Metsäkatu 15, 88900 Kuhmo, Finland",UNTDED 3124
+Consignee Name,3132,M,"Name of the party to whom goods are consigned",String,Tokyo Construction Materials Ltd,UNTDED 3132 (Consignee)
+Consignee Address,3124,M,"Address of the party to whom goods are consigned",Address,"3-7-1 Koto, Koto-ku, Tokyo 135-0016, Japan",UNTDED 3124
+Transport Document Reference,1188,O,"Reference to related transport document (e.g. B/L number)",String,FESCO2024FI123456,UNTDED 1188
+Commercial Invoice Reference,1334,O,"Reference to related commercial invoice",String,9000002000,UNTDED 1334
+Package Type Code,7065,M,"Type of package (box, pallet, bundle, etc.)",Code,BDL (Bundle),UNTDED 7065
+Package Marks & Numbers,7102,O,"Shipping marks and numbers on packages",String,NT-FI-2024-001,UNTDED 7102
+Number of Packages,7224,M,"Total count of packages",Numeric,8,UNTDED 7224
+Package Identification,7402,O,"Unique identifier for individual package (e.g. SSCC)",String,376123456789012345,UNTDED 7402 (SSCC)
+Gross Weight,6292,O,"Weight including packaging",Measure,28800 KGM,UNTDED 6292
+Net Weight,6292,O,"Weight excluding packaging",Measure,28224 KGM,UNTDED 6292
+Volume,6411,O,"Cubic measurement of goods",Measure,156 MTQ,UNTDED 6411
+Container Number,7140,O,"Identification of transport container",String,FESC1234567,UNTDED 7140
+Seal Number,9308,O,"Security seal identification",String,SEAL123456,UNTDED 9308
+Goods Description,7064,M,"Description of goods being shipped",String,Engineered Gluelam Timber Beams,UNTDED 7064
+HS Code,7357,O,"Harmonized System commodity code",Code,4418.91,UNTDED 7357
+Country of Origin,5071,O,"Country where goods originated",Code,FI,UNTDED 5071
+Dangerous Goods,7124,C,"Indicator if dangerous goods (IMO/IMDG)",Boolean,false,UNTDED 7124
+Temperature Range,6245,C,"Temperature control requirements (if applicable)",String,"-20°C to +5°C",UNTDED 6245
