@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Portable Document A1 Certificate",
+  "description": "Electronic attestation certifying which Member State's social \n                    security legislation applies to a posted or mobile worker in the EU.\n                    Required for cross-border work to avoid double social security contributions.",
+  "properties": {
+    "identifier": {
+      "type": "string",
+      "description": "Unique reference number of the A1 certificate"
+    },
+    "issued": {
+      "type": "string",
+      "description": "Date when certificate was issued"
+    },
+    "covered_period": {
+      "type": "string",
+      "description": "Start date of period covered by this certificate"
+    },
+    "valid": {
+      "type": "string",
+      "description": "End date of validity (if limited duration)"
+    },
+    "insured_person": {
+      "type": "object",
+      "description": "Worker to whom this certificate applies"
+    },
+    "has_employer": {
+      "type": "object",
+      "description": "Employer of the insured person"
+    },
+    "issuing_institution": {
+      "type": "object",
+      "description": "Social security authority that issued this certificate"
+    },
+    "has_legal_applicability": {
+      "type": "object",
+      "description": "Member State whose social security legislation applies"
+    },
+    "has_work_location": {
+      "type": "object",
+      "description": "Member State(s) where work is performed"
+    },
+    "has_activity": {
+      "type": "object",
+      "description": "Type of work activity covered"
+    },
+    "employment_type": {
+      "type": "string",
+      "description": "Type of employment relationship",
+      "enum": [
+        "EMPLOYED",
+        "SELF_EMPLOYED",
+        "CIVIL_SERVANT",
+        "CONTRACT_WORKER"
+      ]
+    },
+    "has_applicable_jurisdiction": {
+      "type": "string",
+      "description": "EU regulation article under which certificate is issued",
+      "enum": [
+        "ART_12_1",
+        "ART_12_2",
+        "ART_13_1",
+        "ART_13_2",
+        "ART_13_3",
+        "ART_16"
+      ]
+    },
+    "is_subject_to_transitional_rules": {
+      "type": "boolean",
+      "description": "Whether transitional rules apply (Brexit, etc.)"
+    },
+    "has_determination": {
+      "type": "object",
+      "description": "Whether this is an original or replacement certificate"
+    }
+  },
+  "required": [
+    "identifier",
+    "issued",
+    "covered_period",
+    "insured_person",
+    "has_employer",
+    "issuing_institution",
+    "has_legal_applicability",
+    "has_work_location",
+    "has_activity",
+    "employment_type",
+    "has_applicable_jurisdiction"
+  ],
+  "_semantic_mapping": {
+    "shacl_shape": "webuild:PDA1CertificateShape",
+    "target_class": "webuild:PDA1Certificate",
+    "skos_concept": "webuild-vocab:c_pda1Certificate",
+    "properties": {
+      "identifier": {
+        "owl_property": "dcterms:identifier",
+        "original_name": "identifier",
+        "skos_concept": "webuild-vocab:c_identifier",
+        "datatype": "xsd:string",
+        "class": null,
+        "mandatory": true
+      },
+      "issued": {
+        "owl_property": "dcterms:issued",
+        "original_name": "issued",
+        "skos_concept": "webuild-vocab:c_issueDate",
+        "datatype": "xsd:date",
+        "class": null,
+        "mandatory": true
+      },
+      "covered_period": {
+        "owl_property": "webuild:coveredPeriod",
+        "original_name": "coveredPeriod",
+        "skos_concept": "webuild-vocab:c_periodStart",
+        "datatype": "xsd:date",
+        "class": null,
+        "mandatory": true
+      },
+      "valid": {
+        "owl_property": "dcterms:valid",
+        "original_name": "valid",
+        "skos_concept": "webuild-vocab:c_periodEnd",
+        "datatype": "xsd:date",
+        "class": null,
+        "mandatory": false
+      },
+      "insured_person": {
+        "owl_property": "webuild:insuredPerson",
+        "original_name": "insuredPerson",
+        "skos_concept": "webuild-vocab:c_insuredPerson",
+        "datatype": null,
+        "class": "eu-core:Person",
+        "mandatory": true
+      },
+      "has_employer": {
+        "owl_property": "webuild:hasEmployer",
+        "original_name": "hasEmployer",
+        "skos_concept": "webuild-vocab:c_employer",
+        "datatype": null,
+        "class": "eu-core:LegalEntity",
+        "mandatory": true
+      },
+      "issuing_institution": {
+        "owl_property": "webuild:issuingInstitution",
+        "original_name": "issuingInstitution",
+        "skos_concept": "webuild-vocab:c_issuingInstitution",
+        "datatype": null,
+        "class": "eu-core:PublicOrganisation",
+        "mandatory": true
+      },
+      "has_legal_applicability": {
+        "owl_property": "webuild:hasLegalApplicability",
+        "original_name": "hasLegalApplicability",
+        "skos_concept": "webuild-vocab:c_applicableLegislation",
+        "datatype": null,
+        "class": "webuild:LegalApplicability",
+        "mandatory": true
+      },
+      "has_work_location": {
+        "owl_property": "webuild:hasWorkLocation",
+        "original_name": "hasWorkLocation",
+        "skos_concept": "webuild-vocab:c_workLocation",
+        "datatype": null,
+        "class": "eu-core:Location",
+        "mandatory": true
+      },
+      "has_activity": {
+        "owl_property": "webuild:hasActivity",
+        "original_name": "hasActivity",
+        "skos_concept": "webuild-vocab:c_activity",
+        "datatype": null,
+        "class": "webuild:Activity",
+        "mandatory": true
+      },
+      "employment_type": {
+        "owl_property": "webuild:employmentType",
+        "original_name": "employmentType",
+        "skos_concept": "webuild-vocab:c_employmentType",
+        "datatype": "xsd:string",
+        "class": null,
+        "mandatory": true
+      },
+      "has_applicable_jurisdiction": {
+        "owl_property": "webuild:hasApplicableJurisdiction",
+        "original_name": "hasApplicableJurisdiction",
+        "skos_concept": "webuild-vocab:c_legalBasis",
+        "datatype": "xsd:string",
+        "class": null,
+        "mandatory": true
+      },
+      "is_subject_to_transitional_rules": {
+        "owl_property": "webuild:isSubjectToTransitionalRules",
+        "original_name": "isSubjectToTransitionalRules",
+        "skos_concept": "webuild-vocab:c_transitionalRules",
+        "datatype": "xsd:boolean",
+        "class": null,
+        "mandatory": false
+      },
+      "has_determination": {
+        "owl_property": "webuild:hasDetermination",
+        "original_name": "hasDetermination",
+        "skos_concept": "webuild-vocab:c_determination",
+        "datatype": null,
+        "class": "webuild:Determination",
+        "mandatory": false
+      }
+    }
+  }
+}

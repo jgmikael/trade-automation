@@ -1,0 +1,190 @@
+{
+  "format": "dual-track",
+  "source": "SHACL shape",
+  "credential_type": "PDA1Certificate",
+  "formats": {
+    "json-ld": {
+      "format": "W3C Verifiable Credential",
+      "specification": "https://www.w3.org/TR/vc-data-model-2.0/",
+      "semantic_linking": "automatic via @context",
+      "credential": {
+        "@context": [
+          "https://www.w3.org/ns/credentials/v2",
+          "https://iri.suomi.fi/context/webuild/pda1-v1.jsonld"
+        ],
+        "type": [
+          "VerifiableCredential",
+          "PDA1Certificate"
+        ],
+        "id": "urn:uuid:c6c4f1fdbcb6d1eba7063634f2abf736",
+        "issuer": {
+          "id": "did:web:kela.fi",
+          "type": "Organization"
+        },
+        "issuanceDate": "2026-02-15T20:43:01Z",
+        "expirationDate": "2026-02-16T20:43:01Z",
+        "credentialSubject": {
+          "identifier": "FI-2024-A1-123456",
+          "issued": "2024-02-15",
+          "coveredPeriod": "2024-03-01",
+          "valid": "2024-08-31",
+          "insuredPerson": {
+            "type": "Person",
+            "id": "urn:fi:hetu:010180-123A",
+            "givenName": "Matti",
+            "familyName": "Virtanen",
+            "birthDate": "1980-01-01",
+            "nationality": "FI",
+            "address": {
+              "streetAddress": "Mannerheimintie 15 A 10",
+              "postalCode": "00100",
+              "addressLocality": "Helsinki",
+              "addressCountry": "FI"
+            }
+          },
+          "hasEmployer": {
+            "type": "LegalEntity",
+            "id": "https://ytj.fi/1234567-8",
+            "legalName": "Nordic Construction Oy",
+            "taxIdentifier": "FI12345678",
+            "address": {
+              "streetAddress": "Teollisuuskatu 3",
+              "postalCode": "00510",
+              "addressLocality": "Helsinki",
+              "addressCountry": "FI"
+            }
+          },
+          "issuingInstitution": {
+            "type": "PublicOrganisation",
+            "id": "https://kela.fi",
+            "name": "Kansanel\u00e4kelaitos / Folkpensionsanstalten",
+            "acronym": "Kela",
+            "contactPoint": {
+              "email": "a1-todistukset@kela.fi",
+              "telephone": "+358 20 634 0200"
+            }
+          },
+          "hasLegalApplicability": {
+            "type": "LegalApplicability",
+            "applicableCountry": "FI",
+            "legalFramework": "EU Regulation 883/2004",
+            "description": "Finnish social security legislation applies"
+          },
+          "hasWorkLocation": {
+            "type": "Location",
+            "countryCode": "DE",
+            "addressLocality": "Berlin",
+            "description": "Construction site in Berlin, Germany"
+          },
+          "hasActivity": {
+            "type": "Activity",
+            "activityType": "CONSTRUCTION",
+            "description": "Commercial building construction project",
+            "naceCode": "F41.2"
+          },
+          "employmentType": "EMPLOYED",
+          "hasApplicableJurisdiction": "ART_12_1",
+          "isSubjectToTransitionalRules": false,
+          "hasDetermination": {
+            "type": "Determination",
+            "isOriginal": true,
+            "replacementOf": null
+          },
+          "id": "urn:fi:hetu:010180-123A"
+        },
+        "proof": {
+          "type": "DataIntegrityProof",
+          "cryptosuite": "eddsa-rdfc-2022",
+          "created": "2026-02-15T20:43:01Z",
+          "verificationMethod": "did:web:kela.fi#key-1",
+          "proofPurpose": "assertionMethod",
+          "proofValue": "z...PLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDER"
+        }
+      }
+    },
+    "sd-jwt": {
+      "format": "IETF SD-JWT",
+      "specification": "https://datatracker.ietf.org/doc/draft-ietf-oauth-selective-disclosure-jwt/",
+      "semantic_linking": "manual via registry",
+      "semantic_registry": "https://iri.suomi.fi/registry/webuild/pda1-v1.json",
+      "credential": {
+        "iss": "did:web:kela.fi",
+        "sub": "urn:fi:hetu:010180-123A",
+        "iat": 1771188181,
+        "exp": 1771274581,
+        "type": "PDA1Certificate",
+        "_semantic_registry": "https://iri.suomi.fi/registry/webuild/pda1-v1.json",
+        "_semantic_context": "https://kela.fi/schemas/context/pda1certificate-v1.jsonld",
+        "identifier": "FI-2024-A1-123456",
+        "issued": "2024-02-15",
+        "covered_period": "2024-03-01",
+        "valid": "2024-08-31",
+        "insured_person": {
+          "type": "Person",
+          "id": "urn:fi:hetu:010180-123A",
+          "givenName": "Matti",
+          "familyName": "Virtanen",
+          "birthDate": "1980-01-01",
+          "nationality": "FI",
+          "address": {
+            "streetAddress": "Mannerheimintie 15 A 10",
+            "postalCode": "00100",
+            "addressLocality": "Helsinki",
+            "addressCountry": "FI"
+          }
+        },
+        "has_employer": {
+          "type": "LegalEntity",
+          "id": "https://ytj.fi/1234567-8",
+          "legalName": "Nordic Construction Oy",
+          "taxIdentifier": "FI12345678",
+          "address": {
+            "streetAddress": "Teollisuuskatu 3",
+            "postalCode": "00510",
+            "addressLocality": "Helsinki",
+            "addressCountry": "FI"
+          }
+        },
+        "issuing_institution": {
+          "type": "PublicOrganisation",
+          "id": "https://kela.fi",
+          "name": "Kansanel\u00e4kelaitos / Folkpensionsanstalten",
+          "acronym": "Kela",
+          "contactPoint": {
+            "email": "a1-todistukset@kela.fi",
+            "telephone": "+358 20 634 0200"
+          }
+        },
+        "has_legal_applicability": {
+          "type": "LegalApplicability",
+          "applicableCountry": "FI",
+          "legalFramework": "EU Regulation 883/2004",
+          "description": "Finnish social security legislation applies"
+        },
+        "has_work_location": {
+          "type": "Location",
+          "countryCode": "DE",
+          "addressLocality": "Berlin",
+          "description": "Construction site in Berlin, Germany"
+        },
+        "has_activity": {
+          "type": "Activity",
+          "activityType": "CONSTRUCTION",
+          "description": "Commercial building construction project",
+          "naceCode": "F41.2"
+        },
+        "employment_type": "EMPLOYED",
+        "has_applicable_jurisdiction": "ART_12_1",
+        "is_subject_to_transitional_rules": false,
+        "has_determination": {
+          "type": "Determination",
+          "isOriginal": true,
+          "replacementOf": null
+        },
+        "id": "urn:fi:hetu:010180-123A"
+      }
+    }
+  },
+  "semantic_equivalence": true,
+  "note": "Both credentials carry the same information. JSON-LD has automatic semantic linking; SD-JWT requires registry lookup."
+}

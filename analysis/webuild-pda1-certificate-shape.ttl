@@ -1,0 +1,227 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix webuild: <https://iri.suomi.fi/model/webuild/> .
+@prefix webuild-vocab: <https://iri.suomi.fi/terminology/webuild/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eu-core: <https://iri.suomi.fi/model/eu-core/> .
+
+# SHACL Shape for WE BUILD PD A1 Certificate (Portable Document A1)
+# Based on EU Regulation 883/2004 and 987/2009
+# Social security certificate proving applicable legislation
+
+webuild:PDA1CertificateShape
+  a sh:NodeShape ;
+  sh:targetClass webuild:PDA1Certificate ;
+  sh:name "Portable Document A1 Certificate"@en ,
+          "A1-todistus"@fi ;
+  sh:description """Electronic attestation certifying which Member State's social 
+                    security legislation applies to a posted or mobile worker in the EU.
+                    Required for cross-border work to avoid double social security contributions."""@en ;
+  dcterms:subject webuild-vocab:c_pda1Certificate ;  # Link to SKOS concept
+  
+  # Certificate identifier
+  sh:property [
+    sh:path dcterms:identifier ;
+    sh:name "Certificate Identifier"@en ;
+    sh:description "Unique reference number of the A1 certificate"@en ;
+    dcterms:subject webuild-vocab:c_identifier ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:pattern "^[A-Z]{2}-[0-9]{4}-[0-9]{6,12}$" ;  # Example: FI-2024-123456
+  ] ;
+  
+  # Issue date
+  sh:property [
+    sh:path dcterms:issued ;
+    sh:name "Issue Date"@en ;
+    sh:description "Date when certificate was issued"@en ;
+    dcterms:subject webuild-vocab:c_issueDate ;
+    sh:datatype xsd:date ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  
+  # Validity period (start)
+  sh:property [
+    sh:path webuild:coveredPeriod ;
+    sh:name "Covered Period Start"@en ;
+    sh:description "Start date of period covered by this certificate"@en ;
+    dcterms:subject webuild-vocab:c_periodStart ;
+    sh:datatype xsd:date ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  
+  # Validity period (end)
+  sh:property [
+    sh:path dcterms:valid ;
+    sh:name "Valid Until"@en ;
+    sh:description "End date of validity (if limited duration)"@en ;
+    dcterms:subject webuild-vocab:c_periodEnd ;
+    sh:datatype xsd:date ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+  ] ;
+  
+  # Insured person (worker)
+  sh:property [
+    sh:path webuild:insuredPerson ;
+    sh:name "Insured Person"@en ;
+    sh:description "Worker to whom this certificate applies"@en ;
+    dcterms:subject webuild-vocab:c_insuredPerson ;
+    sh:class eu-core:Person ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  
+  # Employer
+  sh:property [
+    sh:path webuild:hasEmployer ;
+    sh:name "Employer"@en ;
+    sh:description "Employer of the insured person"@en ;
+    dcterms:subject webuild-vocab:c_employer ;
+    sh:class eu-core:LegalEntity ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  
+  # Issuing institution (competent authority)
+  sh:property [
+    sh:path webuild:issuingInstitution ;
+    sh:name "Issuing Institution"@en ;
+    sh:description "Social security authority that issued this certificate"@en ;
+    dcterms:subject webuild-vocab:c_issuingInstitution ;
+    sh:class eu-core:PublicOrganisation ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  
+  # Applicable legislation (which country's social security)
+  sh:property [
+    sh:path webuild:hasLegalApplicability ;
+    sh:name "Applicable Legislation"@en ;
+    sh:description "Member State whose social security legislation applies"@en ;
+    dcterms:subject webuild-vocab:c_applicableLegislation ;
+    sh:class webuild:LegalApplicability ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  
+  # Work location (where work is performed)
+  sh:property [
+    sh:path webuild:hasWorkLocation ;
+    sh:name "Work Location"@en ;
+    sh:description "Member State(s) where work is performed"@en ;
+    dcterms:subject webuild-vocab:c_workLocation ;
+    sh:class eu-core:Location ;
+    sh:minCount 1 ;
+    # Can have multiple locations for multi-country posting
+  ] ;
+  
+  # Activity type
+  sh:property [
+    sh:path webuild:hasActivity ;
+    sh:name "Activity"@en ;
+    sh:description "Type of work activity covered"@en ;
+    dcterms:subject webuild-vocab:c_activity ;
+    sh:class webuild:Activity ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  
+  # Employment type
+  sh:property [
+    sh:path webuild:employmentType ;
+    sh:name "Employment Type"@en ;
+    sh:description "Type of employment relationship"@en ;
+    dcterms:subject webuild-vocab:c_employmentType ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in ( "EMPLOYED" "SELF_EMPLOYED" "CIVIL_SERVANT" "CONTRACT_WORKER" ) ;
+  ] ;
+  
+  # Legal basis (EU regulation article)
+  sh:property [
+    sh:path webuild:hasApplicableJurisdiction ;
+    sh:name "Legal Basis"@en ;
+    sh:description "EU regulation article under which certificate is issued"@en ;
+    dcterms:subject webuild-vocab:c_legalBasis ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in ( 
+      "ART_12_1"   # Temporary posting
+      "ART_12_2"   # Extended posting
+      "ART_13_1"   # Multi-state worker
+      "ART_13_2"   # Cross-border worker
+      "ART_13_3"   # Self-employed multi-state
+      "ART_16"     # Agreement by authorities
+    ) ;
+  ] ;
+  
+  # Transitional rules flag
+  sh:property [
+    sh:path webuild:isSubjectToTransitionalRules ;
+    sh:name "Subject to Transitional Rules"@en ;
+    sh:description "Whether transitional rules apply (Brexit, etc.)"@en ;
+    dcterms:subject webuild-vocab:c_transitionalRules ;
+    sh:datatype xsd:boolean ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+  ] ;
+  
+  # Replacement certificate flag
+  sh:property [
+    sh:path webuild:hasDetermination ;
+    sh:name "Determination Status"@en ;
+    sh:description "Whether this is an original or replacement certificate"@en ;
+    dcterms:subject webuild-vocab:c_determination ;
+    sh:class webuild:Determination ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+  ] ;
+  .
+
+# Additional context and documentation
+webuild:PDA1CertificateShape
+  rdfs:comment """
+The Portable Document A1 (PD A1) is a social security certificate used in the EU/EEA 
+to certify which country's social security legislation applies to a worker who works 
+temporarily or simultaneously in multiple Member States.
+
+Common scenarios requiring A1 certificate:
+1. Posted workers (temporary assignment to another country)
+2. Multi-state workers (working in multiple countries simultaneously)
+3. Cross-border commuters (living in one country, working in another)
+4. Self-employed persons working across borders
+5. Civil servants on international assignment
+
+Key regulatory framework:
+- EU Regulation 883/2004 (coordination of social security systems)
+- EU Regulation 987/2009 (implementing provisions)
+- Directive 2014/67/EU (enforcement in posting of workers)
+
+The certificate prevents:
+- Double social security contributions
+- Gaps in social security coverage
+- Administrative disputes between authorities
+
+This SHACL shape defines the structure for digital A1 certificates in the 
+WE BUILD Large Scale Pilot, enabling electronic issuance and verification 
+through EU Business Wallets.
+
+W3C Semantic Web stack:
+1. SKOS concepts (webuild-vocab:*) define terminology
+2. OWL properties (webuild:*) define data model
+3. SHACL shape defines validation constraints
+4. JSON-LD / SD-JWT for serialization
+5. W3C VC for trust layer
+
+All properties reference SKOS concepts via dcterms:subject for 
+semantic traceability.
+"""@en ;
+  .

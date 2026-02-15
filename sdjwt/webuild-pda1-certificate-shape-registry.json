@@ -1,0 +1,120 @@
+{
+  "$schema": "https://openclaw.ai/schemas/semantic-registry-v1.json",
+  "description": "Semantic registry mapping SD-JWT claims to SHACL/OWL/SKOS",
+  "version": "1.0.0",
+  "source_shacl": "webuild:PDA1CertificateShape",
+  "mappings": {
+    "identifier": {
+      "sdjwt_claim": "identifier",
+      "shacl_shape": "webuild:PDA1CertificateShape",
+      "owl_property": "dcterms:identifier",
+      "skos_concept": "webuild-vocab:c_identifier",
+      "label": "Certificate Identifier",
+      "description": "Unique reference number of the A1 certificate"
+    },
+    "issued": {
+      "sdjwt_claim": "issued",
+      "shacl_shape": "webuild:PDA1CertificateShape",
+      "owl_property": "dcterms:issued",
+      "skos_concept": "webuild-vocab:c_issueDate",
+      "label": "Issue Date",
+      "description": "Date when certificate was issued"
+    },
+    "covered_period": {
+      "sdjwt_claim": "covered_period",
+      "shacl_shape": "webuild:PDA1CertificateShape",
+      "owl_property": "webuild:coveredPeriod",
+      "skos_concept": "webuild-vocab:c_periodStart",
+      "label": "Covered Period Start",
+      "description": "Start date of period covered by this certificate"
+    },
+    "valid": {
+      "sdjwt_claim": "valid",
+      "shacl_shape": "webuild:PDA1CertificateShape",
+      "owl_property": "dcterms:valid",
+      "skos_concept": "webuild-vocab:c_periodEnd",
+      "label": "Valid Until",
+      "description": "End date of validity (if limited duration)"
+    },
+    "insured_person": {
+      "sdjwt_claim": "insured_person",
+      "shacl_shape": "webuild:PDA1CertificateShape",
+      "owl_property": "webuild:insuredPerson",
+      "skos_concept": "webuild-vocab:c_insuredPerson",
+      "label": "Insured Person",
+      "description": "Worker to whom this certificate applies"
+    },
+    "has_employer": {
+      "sdjwt_claim": "has_employer",
+      "shacl_shape": "webuild:PDA1CertificateShape",
+      "owl_property": "webuild:hasEmployer",
+      "skos_concept": "webuild-vocab:c_employer",
+      "label": "Employer",
+      "description": "Employer of the insured person"
+    },
+    "issuing_institution": {
+      "sdjwt_claim": "issuing_institution",
+      "shacl_shape": "webuild:PDA1CertificateShape",
+      "owl_property": "webuild:issuingInstitution",
+      "skos_concept": "webuild-vocab:c_issuingInstitution",
+      "label": "Issuing Institution",
+      "description": "Social security authority that issued this certificate"
+    },
+    "has_legal_applicability": {
+      "sdjwt_claim": "has_legal_applicability",
+      "shacl_shape": "webuild:PDA1CertificateShape",
+      "owl_property": "webuild:hasLegalApplicability",
+      "skos_concept": "webuild-vocab:c_applicableLegislation",
+      "label": "Applicable Legislation",
+      "description": "Member State whose social security legislation applies"
+    },
+    "has_work_location": {
+      "sdjwt_claim": "has_work_location",
+      "shacl_shape": "webuild:PDA1CertificateShape",
+      "owl_property": "webuild:hasWorkLocation",
+      "skos_concept": "webuild-vocab:c_workLocation",
+      "label": "Work Location",
+      "description": "Member State(s) where work is performed"
+    },
+    "has_activity": {
+      "sdjwt_claim": "has_activity",
+      "shacl_shape": "webuild:PDA1CertificateShape",
+      "owl_property": "webuild:hasActivity",
+      "skos_concept": "webuild-vocab:c_activity",
+      "label": "Activity",
+      "description": "Type of work activity covered"
+    },
+    "employment_type": {
+      "sdjwt_claim": "employment_type",
+      "shacl_shape": "webuild:PDA1CertificateShape",
+      "owl_property": "webuild:employmentType",
+      "skos_concept": "webuild-vocab:c_employmentType",
+      "label": "Employment Type",
+      "description": "Type of employment relationship"
+    },
+    "has_applicable_jurisdiction": {
+      "sdjwt_claim": "has_applicable_jurisdiction",
+      "shacl_shape": "webuild:PDA1CertificateShape",
+      "owl_property": "webuild:hasApplicableJurisdiction",
+      "skos_concept": "webuild-vocab:c_legalBasis",
+      "label": "Legal Basis",
+      "description": "EU regulation article under which certificate is issued"
+    },
+    "is_subject_to_transitional_rules": {
+      "sdjwt_claim": "is_subject_to_transitional_rules",
+      "shacl_shape": "webuild:PDA1CertificateShape",
+      "owl_property": "webuild:isSubjectToTransitionalRules",
+      "skos_concept": "webuild-vocab:c_transitionalRules",
+      "label": "Subject to Transitional Rules",
+      "description": "Whether transitional rules apply (Brexit, etc.)"
+    },
+    "has_determination": {
+      "sdjwt_claim": "has_determination",
+      "shacl_shape": "webuild:PDA1CertificateShape",
+      "owl_property": "webuild:hasDetermination",
+      "skos_concept": "webuild-vocab:c_determination",
+      "label": "Determination Status",
+      "description": "Whether this is an original or replacement certificate"
+    }
+  }
+}
