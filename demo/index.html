@@ -700,3 +700,124 @@
     </script>
 </body>
 </html>
+
+<!-- SAP Integration View -->
+<div id="sap-view" class="view-section">
+    <h2 style="margin-top: 0;">SAP ERP Integration</h2>
+    
+    <div style="background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+        <h3 style="margin-top: 0;">From Legacy ERP to Modern W3C Standards</h3>
+        <p>This demonstration shows how existing SAP ERP data can be automatically transformed into KTDDE-compliant W3C Verifiable Credentials.</p>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+        <div style="background: #fef3c7; padding: 25px; border-radius: 8px; border: 2px solid #f59e0b;">
+            <div style="font-size: 3em; text-align: center; margin-bottom: 15px;">📊</div>
+            <h3 style="text-align: center; margin-bottom: 15px;">SAP ERP Source</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 8px 0;">✓ EKKO/EKPO (Purchase Orders)</li>
+                <li style="padding: 8px 0;">✓ LIKP/LIPS (Deliveries)</li>
+                <li style="padding: 8px 0;">✓ VBRK/VBRP (Invoices)</li>
+                <li style="padding: 8px 0;">✓ ZBANKF (Documentary Credits)</li>
+            </ul>
+        </div>
+        
+        <div style="background: #e0e7ff; padding: 25px; border-radius: 8px; border: 2px solid #6366f1;">
+            <div style="font-size: 3em; text-align: center; margin-bottom: 15px;">🔄</div>
+            <h3 style="text-align: center; margin-bottom: 15px;">Transformation Engine</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 8px 0;">✓ Field Mapping (SAP → KTDDE)</li>
+                <li style="padding: 8px 0;">✓ Data Validation</li>
+                <li style="padding: 8px 0;">✓ Structure Conversion</li>
+                <li style="padding: 8px 0;">✓ JSON-LD Generation</li>
+            </ul>
+        </div>
+        
+        <div style="background: #d1fae5; padding: 25px; border-radius: 8px; border: 2px solid #10b981;">
+            <div style="font-size: 3em; text-align: center; margin-bottom: 15px;">📄</div>
+            <h3 style="text-align: center; margin-bottom: 15px;">W3C Verifiable Credentials</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 8px 0;">✓ KTDDE Standardized</li>
+                <li style="padding: 8px 0;">✓ Semantically Linked</li>
+                <li style="padding: 8px 0;">✓ Digitally Signed</li>
+                <li style="padding: 8px 0;">✓ Globally Interoperable</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h3>Available SAP Mappings</h3>
+    <div style="background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background: #f3f4f6;">
+                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e5e7eb;">Document Type</th>
+                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e5e7eb;">SAP Tables</th>
+                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e5e7eb;">Key Fields Mapped</th>
+                    <th style="padding: 12px; text-align: center; border-bottom: 2px solid #e5e7eb;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #e5e7eb;">
+                    <td style="padding: 12px;"><strong>Purchase Order</strong></td>
+                    <td style="padding: 12px;"><code>EKKO, EKPO</code></td>
+                    <td style="padding: 12px;">Order number, amount, items, terms</td>
+                    <td style="padding: 12px; text-align: center;">
+                        <button onclick="showSAPSource('purchase_order')" style="padding: 6px 12px; background: #fef3c7; border: 1px solid #f59e0b; border-radius: 4px; cursor: pointer; margin-right: 5px;">SAP</button>
+                        <button onclick="showTransformation('purchase_order')" style="padding: 6px 12px; background: #e0e7ff; border: 1px solid #6366f1; border-radius: 4px; cursor: pointer;">Transform</button>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 1px solid #e5e7eb;">
+                    <td style="padding: 12px;"><strong>Bill of Lading</strong></td>
+                    <td style="padding: 12px;"><code>LIKP, LIPS</code></td>
+                    <td style="padding: 12px;">B/L number, goods, weight, volume</td>
+                    <td style="padding: 12px; text-align: center;">
+                        <button onclick="showSAPSource('bill_of_lading')" style="padding: 6px 12px; background: #fef3c7; border: 1px solid #f59e0b; border-radius: 4px; cursor: pointer; margin-right: 5px;">SAP</button>
+                        <button onclick="showTransformation('bill_of_lading')" style="padding: 6px 12px; background: #e0e7ff; border: 1px solid #6366f1; border-radius: 4px; cursor: pointer;">Transform</button>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 1px solid #e5e7eb;">
+                    <td style="padding: 12px;"><strong>Commercial Invoice</strong></td>
+                    <td style="padding: 12px;"><code>VBRK, VBRP</code></td>
+                    <td style="padding: 12px;">Invoice number, amount, lines, payment</td>
+                    <td style="padding: 12px; text-align: center;">
+                        <button onclick="showSAPSource('commercial_invoice')" style="padding: 6px 12px; background: #fef3c7; border: 1px solid #f59e0b; border-radius: 4px; cursor: pointer; margin-right: 5px;">SAP</button>
+                        <button onclick="showTransformation('commercial_invoice')" style="padding: 6px 12px; background: #e0e7ff; border: 1px solid #6366f1; border-radius: 4px; cursor: pointer;">Transform</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;"><strong>Documentary Credit</strong></td>
+                    <td style="padding: 12px;"><code>ZBANKF</code></td>
+                    <td style="padding: 12px;">L/C number, amount, banks, terms</td>
+                    <td style="padding: 12px; text-align: center;">
+                        <button onclick="showSAPSource('documentary_credit')" style="padding: 6px 12px; background: #fef3c7; border: 1px solid #f59e0b; border-radius: 4px; cursor: pointer; margin-right: 5px;">SAP</button>
+                        <button onclick="showTransformation('documentary_credit')" style="padding: 6px 12px; background: #e0e7ff; border: 1px solid #6366f1; border-radius: 4px; cursor: pointer;">Transform</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div style="margin-top: 40px; padding: 20px; background: #fef2f2; border-left: 4px solid #ef4444; border-radius: 8px;">
+        <h3 style="margin-top: 0; color: #991b1b;">Production Deployment Notes</h3>
+        <ul>
+            <li><strong>SAP Simulator:</strong> The SAP data shown here is from a mock simulator. In production, this would connect to real SAP ERP systems via OData APIs or RFC.</li>
+            <li><strong>Real-time Integration:</strong> Transformation happens in real-time as SAP documents are created or updated.</li>
+            <li><strong>Dual API Mode:</strong> System can serve both native SAP format and W3C VC format simultaneously.</li>
+            <li><strong>Migration Path:</strong> Allows gradual migration from legacy SAP to modern standards without disrupting existing processes.</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+// Add SAP tab to navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const navTabs = document.querySelector('.nav-tabs');
+    if (navTabs && !document.querySelector('[onclick*="sap"]')) {
+        const sapTab = document.createElement('button');
+        sapTab.className = 'nav-tab';
+        sapTab.onclick = function() { showView('sap'); };
+        sapTab.innerHTML = '📊 SAP Integration';
+        navTabs.appendChild(sapTab);
+    }
+});
+</script>

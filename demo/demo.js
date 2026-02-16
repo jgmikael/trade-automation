@@ -1635,3 +1635,306 @@ if (document.readyState === 'loading') {
 } else {
   initDemo();
 }
+
+// ============================================================================
+// SAP SOURCE DATA AND TRANSFORMATION MAPPINGS
+// ============================================================================
+
+const sapSourceData = {
+    purchase_order: {
+        EKKO: {
+            EBELN: '4500001000',
+            BUKRS: '1000',
+            BSTYP: 'F',
+            BSART: 'NB',
+            AEDAT: '2026-01-01',
+            LIFNR: '110001',
+            EKORG: '1000',
+            EKGRP: '002',
+            WAERS: 'EUR',
+            ZTERM: 'LC60',
+            INCO1: 'CFR',
+            INCO2: 'Tokyo Port',
+            KTWRT: '285000.00',
+            IHREZ: 'TCM-PO-2024-1089'
+        },
+        EKPO: [
+            {
+                EBELN: '4500001000',
+                EBELP: '00010',
+                MATNR: 'TBR-GL-001',
+                TXZ01: 'Gluelam Beam 90x315x12000mm GL30c',
+                MATKL: 'TIMBER',
+                MENGE: '120',
+                MEINS: 'EA',
+                NETPR: '1950.00',
+                PEINH: '1',
+                WAERS: 'EUR',
+                LAND1: 'FI'
+            },
+            {
+                EBELN: '4500001000',
+                EBELP: '00020',
+                MATNR: 'TBR-GL-002',
+                TXZ01: 'Gluelam Beam 115x405x15000mm GL32h',
+                MATKL: 'TIMBER',
+                MENGE: '40',
+                MEINS: 'EA',
+                NETPR: '2625.00',
+                PEINH: '1',
+                WAERS: 'EUR',
+                LAND1: 'FI'
+            }
+        ]
+    },
+    
+    bill_of_lading: {
+        LIKP: {
+            VBELN: '8000002000',
+            LFART: 'ZLFD',
+            VSTEL: '1000',
+            KUNNR: '220001',
+            KUNAG: '220001',
+            ERDAT: '2026-02-08',
+            LFDAT: '2026-02-08',
+            WADAT: '2026-02-08',
+            INCO1: 'CFR',
+            INCO2: 'Tokyo Port',
+            ROUTE: 'SEA-FI-JP',
+            BTGEW: '28800.0',
+            GEWEI: 'KG',
+            VOLUM: '156.0',
+            VOLEH: 'M3',
+            BOLNR: 'FESCO2026FI123456'
+        }
+    },
+    
+    commercial_invoice: {
+        VBRK: {
+            VBELN: '9000002000',
+            FKART: 'F2',
+            FKTYP: 'F',
+            KUNAG: '220001',
+            KUNRG: '220001',
+            ERDAT: '2026-02-10',
+            FKDAT: '2026-02-10',
+            ZTERM: 'LC60',
+            ZBD1T: '60',
+            WAERK: 'EUR',
+            NETWR: '339000.00',
+            MWSBK: '0.00',
+            VBELN_REF: '0100002000',
+            VBELN_DEL: '8000002000',
+            INCO1: 'CFR',
+            INCO2: 'Tokyo Port',
+            LCNUM: 'LC-MUFG-FI-2026-05678',
+            BOLNR: 'FESCO2026FI123456'
+        }
+    },
+    
+    documentary_credit: {
+        ZBANKF: {
+            LCNUM: 'LC-MUFG-FI-2026-05678',
+            LCTYPE: 'IRREVOCABLE_CONFIRMED',
+            APPLICANT: '220001',
+            BENEFICIARY: '110001',
+            ISSUING_BANK: 'MUFGJPJT',
+            ADVISING_BANK: 'NDEAFIHH',
+            CONFIRMING_BANK: 'NDEAFIHH',
+            LCAMOUNT: '339000.00',
+            LCCURRENCY: 'EUR',
+            ISSUE_DATE: '2026-01-15',
+            EXPIRY_DATE: '2026-05-15',
+            LATEST_SHIP_DATE: '2026-02-18',
+            PARTIAL_SHIP: 'FALSE',
+            TRANSHIP: 'TRUE',
+            INCO1: 'CFR',
+            INCO2: 'Tokyo Port',
+            PRES_DAYS: '21',
+            PURCHASE_ORDER: 'TCM-PO-2024-1089',
+            SALES_ORDER: '0100002000'
+        }
+    }
+};
+
+const sapTableInfo = {
+    purchase_order: ['EKKO (Header)', 'EKPO (Items)'],
+    bill_of_lading: ['LIKP (Delivery Header)', 'LIPS (Delivery Items)'],
+    commercial_invoice: ['VBRK (Billing Header)', 'VBRP (Billing Items)'],
+    documentary_credit: ['ZBANKF (L/C Header)'],
+    certificate_of_origin: ['Derived from Material Master'],
+    packing_list: ['Derived from Delivery data']
+};
+
+const transformationMappings = {
+    purchase_order: [
+        { sap: 'EKKO.EBELN', ktdde: 'purchaseOrderNumber', desc: 'Purchase order number' },
+        { sap: 'EKKO.AEDAT', ktdde: 'issueDate', desc: 'Order date' },
+        { sap: 'EKKO.KTWRT + EKKO.WAERS', ktdde: 'totalAmount{value,currency}', desc: 'Total amount' },
+        { sap: 'EKKO.INCO1 + INCO2', ktdde: 'deliveryTerms{incoterms,namedPlace}', desc: 'Incoterms' },
+        { sap: 'EKPO.TXZ01', ktdde: 'goodsItems[].description', desc: 'Line item descriptions' },
+        { sap: 'EKPO.MENGE + MEINS', ktdde: 'goodsItems[].quantity', desc: 'Quantities with units' }
+    ],
+    bill_of_lading: [
+        { sap: 'LIKP.BOLNR', ktdde: 'billOfLadingNumber', desc: 'B/L number' },
+        { sap: 'LIKP.WADAT', ktdde: 'issueDate', desc: 'Issue date' },
+        { sap: 'LIKP.BTGEW + GEWEI', ktdde: 'totalGrossWeight', desc: 'Total weight' },
+        { sap: 'LIKP.VOLUM + VOLEH', ktdde: 'totalVolume', desc: 'Total volume' },
+        { sap: 'LIPS.ARKTX', ktdde: 'goodsItems[].description', desc: 'Goods descriptions' },
+        { sap: 'LIKP.INCO1 + INCO2', ktdde: 'deliveryTerms', desc: 'Shipping terms' }
+    ],
+    commercial_invoice: [
+        { sap: 'VBRK.VBELN', ktdde: 'invoiceNumber', desc: 'Invoice number' },
+        { sap: 'VBRK.FKDAT', ktdde: 'issueDate', desc: 'Invoice date' },
+        { sap: 'VBRK.NETWR + WAERK', ktdde: 'totalAmount', desc: 'Total amount' },
+        { sap: 'VBRP.ARKTX', ktdde: 'invoiceLines[].description', desc: 'Line descriptions' },
+        { sap: 'VBRK.BOLNR', ktdde: 'relatedDocuments.billOfLading', desc: 'B/L reference' },
+        { sap: 'VBRK.ZTERM', ktdde: 'paymentTerms.code', desc: 'Payment terms' }
+    ],
+    documentary_credit: [
+        { sap: 'ZBANKF.LCNUM', ktdde: 'creditNumber', desc: 'L/C number' },
+        { sap: 'ZBANKF.ISSUE_DATE', ktdde: 'issueDate', desc: 'Issue date' },
+        { sap: 'ZBANKF.LCAMOUNT + LCCURRENCY', ktdde: 'creditAmount', desc: 'Credit amount' },
+        { sap: 'ZBANKF.ISSUING_BANK', ktdde: 'issuingBank.swiftCode', desc: 'Issuing bank' },
+        { sap: 'ZBANKF.PRES_DAYS', ktdde: 'presentationPeriodDays', desc: 'Presentation period' },
+        { sap: 'ZBANKF.PARTIAL_SHIP', ktdde: 'partialShipmentAllowed', desc: 'Partial shipment flag' }
+    ]
+};
+
+// ============================================================================
+// SAP DISPLAY FUNCTIONS
+// ============================================================================
+
+function showSAPSource(docKey) {
+    const sapSource = sapSourceData[docKey];
+    if (!sapSource) {
+        alert('SAP source data not available for this document yet. Available for: Purchase Order, Bill of Lading, Commercial Invoice, Documentary Credit.');
+        return;
+    }
+    
+    const tables = sapTableInfo[docKey] || ['SAP Data'];
+    
+    const modal = document.getElementById('documentModal');
+    const title = document.getElementById('modalTitle');
+    const content = document.getElementById('modalContent');
+    
+    title.textContent = `SAP Source Data - ${docKey.replace(/_/g, ' ').toUpperCase()}`;
+    
+    content.innerHTML = `
+        <div style="margin-bottom: 20px; padding: 15px; background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 6px;">
+            <strong>SAP Tables:</strong> ${tables.join(', ')}<br>
+            <strong>Document:</strong> ${docKey.replace(/_/g, ' ').toUpperCase()}
+        </div>
+        ${formatSAPData(sapSource)}
+        <div style="margin-top: 20px; text-align: center;">
+            <button onclick="showTransformation('${docKey}')" style="padding: 10px 20px; background: #3b82f6; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; margin-right: 10px;">View Transformation →</button>
+            <button onclick="closeModal()" style="padding: 10px 20px; background: #6b7280; color: white; border: none; border-radius: 6px; cursor: pointer;">Close</button>
+        </div>
+    `;
+    
+    modal.classList.add('active');
+}
+
+function showTransformation(docKey) {
+    const mappings = transformationMappings[docKey];
+    
+    if (!mappings) {
+        alert('Transformation mapping not available for this document yet.');
+        return;
+    }
+    
+    const modal = document.getElementById('documentModal');
+    const title = document.getElementById('modalTitle');
+    const content = document.getElementById('modalContent');
+    
+    title.textContent = `SAP → KTDDE Transformation - ${docKey.replace(/_/g, ' ').toUpperCase()}`;
+    
+    const tables = sapTableInfo[docKey] || ['SAP Data'];
+    
+    let html = `
+        <div style="margin-bottom: 20px; padding: 15px; background: #f0f9ff; border-left: 4px solid #3b82f6; border-radius: 6px;">
+            <h3 style="margin-top: 0;">Transformation Process</h3>
+            <p>Converting SAP ERP data to KTDDE standardized JSON</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 15px; align-items: center; margin-bottom: 30px;">
+            <div style="text-align: center; padding: 20px; background: #fef3c7; border-radius: 8px;">
+                <div style="font-size: 2em; margin-bottom: 10px;">📊</div>
+                <strong>SAP ERP</strong><br>
+                <span style="font-size: 0.9em; color: #666;">${tables.join(', ')}</span>
+            </div>
+            <div style="font-size: 2em; color: #3b82f6;">→</div>
+            <div style="text-align: center; padding: 20px; background: #d1fae5; border-radius: 8px;">
+                <div style="font-size: 2em; margin-bottom: 10px;">📄</div>
+                <strong>KTDDE JSON</strong><br>
+                <span style="font-size: 0.9em; color: #666;">W3C VC</span>
+            </div>
+        </div>
+        
+        <h3 style="margin-bottom: 15px;">Field Mappings:</h3>
+        <div style="background: #f9fafb; border-radius: 8px; padding: 20px;">
+    `;
+    
+    mappings.forEach((mapping, i) => {
+        html += `
+            <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 15px; align-items: center; padding: 15px; background: white; border-radius: 6px; margin-bottom: 10px; border: 2px solid #e5e7eb;">
+                <div>
+                    <code style="background: #fef3c7; padding: 4px 8px; border-radius: 4px; font-size: 0.9em;">${mapping.sap}</code>
+                </div>
+                <div style="color: #3b82f6; font-weight: bold;">➜</div>
+                <div>
+                    <code style="background: #d1fae5; padding: 4px 8px; border-radius: 4px; font-size: 0.9em;">${mapping.ktdde}</code>
+                    <div style="font-size: 0.85em; color: #666; margin-top: 5px;">${mapping.desc}</div>
+                </div>
+            </div>
+        `;
+    });
+    
+    html += `
+        </div>
+        <div style="margin-top: 20px; text-align: center;">
+            <button onclick="showSAPSource('${docKey}')" style="margin-right: 10px; padding: 10px 20px; background: #fef3c7; border: 2px solid #f59e0b; border-radius: 6px; cursor: pointer; font-weight: 600;">← View SAP Source</button>
+            <button onclick="showDocument('${docKey}')" style="padding: 10px 20px; background: #d1fae5; border: 2px solid #10b981; border-radius: 6px; cursor: pointer; font-weight: 600;">View KTDDE Result →</button>
+        </div>
+    `;
+    
+    content.innerHTML = html;
+    modal.classList.add('active');
+}
+
+function formatSAPData(data) {
+    let html = '<div style="font-family: monospace; font-size: 0.9em; background: #f9fafb; padding: 20px; border-radius: 8px; overflow-x: auto;">';
+    
+    for (const [table, records] of Object.entries(data)) {
+        html += `<div style="margin-bottom: 20px;">`;
+        html += `<div style="background: #fef3c7; padding: 10px; border-radius: 4px; font-weight: bold; margin-bottom: 10px;">Table: ${table}</div>`;
+        
+        if (Array.isArray(records)) {
+            records.forEach((record, idx) => {
+                html += `<div style="margin-left: 20px; margin-bottom: 15px;">`;
+                html += `<div style="color: #666; margin-bottom: 5px;">Record ${idx + 1}:</div>`;
+                html += formatSAPRecord(record);
+                html += `</div>`;
+            });
+        } else {
+            html += formatSAPRecord(records);
+        }
+        
+        html += `</div>`;
+    }
+    
+    html += '</div>';
+    return html;
+}
+
+function formatSAPRecord(record) {
+    let html = '<div style="margin-left: 20px;">';
+    for (const [field, value] of Object.entries(record)) {
+        html += `<div style="padding: 4px 0;">`;
+        html += `<span style="color: #f59e0b; font-weight: 600;">${field}:</span> `;
+        html += `<span style="color: #374151;">${value}</span>`;
+        html += `</div>`;
+    }
+    html += '</div>';
+    return html;
+}
